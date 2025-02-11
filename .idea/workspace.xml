@@ -4,31 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/discord.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/postcss.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/Badge.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/MYMCS9.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/SpawnBg.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/Vector.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/fonts/MinecraftTen-VGORe.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/sr.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Store.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/About_us.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Contact.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Header.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Mymc_connection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/OurPartners.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/tailwind.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/tsconfig.app.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/tsconfig.json" afterDir="false" />
-    </list>
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="mymc web using react" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -104,11 +80,24 @@
       <updated>1739173892349</updated>
       <workItem from="1739173893544" duration="26013000" />
       <workItem from="1739245808487" duration="14119000" />
-      <workItem from="1739267842337" duration="18719000" />
+      <workItem from="1739267842337" duration="19644000" />
     </task>
+    <task id="LOCAL-00001" summary="mymc web using react">
+      <option name="closed" value="true" />
+      <created>1739307399049</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1739307399049</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="mymc web using react" />
+    <option name="LAST_COMMIT_MESSAGE" value="mymc web using react" />
   </component>
 </project>
