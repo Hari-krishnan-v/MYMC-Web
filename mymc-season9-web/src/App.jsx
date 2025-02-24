@@ -8,11 +8,11 @@ import {Header} from "./pages/section/Header.jsx";
 function App() {
     return (
         <>
-            <Header/>
+
 
         <Router>
             <Routes>
-                <Route path="/" element={<Dashboard />} />
+                <Route path="/"  element={<Dashboard />} />
                 <Route path={"/store"} element={<Store/>} />
 
             </Routes>
