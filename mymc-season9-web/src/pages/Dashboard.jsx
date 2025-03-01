@@ -12,6 +12,7 @@ import mymclogoanimation from "../assets/mymclogoanimation.gif"
 import {Faq} from "./section/Faq.jsx";
 import InfiniteScrollingLogosAnimation from "./section/InfiniteScrollingLogosAnimation.jsx";
 import Footer from "./section/Footer.jsx";
+import {News} from "./section/News.jsx";
 
 
 export const Dashboard = () => {
@@ -44,9 +45,10 @@ export const Dashboard = () => {
                 <MymcConnection/>
                 <PremiumPacks />
                 {/*<OurPartners />*/}
+                <News/>
                 <OurTeam />
                 {/*<Faq/>*/}
-                <InfiniteScrollingLogosAnimation/>
+                {/*<InfiniteScrollingLogosAnimation/>*/}
                 <Contact />
             </main>
             <Footer/>

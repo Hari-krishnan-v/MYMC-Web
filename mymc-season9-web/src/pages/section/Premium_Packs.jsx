@@ -1,14 +1,7 @@
 import React, { useState } from 'react';
 import vector from '../../assets/Vector.svg'
 import Badge from '../../assets/Badge.svg'
-import { Box,Strong,Link } from "@chakra-ui/react"
 import { motion } from "framer-motion";
-import {
-    HoverCardArrow,
-    HoverCardContent,
-    HoverCardRoot,
-    HoverCardTrigger,
-} from "../../components/ui/hover-card.jsx";
 
 
 export const PremiumPacks = () => {
@@ -19,29 +12,42 @@ export const PremiumPacks = () => {
     const handleToggle = (selection) => {
         setIsMonthly(selection === 'monthly');
     };
-
     return (
         <section id={'PremiumPacks'} className={'min-h-screen flex justify-center items-center relative '}>
             <div className="gradient-overlay2 h-full"></div>
             <div className={'z-20 max-w-[1000px] w-full flex-col justify-center items-center   p-6'}>
                 <div className={'flex-col w-full justify-center items-center mb-6'}>
-                    <h2 className={'text-center font-bold text-white text-[56px]  '}> <span className={'text-[#ff9800] mine-logo'}>Premium</span> Packs </h2>
-                    <p className={'text-center text-white'}>
+                    <motion.h2
+                        initial={{opacity: 0, scale: 0.7}}
+                        whileInView={{opacity: 1, scale: 1}}
+                        exit={{opacity: 0, scale: -10}}
+                        transition={{duration: .6, ease: "easeInOut"}}
+                        className={'text-center font-bold text-white text-[56px]  '}> <span className={'text-[#ff9800] mine-logo'}>Premium</span> Packs </motion.h2>
+                    <motion.p
+                        initial={{opacity: 0, scale: 0.7}}
+                        whileInView={{opacity: 1, scale: 1}}
+                        exit={{opacity: 0, scale: -10}}
+                        transition={{duration: .6, ease: "easeInOut",delay:0.2}}
+                        className={'text-center text-white'}>
                         Elevate your gameplay with our premium plans, designed to give you exclusive advantages and
                         access to enhanced assets on the server. Enjoy essential features with no hidden fees, all
                         tailored to maximize your Minecraft experience.
-                    </p>
+                    </motion.p>
                 </div>
                 <div className="flex justify-center w-full">
-                    <div
-                        className="toggle bg-black w-[240px] h-[42px] flex items-center justify-between border rounded-full p-1">
+                    <motion.div
+                        initial={{opacity: 0, scale: 0.8}}
+                        whileInView={{opacity: 1, scale: 1}}
+                        exit={{opacity: 0, scale: -10}}
+                        transition={{duration: .6, ease: "easeInOut",delay:0.2}}
+                        className="toggle bg-black  w-[240px] h-[42px] flex items-center justify-between border rounded-full p-1">
                         <button
                             onClick={() => handleToggle('monthly')}
                             className={`w-1/2 text-center py-1 rounded-full transition-all  ${
                                 isMonthly ? 'bg-white text-black' : 'bg-black text-white'
                             }`}
                         >
-                            Monthly
+                            Seasonal
                         </button>
                         <button
                             onClick={() => handleToggle('battlePass')}
@@ -51,7 +57,7 @@ export const PremiumPacks = () => {
                         >
                             BattlePass
                         </button>
-                    </div>
+                    </motion.div>
                 </div>
                 {/*<p className={'text-center text-[14px]  text-[#3199FF] mt-4'}>-5% off on seasonally payments</p>*/}
 
@@ -72,7 +78,9 @@ export const PremiumPacks = () => {
 const MonthlyPlan = () => {
     const HandlePurchase = (amount) => {
 
-          alert(`Purchasing for amount: ₹${amount}`);
+         if(!user){
+            alert("Please login to purchase")
+         }
 
     };
     return (
@@ -87,41 +95,15 @@ const MonthlyPlan = () => {
                     <h3 className="text-xl text-[#FFBB00] Plan-head font-bold">Gold</h3>
                     <p className="text-sm text-[#CFCFCF] Plan-head">Basic Plan</p>
                     <h2 className="my-3 Plan-head font-medium text-3xl">
-                        ₹59 <span className="text-xl">/per month</span>
+                        ₹59 <span className="text-xl">/per season</span>
                     </h2>
                 </div>
 
                 <div className="space-y-2 ">
                     <p className={'text-sm flex Plan-head items-center '}><span className={'mr-1'}><img
-                        src={vector}/> </span> INGAME
-                        Role [
-                        <HoverCardRoot>
-                            <HoverCardTrigger>
-                                <span style={{color:'#7EE772'}}>1 Month</span>]
-                            </HoverCardTrigger>
-                            <HoverCardContent maxWidth="340px" >
-                                <HoverCardArrow />
-                                <Box padding={'10px'}>
-                                    <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,
-                                    referring to energy centers in the body
-                                </Box>
-                            </HoverCardContent>
-                        </HoverCardRoot>
-                    </p>
+                        src={vector}/> </span> INGAME Role</p>
                     <p className={'text-sm flex Plan-head items-center '}><span className={'mr-1'}><img
-                        src={vector}/> </span> MYMC Discord Role  [
-                        <HoverCardRoot>
-                        <HoverCardTrigger>
-                            <span style={{color:'#7EE772'}}>1 Month</span>]
-                        </HoverCardTrigger>
-                        <HoverCardContent maxWidth="340px" >
-                            <HoverCardArrow />
-                            <Box padding={'10px'}>
-                                <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,
-                                referring to energy centers in the body
-                            </Box>
-                        </HoverCardContent>
-                    </HoverCardRoot> </p>
+                        src={vector}/> </span> MYMC Discord Role</p>
                     <p className={'text-sm flex Plan-head items-center '}><span className={'mr-1'}><img
                         src={vector}/> </span> Multiple Homes ( 3 Max )</p>
                     <p className={'text-sm flex Plan-head items-center '}><span className={'mr-1'}><img
@@ -145,40 +127,17 @@ const MonthlyPlan = () => {
                         <h3 className="text-xl text-[#1BF0FF] Plan-head font-bold">Diamond</h3>
                         <p className="text-sm text-[#CFCFCF] Plan-head">The Best One</p>
                         <h2 className="my-3 font-medium Plan-head text-3xl">
-                            ₹199 <span className="text-xl">/per month</span>
+                            ₹199 <span className="text-xl">/per season</span>
                         </h2>
                     </div>
 
                     <div className="space-y-2">
                         <p className={'text-sm flex items-center Plan-head '}><span className={'mr-1'}><img
-                            src={Badge}/> </span>/craft Command  [ <HoverCardRoot>
-                            <HoverCardTrigger>
-                                <span style={{color:'#7EE772'}}>1 Month</span>]
-                            </HoverCardTrigger>
-                            <HoverCardContent maxWidth="340px" >
-                                <HoverCardArrow />
-                                <Box padding={'10px'}>
-                                    <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,
-                                    referring to energy centers in the body
-                                </Box>
-                            </HoverCardContent>
-                        </HoverCardRoot> </p>
+                            src={Badge}/> </span>/craft Command </p>
                         <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img
-                            src={vector}/> </span> INGAME
-                            Role  [ <span style={{color:'#7EE772'}}>1 Month</span>] </p>
+                            src={vector}/> </span> INGAME Role  </p>
                         <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img
-                            src={vector}/> </span> MYMC Discord Role  [ <HoverCardRoot>
-                            <HoverCardTrigger>
-                                <span style={{color:'#7EE772'}}>1 Month</span>]
-                            </HoverCardTrigger>
-                            <HoverCardContent maxWidth="340px" >
-                                <HoverCardArrow />
-                                <Box padding={'10px'}>
-                                    <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,
-                                    referring to energy centers in the body
-                                </Box>
-                            </HoverCardContent>
-                        </HoverCardRoot> ] </p>
+                            src={vector}/> </span> MYMC Discord Role </p>
                         <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img
                             src={vector}/> </span> Multiple Homes ( 4 Max )</p>
                         <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img
@@ -201,31 +160,19 @@ const MonthlyPlan = () => {
                     <h3 className="text-xl text-[#00BC32] font-bold Plan-head">Emerald</h3>
                     <p className="text-sm text-[#CFCFCF] Plan-head">The Flex</p>
                     <h2 className="my-3 font-medium text-3xl Plan-head">
-                        ₹299 <span className="text-xl">/per month</span>
+                        ₹399 <span className="text-xl">/per season</span>
                     </h2>
                 </div>
 
                 <div className="space-y-2">
                     <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img
-                        src={Badge}/> </span> /anvil Command  [ <span style={{color:'#7EE772'}}>1 Month</span>] </p>
+                        src={Badge}/> </span> /anvil Command   </p>
                     <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img
-                        src={vector}/> </span> /craft Command  [ <span style={{color:'#7EE772'}}>1 Month</span>] </p>
+                        src={vector}/> </span> /craft Command  </p>
                     <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img
-                        src={vector}/> </span> INGAME
-                        Role  [ <span style={{color:'#7EE772'}}>1 Month</span>] </p>
+                        src={vector}/> </span> INGAME Role  </p>
                     <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img
-                        src={vector}/> </span> MYMC Discord Role  [ <HoverCardRoot>
-                        <HoverCardTrigger>
-                            <span style={{color:'#7EE772'}}>1 Month</span>]
-                        </HoverCardTrigger>
-                        <HoverCardContent maxWidth="340px" >
-                            <HoverCardArrow />
-                            <Box padding={'10px'}>
-                                <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,
-                                referring to energy centers in the body
-                            </Box>
-                        </HoverCardContent>
-                    </HoverCardRoot> ] </p>
+                        src={vector}/> </span> MYMC Discord Role  </p>
                     <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img
                         src={vector}/> </span> Multiple Homes ( 5 Max )</p>
                     <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img
@@ -237,7 +184,7 @@ const MonthlyPlan = () => {
 
                 </div>
 
-                <button className="mt-4 bg-black text-white Plan-head px-4 py-2 shiny-cta" onClick={()=>HandlePurchase(299)}>
+                <button className="mt-4 bg-black text-white Plan-head px-4 py-2 shiny-cta" onClick={()=>HandlePurchase(399)}>
                     Purchase
                 </button>
             </div>
@@ -255,7 +202,7 @@ const BattlePass = () => {
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.8 }}
             className={'max-w-[950px] min-h-[500px] flex  justify-center  gap-4 items-center '}>
-            <h1 className={'mine-logo text-[71px]  font-bold'}>COMING  SOON</h1>
+            <h1 className={'mine-logo text-[71px]  font-bold'}><span className={"text-[#0eff00] mine-logo"}>COMING</span>   SOON</h1>
             {/*<div*/}
             {/*    className="min-w-[300px] h-[459px]  bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between">*/}
             {/*    <div>*/}

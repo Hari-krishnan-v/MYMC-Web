@@ -2,7 +2,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import Minecraft from "../../assets/Minecraft.mp4";
 import mymcs9 from "../../assets/MYMCS9.png"
-import {FaCircle} from "react-icons/fa";
+import {FaCircle,FaBell} from "react-icons/fa";
 export const Home = () => {
     return (
         <section className={'home bg-no-repeat '} id={'home'}>
@@ -16,11 +16,12 @@ export const Home = () => {
             <div className={'gradient-overlay'}></div>
 
             {/*sticky logo and button to go up*/}
-            <div className={' fixed right-0  bottom-0 h-[200px] w-[200px] opacity-35 z-10  '}>
+            <div className={' fixed right-0  bottom-0 h-[200px] w-[200px] opacity-35 z-20  '}>
                 <a href="#home">
                     <img src={mymcs9}/>
                 </a>
             </div>
+
 
             <div className={'max-w-[1440px] relative z-20 w-full m-auto'}>
                 <div className={'flex '}>
@@ -33,7 +34,7 @@ export const Home = () => {
                             <FaCircle fill={"#0eff00"}  />
                             <h2 className={'font-bold'}>Server Online</h2>
                         </div>
-                        <h1 className={'text-[4.4375rem] font-bold mine-logo text-white'}>MUTTAYI MINECRAFT</h1>
+                        <h1 className={'text-[4.4375rem] font-bold mine-logo text-white '}>MUTTAYI MINECRAFT</h1>
                         <p className={'text-[1rem] mb-4 font-medium w-[600px] text-left text-white'}>Muttayi Minecraft
                             is a kerala based minecraft server with amazing community
                             and active admins </p>
@@ -44,10 +45,8 @@ export const Home = () => {
                         </div>
                         <button className={'shiny-cta'}>JOIN NOW</button>
                     </motion.div>
-
                 </div>
             </div>
-
         </section>
     )
 }

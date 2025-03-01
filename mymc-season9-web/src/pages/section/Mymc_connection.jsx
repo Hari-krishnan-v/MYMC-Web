@@ -8,14 +8,14 @@ export const MymcConnection = () => {
         <section id={'MymcConnection'} className={'relative overflow-hidden '}>
             <div className="gradient-overlay2 h-full"></div>
 
-            <div className={' max-w-[1440px] h-[80vh]  w-full m-auto'}>
-                <div className={'z-50 flex sm:flex-wrap mymc-con'}>
+            <div className={' max-w-[1440px] h-[80vh] flex justify-center items-center overflow-hidden  w-full m-auto'}>
+                <div className={'z-20 flex sm:flex-wrap mymc-con'}>
                     <motion.div
-                        initial={{opacity: 0, scale: 0.9}}
+                        initial={{opacity: 0, scale: .8}}
                         whileInView={{opacity: 1, scale: 1}}
                         exit={{opacity: 0, scale: -10}}
-                        transition={{duration: .6}}
-                        className=" z-20 container w-[711px] h-fit ">
+                        transition={{duration: .6, ease: "easeInOut",}}
+                        className=" z-20 container w-[711px] h-[710px]  ">
                         <img src={MYMCS9} alt="Mymc Connection"/>
                     </motion.div>
                     <motion.div
