@@ -4,15 +4,30 @@ import vector from '../../assets/Vector.svg';
 import Cookies from "js-cookie";
 import ClaimBlocksimg from '../../assets/storeItems/ClaimBlocks.png';
 import money from '../../assets/storeItems/money.png';
+import AddItemBtn from "../../components/Buttons/AddItem.jsx";
+import {toast, ToastContainer} from "react-toastify";
 
 export const StoreSection = () => {
     const [selected, setSelected] = useState('All');
+    const user = Cookies.get('username');
 
     const addToCart = (item) => {
-        const cart = JSON.parse(Cookies.get('cart') || '[]');
-        cart.push(item);
-        Cookies.set('cart', JSON.stringify(cart), {expires: 7});
-        setSelected(selected); // Trigger re-render
+        if(!user) {
+            toast.error("please login", {
+                position: "bottom-right",
+                className: "toast-message",
+            });
+
+        }else{
+            const cart = JSON.parse(Cookies.get('cart') || '[]');
+            cart.push(item);
+            Cookies.set('cart', JSON.stringify(cart), {expires: 7});
+            toast.success("Item added to the cart !", {
+                position: "bottom-right",
+                className: "toast-message",
+            });
+            setSelected(selected); // Trigger re-render
+        }
     };
 
     return (
@@ -33,6 +48,8 @@ export const StoreSection = () => {
                 <IngameCurrency addToCart={addToCart}/> : selected === 'Kits' ?
                     <Kits addToCart={addToCart}/> : selected === 'Homes' ? <Homes addToCart={addToCart}/> :
                         <All addToCart={addToCart}/>}
+            <ToastContainer />
+
         </section>
     );
 };
@@ -64,8 +81,8 @@ const ClaimBlocks = ({addToCart}) => {
                     className="min-h-[500px] w-11/12 sm:w-3/4 md:w-full lg:w-full p-5 flex flex-wrap gap-9 justify-center z-20">
             {items.map((item, index) => (
                 <div key={index}
-                     className="min-w-[280px] max-w-[300px] h-[400px] bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between shadow-lg transform transition-transform hover:scale-105 overflow-hidden">
-                    <div className="w-full flex justify-center mb-4 border py-2">
+                     className="min-w-[280px] max-w-[300px] h-[400px] bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between items-center shadow-lg transform transition-transform hover:scale-105 overflow-hidden">
+                    <div className="w-full flex justify-center mb-4  py-2">
                         <img src={ClaimBlocksimg} alt={item.name}
                              className="w-24 h-24 "/>
                     </div>
@@ -82,10 +99,10 @@ const ClaimBlocks = ({addToCart}) => {
                         <p className="text-sm flex items-center justify-center Plan-head">
                          </p>
                     </div>
-                    <button
+                    <AddItemBtn
                         className="mt-4 bg-[#00BC32] text-white Plan-head px-4 py-2 rounded-full shadow-md hover:bg-[#00a82d] transition-colors"
                         onClick={() => addToCart(item)}>Add to Cart
-                    </button>
+                    </AddItemBtn>
                 </div>
             ))}
         </motion.div>
@@ -119,9 +136,9 @@ const IngameCurrency = ({addToCart}) => {
                     className="min-h-[500px] w-11/12 sm:w-3/4 md:w-full lg:w-full p-5 flex flex-wrap gap-9 justify-center z-20">
             {items.map((item, index) => (
                 <div key={index}
-                     className="min-w-[280px] max-w-[300px] h-[400px] bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between shadow-lg transform transition-transform hover:scale-105 overflow-hidden">
-                    <div className="w-full flex justify-center mb-4 border py-2">
-                        <img src={ClaimBlocksimg} alt={item.name}
+                     className="min-w-[280px] max-w-[300px] h-[400px] bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between items-center  shadow-lg transform transition-transform hover:scale-105 overflow-hidden">
+                    <div className="w-full flex justify-center mb-4  py-2">
+                        <img src={money} alt={item.name}
                              className="w-24 h-24 "/>
                     </div>
                     <div className="text-center">
@@ -137,10 +154,10 @@ const IngameCurrency = ({addToCart}) => {
                         <p className="text-sm flex items-center justify-center Plan-head">
                         </p>
                     </div>
-                    <button
-                        className="mt-4 bg-[#00BC32] text-white Plan-head px-4 py-2 rounded-full shadow-md hover:bg-[#00a82d] transition-colors"
+                    <AddItemBtn
+
                         onClick={() => addToCart(item)}>Add to Cart
-                    </button>
+                    </AddItemBtn>
                 </div>
             ))}
         </motion.div>
@@ -172,8 +189,8 @@ const Kits = ({addToCart}) => {
                     className="min-h-[500px] w-11/12 sm:w-3/4 md:w-full lg:w-full p-5 flex flex-wrap gap-9 justify-center z-20">
             {items.map((item, index) => (
                 <div key={index}
-                     className="min-w-[280px] max-w-[300px] h-[400px] bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between shadow-lg transform transition-transform hover:scale-105 overflow-hidden">
-                    <div className="w-full flex justify-center mb-4 border py-2">
+                     className="min-w-[280px] max-w-[300px] h-[400px] bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between items-center shadow-lg transform transition-transform hover:scale-105 overflow-hidden">
+                    <div className="w-full flex justify-center mb-4  py-2">
                         <img src={ClaimBlocksimg} alt={item.name}
                              className="w-24 h-24 "/>
                     </div>
@@ -190,10 +207,10 @@ const Kits = ({addToCart}) => {
                         <p className="text-sm flex items-center justify-center Plan-head">
                         </p>
                     </div>
-                    <button
+                    <AddItemBtn
                         className="mt-4 bg-[#00BC32] text-white Plan-head px-4 py-2 rounded-full shadow-md hover:bg-[#00a82d] transition-colors"
                         onClick={() => addToCart(item)}>Add to Cart
-                    </button>
+                    </AddItemBtn>
                 </div>
             ))}
         </motion.div>
@@ -225,8 +242,8 @@ const Homes = ({addToCart}) => {
                     className="min-h-[500px] w-11/12 sm:w-3/4 md:w-full lg:w-full p-5 flex flex-wrap gap-9 justify-center z-20">
             {items.map((item, index) => (
                 <div key={index}
-                     className="min-w-[280px] max-w-[300px] h-[400px] bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between shadow-lg transform transition-transform hover:scale-105 overflow-hidden">
-                    <div className="w-full flex justify-center mb-4 border py-2">
+                     className="min-w-[280px] max-w-[300px] h-[400px] bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between items-center shadow-lg transform transition-transform hover:scale-105 overflow-hidden">
+                    <div className="w-full flex justify-center mb-4  py-2">
                         <img src={ClaimBlocksimg} alt={item.name}
                              className="w-24 h-24 "/>
                     </div>
@@ -243,10 +260,10 @@ const Homes = ({addToCart}) => {
                         <p className="text-sm flex items-center justify-center Plan-head">
                         </p>
                     </div>
-                    <button
+                    <AddItemBtn
                         className="mt-4 bg-[#00BC32] text-white Plan-head px-4 py-2 rounded-full shadow-md hover:bg-[#00a82d] transition-colors"
                         onClick={() => addToCart(item)}>Add to Cart
-                    </button>
+                    </AddItemBtn>
                 </div>
             ))}
         </motion.div>

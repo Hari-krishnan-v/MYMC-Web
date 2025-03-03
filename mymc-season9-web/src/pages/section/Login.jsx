@@ -23,7 +23,7 @@ const Login = ({ onLogin }) => {
     };
 
     return (
-        <div className="flex flex-col p-4">
+        <div className="flex flex-col p-4 ">
             <h2 className="mine-logo text-start text-xl">Login</h2>
             <div className="mt-3 flex flex-col gap-3">
                 <label>Username:</label>

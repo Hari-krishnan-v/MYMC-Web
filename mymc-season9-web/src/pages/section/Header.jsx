@@ -135,7 +135,7 @@ export const Header = ({ username }) => {
                                     <FaUser />
                                 </button>
                             </DialogTrigger>
-                            <DialogContent className={'flex flex-col w-80 h-80 p-2'}>
+                            <DialogContent className={'flex flex-col w-80  p-2'}>
                                 <DialogBody className={''}>
                                     <Login />
                                 </DialogBody>
