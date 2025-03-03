@@ -1,42 +1,49 @@
 import React, {useEffect, useState} from 'react';
-import { Link } from 'react-router-dom';
-import { FaBars, FaUser, FaShoppingCart } from "react-icons/fa";
-import { motion } from "framer-motion";
+import {Link} from 'react-router-dom';
+import {FaBars, FaShoppingCart, FaUser} from "react-icons/fa";
+import {motion} from "framer-motion";
 import {
-    DrawerActionTrigger,
     DrawerBackdrop,
     DrawerBody,
     DrawerCloseTrigger,
     DrawerContent,
-    DrawerHeader, DrawerRoot,
+    DrawerHeader,
+    DrawerRoot,
     DrawerTitle,
     DrawerTrigger,
 } from "../../components/ui/drawer";
 import Cookies from "js-cookie";
-import {
-    DialogBody,
-    DialogCloseTrigger,
-    DialogContent,
-    DialogHeader,
-    DialogRoot,
-    DialogTitle,
-    DialogTrigger
-} from "../../components/ui/dialog";
+import {DialogBody, DialogCloseTrigger, DialogContent, DialogRoot, DialogTrigger} from "../../components/ui/dialog";
 import Login from "./Login.jsx";
+import {MenuContent, MenuItem, MenuRoot, MenuTrigger} from "../../components/ui/menu.tsx";
+import {Cart} from "./Cart.jsx";
 
 
 export const Header = () => {
     const [open, setOpen] = useState(false);
     const [isAuthenticated, setAuthenticated] = useState(false);
+    const [cartCount, setCartCount] = useState(0);
     const username = Cookies.get("username");
 
     useEffect(() => {
         setAuthenticated(!!username);
     }, [username]);
 
+    useEffect(() => {
+        const updateCartCount = () => {
+            const cart = JSON.parse(Cookies.get('cart') || '[]');
+            setCartCount(cart.length);
+        }
+        updateCartCount();
+        const interval = setInterval(updateCartCount, 1000);
+        return () => clearInterval(interval);
+    }, []);
+
     const handleLogout = () => {
         Cookies.remove("username");
+        Cookies.remove("cart");
         setAuthenticated(false);
+        setCartCount(0)
         window.location.reload(); // Ensure UI updates correctly
     };
 
@@ -47,7 +54,7 @@ export const Header = () => {
             animate={{ opacity: 1, top: 8 }}
             exit={{ opacity: 0, top: -100 }}
             transition={{ duration: .8 }}
-            className="fixed top left-0 right-0 flex justify-center items-center shadow-xl h-[65px] max-w-[1100px] rounded-3xl mx-auto z-50"
+            className="fixed top left-0 right-0 flex justify-center items-center shadow-xl h-[65px] max-w-[1100px] rounded-3xl mx-auto z-50 "
             style={{ backgroundColor: 'rgba(37, 38, 41, 0.8)', backdropFilter: 'blur(10px)' }}
         >
             <nav className={'flex justify-between w-full px-7 items-center navbar'}>
@@ -80,15 +87,50 @@ export const Header = () => {
                         <a className={'block text-[16px] px-3'} href={'/#News'}> NEWS</a>
                     </li>
                 </ul>
-                <div className="flex items-center">
+                <div className="flex gap-2 items-center ">
                     {isAuthenticated ? (
                         <>
-                            <Link to="/profile" className="text-white mx-2">
-                                <FaUser />
-                            </Link>
-                            <Link to="/cart" className="text-white mx-2">
-                                <FaShoppingCart />
-                            </Link>
+                            <MenuRoot>
+                                <MenuTrigger asChild>
+                                    <button className="text-white mx-2">
+                                        <FaUser/>
+                                    </button>
+                                </MenuTrigger>
+                                <MenuContent className=" p-[10px] rounded-[5px] ">
+                                    <MenuItem>{username}</MenuItem>
+                                    <MenuItem
+                                        value="delete"
+                                        color="fg.error"
+                                        _hover={{bg: "bg.error", color: "fg.error"}}
+                                        onClick={handleLogout}
+                                    >
+                                        Logout...
+                                    </MenuItem>
+                                </MenuContent>
+                            </MenuRoot>
+                            <DrawerRoot >
+                                <DrawerBackdrop   />
+                                <DrawerTrigger >
+                                    <button className="text-white mx-2 relative">
+                                        <FaShoppingCart/>
+                                        {cartCount > 0 && (
+                                            <span className="absolute top-[-10px] right-[-10px] bg-red-500 text-white text-xs rounded-full px-2">
+                                                {cartCount}
+                                            </span>
+                                        )}
+                                    </button>
+                                </DrawerTrigger>
+                                <DrawerContent className={'p-[20px]  flex flex-col gap-5'}>
+                                    <DrawerHeader className={' text-2xl mine-logo font-bold py-3'}>
+                                        <DrawerTitle>Cart</DrawerTitle>
+                                    </DrawerHeader>
+                                    <DrawerBody>
+                                        <Cart username={username}/>
+                                    </DrawerBody>
+
+                                    <DrawerCloseTrigger/>
+                                </DrawerContent>
+                            </DrawerRoot>
                         </>
                     ) : (
                         <DialogRoot placement={"center"}>

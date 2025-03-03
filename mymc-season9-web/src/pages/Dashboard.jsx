@@ -13,17 +13,31 @@ import {Faq} from "./section/Faq.jsx";
 import InfiniteScrollingLogosAnimation from "./section/InfiniteScrollingLogosAnimation.jsx";
 import Footer from "./section/Footer.jsx";
 import {News} from "./section/News.jsx";
+import {NumberOfPlayers} from "../Authstore/AuthStore.js";
 
 
 export const Dashboard = () => {
     const [loading, setLoading] = useState(true);
     const [fadeOut, setFadeOut] = useState(false);
+    const [playerCount, setPlayerCount] = useState(0);
+    const [serverStatus, setServerStatus] = useState('Offline');
 
     useEffect(() => {
         setTimeout(() => {
             setFadeOut(true); // Start fade-out animation
             setTimeout(() => setLoading(false), 600); // Remove loader after animation
         }, 3500); // Adjust time as needed
+    }, []);
+
+    useEffect(() => {
+        const fetchPlayerCount = async () => {
+            const count = await NumberOfPlayers();
+            setPlayerCount(count.players);
+            setServerStatus(count.online);
+        };
+        fetchPlayerCount(); // Initial fetch
+        const intervalId = setInterval(fetchPlayerCount, 10000);
+        return () => clearInterval(intervalId);
     }, []);
 
     if (loading) {
@@ -41,7 +55,7 @@ export const Dashboard = () => {
         <>
             <Header/>
             <main >
-                <Home/>
+                <Home playerCount={playerCount} serverStatus={serverStatus}/>
                 <MymcConnection/>
                 <PremiumPacks />
                 {/*<OurPartners />*/}
@@ -51,7 +65,7 @@ export const Dashboard = () => {
                 {/*<InfiniteScrollingLogosAnimation/>*/}
                 <Contact />
             </main>
-            <Footer/>
+            <Footer playerCount={playerCount}/>
         </>
     );
 };

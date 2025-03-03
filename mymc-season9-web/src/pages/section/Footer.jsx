@@ -1,7 +1,7 @@
 import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
 import { motion } from "framer-motion";
 
-const Footer = () => {
+const Footer = ({playerCount}) => {
     return (
         <footer className="text-white py-10 px-4 text-center">
             <div className="container mx-auto grid md:grid-cols-3 gap-6 text-sm">
@@ -35,7 +35,7 @@ const Footer = () => {
                         <p><span className="font-semibold">Server IP : </span><a href="" className="rainbow-text"> play.muttayi.world</a></p>
                         <p><span className="font-semibold">Version :</span>  1.18 - 1.21.4</p>
                         <p><span className="font-semibold">Uptime:</span> 24/7</p>
-                        <p><span className="font-semibold">Players Online:</span> <span className="text-green-400">27</span></p>
+                        <p><span className="font-semibold">Players Online:</span> <span className="text-green-400">{playerCount}</span></p>
                     </div>
                 </motion.div>
 
