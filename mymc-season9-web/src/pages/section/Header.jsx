@@ -11,9 +11,9 @@ import {
     DrawerRoot,
     DrawerTitle,
     DrawerTrigger,
-} from "../../components/ui/Drawer.js";
+} from "../../components/ui/Drawer.tsx";
 import Cookies from "js-cookie";
-import { DialogBody, DialogCloseTrigger, DialogContent, DialogRoot, DialogTrigger } from "../../components/ui/Dialog.js";
+import { DialogBody, DialogCloseTrigger, DialogContent, DialogRoot, DialogTrigger } from "../../components/ui/Dialog.tsx";
 import Login from "./Login.jsx";
 import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from "../../components/ui/Menu.tsx";
 import { Cart } from "./Cart.jsx";
