@@ -77,8 +77,8 @@ export const OurTeam = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: -10 }}
                         transition={{ duration: .6, ease: "easeInOut", delay: 0.1 }}
-                        className="text-white text-sm sm:text-base md:text-lg">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                        className="text-white text-sm sm:text-base md:text-lg sm:mx-3">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
                     </motion.p>
                 </div>
                 <div className="flex flex-wrap justify-center gap-5 max-w-screen-2xl">
@@ -89,18 +89,18 @@ export const OurTeam = () => {
                             whileInView={{ opacity: 1, scale: 1 }}
                             exit={{ opacity: 0, scale: -10 }}
                             transition={{ duration: .6, ease: "easeInOut" }}
-                            className="card w-40 sm:w-48 md:w-56 lg:w-64">
+                            className="card w-64 sm:w-48 md:w-56 lg:w-64">
                             <div className="card-inner">
-                                <div className="card-front relative">
-                                    <img src={item.CharacterImage} className="bg-cover object-cover w-full h-full" alt="partner1" />
+                                <div className={`card-front relative ${item.role === 'Founder' ? 'border-[#FFBB00]' : ''}`}>
+                                    <img src={item.CharacterImage} className="bg-cover object-cover w-full h-full] z-20 " style={{filter:'drop-shadow(5px 5px 15px rgba(0,0,0,0.5)'}} alt="partner1" />
                                     <motion.div
                                         initial={{ opacity: 0, y: 100 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         exit={{ opacity: 0, y: 100 }}
                                         transition={{ duration: 1, ease: "easeInOut" }}
                                         className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 flex justify-start items-end px-4 pb-2">
-                                        <div className="text-white text-start">
-                                            <h2 className="text-2xl head-font font-bold">{item.name}<span className={'text-xl text-orange-400'}>[{item.role}]</span></h2>
+                                        <div className="text-white text-start mb-1">
+                                            <h2 className="text-xl head-font font-bold">{item.name}<span className={'text-xl text-orange-400'}>[{item.role}]</span></h2>
                                         </div>
                                     </motion.div>
                                 </div>

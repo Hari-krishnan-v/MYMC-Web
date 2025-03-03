@@ -1,17 +1,35 @@
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import vector from '../../assets/Vector.svg'
 import Badge from '../../assets/Badge.svg'
 import { motion } from "framer-motion";
+import {DialogBody, DialogCloseTrigger, DialogContent, DialogRoot} from "../../components/ui/dialog.tsx";
+import Login from "./Login.jsx";
 
 
-export const PremiumPacks = () => {
-    // State to track which button is selected
+export const PremiumPacks = ({username}) => {
     const [isMonthly, setIsMonthly] = useState(true);
+    const [isAuthenticated, setIsAuthenticated] = useState(false); // Replace with actual authentication logic
+    const [showLoginDialog, setShowLoginDialog] = useState(false);
 
-    // Function to handle the toggle
+    useEffect(() => {
+        if (username) {
+            setIsAuthenticated(true);
+        }
+    }, []);
     const handleToggle = (selection) => {
         setIsMonthly(selection === 'monthly');
     };
+
+    const handlePurchase = (amount) => {
+        if (isAuthenticated) {
+
+            console.log( amount);
+        } else {
+
+            setShowLoginDialog(true);
+        }
+    };
+
     return (
         <section id={'PremiumPacks'} className={'min-h-screen flex justify-center items-center relative '}>
             <div className="gradient-overlay2 h-full"></div>
@@ -65,24 +83,27 @@ export const PremiumPacks = () => {
                 {/* Content based on the active toggle */}
                 <div className={'mt-6 text-center text-white'}>
                     {isMonthly ? (
-                        <MonthlyPlan/>
+                        <MonthlyPlan handlePurchase={handlePurchase} />
                     ) : (
                         <BattlePass/>
                     )}
                 </div>
             </div>
+            <DialogRoot open={showLoginDialog} onOpenChange={setShowLoginDialog}>
+                <DialogContent className={'flex flex-col w-80 h-80 p-2'}>
+                    <DialogBody>
+                        <Login />
+                    </DialogBody>
+                    <DialogCloseTrigger />
+                </DialogContent>
+            </DialogRoot>
         </section>
     );
 };
 
-const MonthlyPlan = () => {
-    const HandlePurchase = (amount) => {
+const MonthlyPlan = ({ handlePurchase }) => {
 
-         if(!user){
-            alert("Please login to purchase")
-         }
 
-    };
     return (
         <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -90,7 +111,7 @@ const MonthlyPlan = () => {
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.5 }}
             className={'max-w-[950px] flex  justify-between  gap-4 items-center  plan '}>
-            <div className="min-w-[300px] h-[459px]  bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between">
+            <div className="min-w-[300px] h-[459px]  bg-[#2A2A2A] text-left border border-[#ceff00] md:space-y-5 rounded-3xl p-6 flex flex-col justify-between">
                 <div>
                     <h3 className="text-xl text-[#FFBB00] Plan-head font-bold">Gold</h3>
                     <p className="text-sm text-[#CFCFCF] Plan-head">Basic Plan</p>
@@ -113,12 +134,12 @@ const MonthlyPlan = () => {
                     <p className={'text-sm flex Plan-head items-center '}><span className={'mr-1'}><img
                         src={vector}/> </span>Bonus Claim Blocks ( +1000 )</p>
                 </div>
-                <button className="mt-4 Plan-head bg-black text-white px-4 py-2 shiny-cta" onClick={()=>HandlePurchase(59)}>
+                <button className="mt-4 Plan-head bg-black text-white px-4 py-2 shiny-cta" onClick={()=>handlePurchase(59)}>
                     Purchase
                 </button>
             </div>
             <div
-                className="w-[308px] h-[496px] bg-[#FFBB00] flex flex-col justify-between items-center rounded-3xl p-2">
+                className="w-[308px] h-[496px] bg-[#FFBB00] flex flex-col justify-between md:space-y-5 items-center rounded-3xl p-2">
                 <p className="text-[12px] text-center Plan-head text-black">RECOMMENDED</p>
 
                 <div
@@ -148,14 +169,14 @@ const MonthlyPlan = () => {
                             src={vector}/> </span>Bonus Claim Blocks ( +3000 )</p>
                     </div>
 
-                    <button className="mt-4 bg-black text-white Plan-head px-4 py-2 mb-3 shiny-cta" onClick={()=>HandlePurchase(199)}>
+                    <button className="mt-4 bg-black text-white Plan-head px-4 py-2 mb-3 shiny-cta" onClick={()=>handlePurchase(199)}>
                         Purchase
                     </button>
                 </div>
             </div>
 
             <div
-                className="min-w-[300px] h-[459px] bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between">
+                className="min-w-[300px] h-[459px] bg-[#2A2A2A] text-left border border-[#ceff00] md:space-y-5 rounded-3xl p-6 flex flex-col justify-between">
                 <div>
                     <h3 className="text-xl text-[#00BC32] font-bold Plan-head">Emerald</h3>
                     <p className="text-sm text-[#CFCFCF] Plan-head">The Flex</p>
@@ -184,7 +205,7 @@ const MonthlyPlan = () => {
 
                 </div>
 
-                <button className="mt-4 bg-black text-white Plan-head px-4 py-2 shiny-cta" onClick={()=>HandlePurchase(399)}>
+                <button className="mt-4 bg-black text-white Plan-head px-4 py-2 shiny-cta"  onClick={() => handlePurchase(399)}>
                     Purchase
                 </button>
             </div>

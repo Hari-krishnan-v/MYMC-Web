@@ -16,12 +16,9 @@ const Login = ({ onLogin }) => {
 
         setLoading(true);
         setUserCookie(username);
-            window.location.href = window.location.href;
-
+        window.location.reload();
         onLogin();
         setError('');
-
-        // Delay reload slightly for better UX
 
     };
 

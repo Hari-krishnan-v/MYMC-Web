@@ -4,8 +4,11 @@ import {motion} from "framer-motion";
 import download from "../assets/download.gif";
 import {StoreSection} from "./section/StoreSection.jsx";
 import Footer from "./section/Footer.jsx";
+import Cookies from "js-cookie";
 
 export const Store = () => {
+    const username = Cookies.get("username");
+
     // const [loading, setLoading] = useState(true);
     // const [fadeOut, setFadeOut] = useState(false);
     //
@@ -27,7 +30,7 @@ export const Store = () => {
     // }
     return (
         <>
-        <Header/>
+        <Header username={username}/>
             <main>
                 <StoreSection/>
             </main>

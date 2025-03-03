@@ -1,7 +1,7 @@
-import React, {useEffect, useState} from 'react';
-import {Link} from 'react-router-dom';
-import {FaBars, FaShoppingCart, FaUser} from "react-icons/fa";
-import {motion} from "framer-motion";
+import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
+import { FaBars, FaShoppingCart, FaUser } from "react-icons/fa";
+import { motion } from "framer-motion";
 import {
     DrawerBackdrop,
     DrawerBody,
@@ -13,17 +13,15 @@ import {
     DrawerTrigger,
 } from "../../components/ui/drawer";
 import Cookies from "js-cookie";
-import {DialogBody, DialogCloseTrigger, DialogContent, DialogRoot, DialogTrigger} from "../../components/ui/dialog";
+import { DialogBody, DialogCloseTrigger, DialogContent, DialogRoot, DialogTrigger } from "../../components/ui/dialog";
 import Login from "./Login.jsx";
-import {MenuContent, MenuItem, MenuRoot, MenuTrigger} from "../../components/ui/menu.tsx";
-import {Cart} from "./Cart.jsx";
+import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from "../../components/ui/menu.tsx";
+import { Cart } from "./Cart.jsx";
 
-
-export const Header = () => {
+export const Header = ({ username }) => {
     const [open, setOpen] = useState(false);
     const [isAuthenticated, setAuthenticated] = useState(false);
     const [cartCount, setCartCount] = useState(0);
-    const username = Cookies.get("username");
 
     useEffect(() => {
         setAuthenticated(!!username);
@@ -47,7 +45,6 @@ export const Header = () => {
         window.location.reload(); // Ensure UI updates correctly
     };
 
-
     return (
         <motion.header
             initial={{ opacity: 0, top: -100 }}
@@ -58,8 +55,8 @@ export const Header = () => {
             style={{ backgroundColor: 'rgba(37, 38, 41, 0.8)', backdropFilter: 'blur(10px)' }}
         >
             <nav className={'flex justify-between w-full px-7 items-center navbar'}>
-                <div className="logo">
-                    <h2 className={'text-white text-[2rem] ml-3 font-bold mine-logo'}>MYMC</h2>
+                <div className="logo flex justify-center items-center">
+                    <h2 className={'text-white text-[1.8rem]  font-bold mine-logo'}>MYMC</h2>
                 </div>
                 <ul className={'list-none flex deactivate transition-all'}>
                     <li className={'mx-2'}>
@@ -93,26 +90,26 @@ export const Header = () => {
                             <MenuRoot>
                                 <MenuTrigger asChild>
                                     <button className="text-white mx-2">
-                                        <FaUser/>
+                                        <FaUser />
                                     </button>
                                 </MenuTrigger>
-                                <MenuContent className=" p-[10px] rounded-[5px] ">
+                                <MenuContent className="p-[10px] rounded-[5px]">
                                     <MenuItem>{username}</MenuItem>
                                     <MenuItem
                                         value="delete"
                                         color="fg.error"
-                                        _hover={{bg: "bg.error", color: "fg.error"}}
+                                        _hover={{ bg: "bg.error", color: "fg.error" }}
                                         onClick={handleLogout}
                                     >
                                         Logout...
                                     </MenuItem>
                                 </MenuContent>
                             </MenuRoot>
-                            <DrawerRoot >
-                                <DrawerBackdrop   />
-                                <DrawerTrigger >
+                            <DrawerRoot>
+                                <DrawerBackdrop />
+                                <DrawerTrigger>
                                     <button className="text-white mx-2 relative">
-                                        <FaShoppingCart/>
+                                        <FaShoppingCart />
                                         {cartCount > 0 && (
                                             <span className="absolute top-[-10px] right-[-10px] bg-red-500 text-white text-xs rounded-full px-2">
                                                 {cartCount}
@@ -120,15 +117,14 @@ export const Header = () => {
                                         )}
                                     </button>
                                 </DrawerTrigger>
-                                <DrawerContent className={'p-[20px]  flex flex-col gap-5'}>
-                                    <DrawerHeader className={' text-2xl mine-logo font-bold py-3'}>
+                                <DrawerContent className={'p-[20px] flex flex-col gap-5'}>
+                                    <DrawerHeader className={'text-2xl mine-logo font-bold py-3'}>
                                         <DrawerTitle>Cart</DrawerTitle>
                                     </DrawerHeader>
                                     <DrawerBody>
-                                        <Cart username={username}/>
+                                        <Cart username={username} />
                                     </DrawerBody>
-
-                                    <DrawerCloseTrigger/>
+                                    <DrawerCloseTrigger />
                                 </DrawerContent>
                             </DrawerRoot>
                         </>
@@ -136,17 +132,16 @@ export const Header = () => {
                         <DialogRoot placement={"center"}>
                             <DialogTrigger asChild>
                                 <button className="text-white mx-2">
-                                    <FaUser/>
+                                    <FaUser />
                                 </button>
                             </DialogTrigger>
-                            <DialogContent className={' flex flex-col w-80 h-80 p-2 '} >
-                                <DialogBody className={' '} >
-                                 <Login />
+                            <DialogContent className={'flex flex-col w-80 h-80 p-2'}>
+                                <DialogBody className={''}>
+                                    <Login />
                                 </DialogBody>
                                 <DialogCloseTrigger />
                             </DialogContent>
                         </DialogRoot>
-
                     )}
                     <DrawerRoot open={open} onOpenChange={(e) => setOpen(e.open)}>
                         <DrawerBackdrop />
@@ -201,7 +196,7 @@ export const Header = () => {
                                     </li>
                                 </ul>
                             </DrawerBody>
-                            <DrawerCloseTrigger/>
+                            <DrawerCloseTrigger />
                         </DrawerContent>
                     </DrawerRoot>
                 </div>

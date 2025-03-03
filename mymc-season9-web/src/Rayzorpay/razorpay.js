@@ -2,14 +2,13 @@ import Razorpay from 'razorpay';
 
 export const handleRazorpayPayment = (username, totalAmount, cartItems) => {
     const options = {
-        key: 'YOUR_RAZORPAY_KEY', // Replace with your Razorpay key
-        amount: totalAmount * 100, // Amount in paise
+        key: 'YOUR_RAZORPAY_KEY',
+        amount: totalAmount * 100,
         currency: 'INR',
         name: 'Your Store Name',
         description: 'Purchase Description',
         handler: function (response) {
             alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
-            // Handle post-payment actions here
         },
         prefill: {
             name: username,

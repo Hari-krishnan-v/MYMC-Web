@@ -14,6 +14,7 @@ import InfiniteScrollingLogosAnimation from "./section/InfiniteScrollingLogosAni
 import Footer from "./section/Footer.jsx";
 import {News} from "./section/News.jsx";
 import {NumberOfPlayers} from "../Authstore/AuthStore.js";
+import Cookies from "js-cookie";
 
 
 export const Dashboard = () => {
@@ -21,11 +22,11 @@ export const Dashboard = () => {
     const [fadeOut, setFadeOut] = useState(false);
     const [playerCount, setPlayerCount] = useState(0);
     const [serverStatus, setServerStatus] = useState('Offline');
-
+    const username = Cookies.get("username");
     useEffect(() => {
         setTimeout(() => {
-            setFadeOut(true); // Start fade-out animation
-            setTimeout(() => setLoading(false), 600); // Remove loader after animation
+            setFadeOut(true);
+            setTimeout(() => setLoading(false), 600);
         }, 3500); // Adjust time as needed
     }, []);
 
@@ -35,7 +36,7 @@ export const Dashboard = () => {
             setPlayerCount(count.players);
             setServerStatus(count.online);
         };
-        fetchPlayerCount(); // Initial fetch
+        fetchPlayerCount();
         const intervalId = setInterval(fetchPlayerCount, 10000);
         return () => clearInterval(intervalId);
     }, []);
@@ -53,11 +54,11 @@ export const Dashboard = () => {
 
     return (
         <>
-            <Header/>
+            <Header username={username}/>
             <main >
                 <Home playerCount={playerCount} serverStatus={serverStatus}/>
                 <MymcConnection/>
-                <PremiumPacks />
+                <PremiumPacks username={username}/>
                 {/*<OurPartners />*/}
                 <News/>
                 <OurTeam />
