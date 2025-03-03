@@ -119,7 +119,7 @@
       <workItem from="1740976637591" duration="1395000" />
       <workItem from="1740980917056" duration="8579000" />
       <workItem from="1740992192161" duration="2791000" />
-      <workItem from="1741000633667" duration="7406000" />
+      <workItem from="1741000633667" duration="7885000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -177,7 +177,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741009199950</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fetch data player count and server status">
+      <option name="closed" value="true" />
+      <created>1741009604389</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1741009604389</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
