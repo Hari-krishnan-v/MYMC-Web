@@ -32,7 +32,7 @@ const Footer = ({playerCount}) => {
                 >
                     <h3 className="text-lg head-font text-[20px] font-bold mb-2 text-start">Server Info</h3>
                     <div className="flex flex-col gap-2 text-[15px] text-[#adb7be] text-start">
-                        <p><span className="font-semibold">Server IP : </span><a href="" className="rainbow-text"> play.muttayi.world</a></p>
+                        <p><span className="font-semibold">Server IP : </span><a href="#" className="rainbow-text"> play.muttayi.world</a></p>
                         <p><span className="font-semibold">Version :</span>  1.18 - 1.21.4</p>
                         <p><span className="font-semibold">Uptime:</span> 24/7</p>
                         <p><span className="font-semibold">Players Online:</span> <span className="text-green-400">{playerCount}</span></p>
