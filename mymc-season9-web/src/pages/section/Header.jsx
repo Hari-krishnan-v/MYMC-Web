@@ -11,11 +11,11 @@ import {
     DrawerRoot,
     DrawerTitle,
     DrawerTrigger,
-} from "../../components/ui/drawer";
+} from "../../components/ui/Drawer.js";
 import Cookies from "js-cookie";
-import { DialogBody, DialogCloseTrigger, DialogContent, DialogRoot, DialogTrigger } from "../../components/ui/dialog";
+import { DialogBody, DialogCloseTrigger, DialogContent, DialogRoot, DialogTrigger } from "../../components/ui/Dialog.js";
 import Login from "./Login.jsx";
-import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from "../../components/ui/menu.tsx";
+import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from "../../components/ui/Menu.tsx";
 import { Cart } from "./Cart.jsx";
 
 export const Header = ({ username }) => {

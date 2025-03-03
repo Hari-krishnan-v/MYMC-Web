@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="fetch data player count and server status">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/razorpay.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/razorpay.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/Store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Store.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Header.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Mymc_connection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Mymc_connection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/News.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/vite.config.js" afterDir="false" />
-    </list>
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="fetch data player count and server status" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -133,7 +119,7 @@
       <workItem from="1740976637591" duration="1395000" />
       <workItem from="1740980917056" duration="8579000" />
       <workItem from="1740992192161" duration="2791000" />
-      <workItem from="1741000633667" duration="6427000" />
+      <workItem from="1741000633667" duration="6992000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -175,7 +161,15 @@
       <option name="project" value="LOCAL" />
       <updated>1740990121369</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fetch data player count and server status">
+      <option name="closed" value="true" />
+      <created>1741009029652</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1741009029652</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

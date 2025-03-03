@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react';
 import vector from '../../assets/Vector.svg'
 import Badge from '../../assets/Badge.svg'
 import { motion } from "framer-motion";
-import {DialogBody, DialogCloseTrigger, DialogContent, DialogRoot} from "../../components/ui/dialog.tsx";
+import {DialogBody, DialogCloseTrigger, DialogContent, DialogRoot} from "../../components/ui/Dialog.tsx";
 import Login from "./Login.jsx";
 
 
