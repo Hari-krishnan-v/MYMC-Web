@@ -1,26 +1,34 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
 import Minecraft from "../../assets/Minecraft.mp4";
 import mymcs9 from "../../assets/MYMCS9.png";
 import { FaCircle } from "react-icons/fa";
 
 export const Home = ({ playerCount, serverStatus }) => {
+    // useEffect(() => {
+    //     // Preload video
+    //     const video = document.createElement('video');
+    //     video.src = Minecraft;
+    //     video.load();
+    //
+    //     // Preload images
+    //     const images = [mymcs9];
+    //     images.forEach(src => {
+    //         const img = new Image();
+    //         img.src = src;
+    //     });
+    // }, []);
+
     if (playerCount === undefined) {
         playerCount = 0;
     }
-    return (
 
+    return (
         <section className={'home bg-no-repeat relative'} id={'home'}>
-            <video autoPlay loop muted className={'video-background '}>
+            <video preload="auto" autoPlay loop muted className={'video-background '}>
                 <source src={Minecraft} type="video/mp4" />
             </video>
             <div className={'gradient-overlay'}></div>
-
-            {/*<div className={'fixed right-0 bottom-0 h-[200px] w-[200px] opacity-35 z-50 sm:hidden md:block'}>*/}
-            {/*    <a href="#home">*/}
-            {/*        <img src={mymcs9} alt="MYMCS9" />*/}
-            {/*    </a>*/}
-            {/*</div>*/}
             <div className={'max-w-[1440px] relative z-20 w-full m-auto'}>
                 <div className={'flex'}>
                     <motion.div

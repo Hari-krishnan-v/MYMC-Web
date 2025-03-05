@@ -7,6 +7,9 @@ import ZYCO from '../../assets/characters/chhycoohunter.png';
 import zycoChr from '../../assets/characters/zyco.png';
 import sam from '../../assets/characters/sam.png';
 import Akku from '../../assets/characters/akku.png';
+import ARchr from '../../assets/characters/ARchr.png';
+import suposChr from '../../assets/characters/suposChr.png';
+
 import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
 import { motion } from "framer-motion";
 
@@ -43,7 +46,15 @@ export const OurTeam = () => {
             name: "supposedly_sam",
             role: "Admin",
             image: sam,
-            CharacterImage: zycoChr,
+            CharacterImage: suposChr,
+            discord: "https://discord.gg/mymc",
+            instagram: "",
+            youtube: ""
+        }, {
+            name: "ARnG2",
+            role: "Admin",
+            image: sam,
+            CharacterImage: ARchr,
             discord: "https://discord.gg/mymc",
             instagram: "",
             youtube: ""
