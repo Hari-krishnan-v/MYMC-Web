@@ -79,8 +79,6 @@ export const PremiumPacks = ({username}) => {
                 </div>
                 {/*<p className={'text-center text-[14px]  text-[#3199FF] mt-4'}>-5% off on seasonally payments</p>*/}
 
-
-                {/* Content based on the active toggle */}
                 <div className={'mt-6 text-center text-white'}>
                     {isMonthly ? (
                         <MonthlyPlan handlePurchase={handlePurchase} />
@@ -89,13 +87,14 @@ export const PremiumPacks = ({username}) => {
                     )}
                 </div>
             </div>
-            <DialogRoot open={showLoginDialog} onOpenChange={setShowLoginDialog}>
-                <DialogContent className={'flex flex-col w-80 h-80 p-2'}>
+            <DialogRoot open={showLoginDialog}  placement={"center"}>
+                <DialogContent className={'flex flex-col w-80 p-2'}>
                     <DialogBody>
                         <Login />
                     </DialogBody>
-                    <DialogCloseTrigger />
+                    <DialogCloseTrigger onClick={()=>setShowLoginDialog(false)}/>
                 </DialogContent>
+
             </DialogRoot>
         </section>
     );
@@ -111,7 +110,7 @@ const MonthlyPlan = ({ handlePurchase }) => {
             exit={{ opacity: 0, scale: 0.9 }}
             transition={{ duration: 0.5 }}
             className={'max-w-[950px] flex  justify-between  gap-4 items-center  plan '}>
-            <div className="min-w-[300px] h-[459px]  bg-[#2A2A2A] text-left border border-[#ceff00] md:space-y-5 rounded-3xl p-6 flex flex-col justify-between">
+            <div className="min-w-[300px] h-[480px]  bg-[#2A2A2A] text-left border border-[#ceff00] md:space-y-5 rounded-3xl p-6 flex flex-col justify-between">
                 <div>
                     <h3 className="text-xl text-[#FFBB00] Plan-head font-bold">Gold</h3>
                     <p className="text-sm text-[#CFCFCF] Plan-head">Basic Plan</p>
@@ -139,7 +138,7 @@ const MonthlyPlan = ({ handlePurchase }) => {
                 </button>
             </div>
             <div
-                className="w-[308px] h-[496px] bg-[#FFBB00] flex flex-col justify-between md:space-y-5 items-center rounded-3xl p-2">
+                className="w-[308px] h-[496px] bg-[#FFBB00] flex flex-col justify-between md:space-y-5 items-center rounded-3xl p-2 ">
                 <p className="text-[12px] text-center Plan-head text-black">RECOMMENDED</p>
 
                 <div
@@ -176,7 +175,7 @@ const MonthlyPlan = ({ handlePurchase }) => {
             </div>
 
             <div
-                className="min-w-[300px] h-[459px] bg-[#2A2A2A] text-left border border-[#ceff00] md:space-y-5 rounded-3xl p-6 flex flex-col justify-between">
+                className="min-w-[300px] h-[480px] bg-[#2A2A2A] text-left border border-[#ceff00] md:space-y-5 rounded-3xl p-6 flex flex-col justify-between">
                 <div>
                     <h3 className="text-xl text-[#00BC32] font-bold Plan-head">Emerald</h3>
                     <p className="text-sm text-[#CFCFCF] Plan-head">The Flex</p>
@@ -205,7 +204,7 @@ const MonthlyPlan = ({ handlePurchase }) => {
 
                 </div>
 
-                <button className="mt-4 bg-black text-white Plan-head px-4 py-2 shiny-cta"  onClick={() => handlePurchase(399)}>
+                <button className="text-white Plan-head  shiny-cta"  onClick={() => handlePurchase(399)}>
                     Purchase
                 </button>
             </div>
@@ -224,206 +223,6 @@ const BattlePass = () => {
             transition={{ duration: 0.8 }}
             className={'max-w-[950px] min-h-[500px] flex  justify-center  gap-4 items-center '}>
             <h1 className={'mine-logo text-[71px]  font-bold'}><span className={"text-[#0eff00] mine-logo"}>COMING</span>   SOON</h1>
-            {/*<div*/}
-            {/*    className="min-w-[300px] h-[459px]  bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between">*/}
-            {/*    <div>*/}
-            {/*        <h3 className="text-xl text-[#FFBB00] Plan-head font-bold">Gold</h3>*/}
-            {/*        <p className="text-sm text-[#CFCFCF] Plan-head">Basic Plan</p>*/}
-            {/*        <div className="flex flex-col items-start my-1">*/}
-            {/*            <p className="text-[10px] text-[#1574D2] Plan-head">-5% off</p>*/}
-            {/*            <h2 className="Plan-head font-medium text-3xl">*/}
-            {/*                ₹168 <span className="text-xl">/per Season</span>*/}
-            {/*            </h2>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*    <div className="space-y-2 ">*/}
-            {/*    <p className={'text-sm flex Plan-head items-center '}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span> INGAME*/}
-            {/*            Role [ <HoverCardRoot>*/}
-            {/*            <HoverCardTrigger>*/}
-            {/*                <span style={{color:'#7EE772'}}>1 Month</span>]*/}
-            {/*            </HoverCardTrigger>*/}
-            {/*            <HoverCardContent maxWidth="340px" >*/}
-            {/*                <HoverCardArrow />*/}
-            {/*                <Box padding={'10px'}>*/}
-            {/*                    <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,*/}
-            {/*                    referring to energy centers in the body*/}
-            {/*                </Box>*/}
-            {/*            </HoverCardContent>*/}
-            {/*        </HoverCardRoot> ] </p>*/}
-            {/*        <p className={'text-sm flex Plan-head items-center '}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span> MYMC Discord Role [<HoverCardRoot>*/}
-            {/*            <HoverCardTrigger>*/}
-            {/*                <span style={{color:'#7EE772'}}>1 Month</span>]*/}
-            {/*            </HoverCardTrigger>*/}
-            {/*            <HoverCardContent maxWidth="340px" >*/}
-            {/*                <HoverCardArrow />*/}
-            {/*                <Box padding={'10px'}>*/}
-            {/*                    <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,*/}
-            {/*                    referring to energy centers in the body*/}
-            {/*                </Box>*/}
-            {/*            </HoverCardContent>*/}
-            {/*        </HoverCardRoot> ] </p>*/}
-            {/*        <p className={'text-sm flex Plan-head items-center '}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span> Multiple Homes ( 3 Max )</p>*/}
-            {/*        <p className={'text-sm flex Plan-head items-center '}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span> Custom Kit ( Tools and Armor )</p>*/}
-            {/*        <p className={'text-sm flex Plan-head items-center '}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span> Ingame Currency ( 5000 )</p>*/}
-            {/*        <p className={'text-sm flex Plan-head items-center '}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span>Bonus Claim Blocks ( +1000 )</p>*/}
-            {/*    </div>*/}
-            {/*    <button className="mt-4 Plan-head bg-black text-white px-4 py-2 rounded-full">*/}
-            {/*        Purchase*/}
-            {/*    </button>*/}
-            {/*</div>*/}
-            {/*<div*/}
-            {/*    className="w-[308px] h-[496px] bg-[#FFBB00] flex flex-col justify-between items-center rounded-3xl p-2">*/}
-            {/*    <p className="text-[12px] text-center Plan-head text-black">RECOMMENDED</p>*/}
-            {/*    <div*/}
-            {/*        className="w-[300px] h-[459px] bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between">*/}
-            {/*        <div>*/}
-            {/*            <h3 className="text-xl text-[#1BF0FF] Plan-head font-bold">Diamond</h3>*/}
-            {/*            <p className="text-sm text-[#CFCFCF] Plan-head">The Best One</p>*/}
-            {/*            <div className="flex flex-col items-start my-1 mb-3">*/}
-            {/*                <p className="text-[10px] text-[#1574D2] Plan-head">-5% off</p>*/}
-            {/*                <h2 className="Plan-head font-medium text-3xl">*/}
-            {/*                    ₹567 <span className="text-xl">/per Season</span>*/}
-            {/*                </h2>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-
-            {/*        <div className="space-y-2">*/}
-            {/*        <p className={'text-sm flex items-center Plan-head '}><span className={'mr-1'}><img*/}
-            {/*                src={Badge}/> </span>/craft Command [ <HoverCardRoot>*/}
-            {/*            <HoverCardTrigger>*/}
-            {/*                <span style={{color:'#7EE772'}}>1 Month</span>]*/}
-            {/*            </HoverCardTrigger>*/}
-            {/*            <HoverCardContent maxWidth="340px" >*/}
-            {/*                <HoverCardArrow />*/}
-            {/*                <Box padding={'10px'}>*/}
-            {/*                    <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,*/}
-            {/*                    referring to energy centers in the body*/}
-            {/*                </Box>*/}
-            {/*            </HoverCardContent>*/}
-            {/*        </HoverCardRoot> ] </p>*/}
-            {/*            <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*                src={vector}/> </span> INGAME*/}
-            {/*                Role [ <span style={{color: '#7EE772'}}>1 Month</span>] </p>*/}
-            {/*            <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*                src={vector}/> </span> MYMC Discord Role [ <HoverCardRoot>*/}
-            {/*                <HoverCardTrigger>*/}
-            {/*                    <span style={{color:'#7EE772'}}>1 Month</span>]*/}
-            {/*                </HoverCardTrigger>*/}
-            {/*                <HoverCardContent maxWidth="340px" >*/}
-            {/*                    <HoverCardArrow />*/}
-            {/*                    <Box padding={'10px'}>*/}
-            {/*                        <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,*/}
-            {/*                        referring to energy centers in the body*/}
-            {/*                    </Box>*/}
-            {/*                </HoverCardContent>*/}
-            {/*            </HoverCardRoot>]*/}
-            {/*            </p>*/}
-            {/*            <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*                src={vector}/> </span> Multiple Homes ( 4 Max )</p>*/}
-            {/*            <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*                src={vector}/> </span>Custom Kit ( Tools and Armor )</p>*/}
-            {/*            <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*                src={vector}/> </span>Ingame Currency ( 15000 )</p>*/}
-            {/*            <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*                src={vector}/> </span>Bonus Claim Blocks ( +3000 )</p>*/}
-            {/*        </div>*/}
-
-            {/*        <button className="mt-4 bg-black text-white Plan-head px-4 py-2 mb-3 ">*/}
-            {/*            Purchase*/}
-            {/*        </button>*/}
-            {/*    </div>*/}
-            {/*</div>*/}
-
-            {/*<div*/}
-            {/*    className="min-w-[300px] h-[459px] bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between">*/}
-            {/*    <div>*/}
-            {/*        <h3 className="text-xl text-[#00BC32] font-bold Plan-head">Emerald</h3>*/}
-            {/*        <p className="text-sm text-[#CFCFCF] Plan-head">The Flex</p>*/}
-            {/*            <div className="flex flex-col items-start my-1 mb-3">*/}
-            {/*                <p className="text-[10px] text-[#1574D2] Plan-head">-5% off</p>*/}
-            {/*                <h2 className="Plan-head font-medium text-3xl">*/}
-            {/*                    ₹852 <span className="text-xl">/per Season</span>*/}
-            {/*                </h2>*/}
-            {/*            </div>*/}
-            {/*    </div>*/}
-
-            {/*    <div className="space-y-2">*/}
-            {/*        <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*            src={Badge}/> </span> /anvil Command [<HoverCardRoot>*/}
-            {/*            <HoverCardTrigger>*/}
-            {/*                <span style={{color:'#7EE772'}}>1 Month</span>]*/}
-            {/*            </HoverCardTrigger>*/}
-            {/*            <HoverCardContent maxWidth="340px" >*/}
-            {/*                <HoverCardArrow />*/}
-            {/*                <Box padding={'10px'}>*/}
-            {/*                    <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,*/}
-            {/*                    referring to energy centers in the body*/}
-            {/*                </Box>*/}
-            {/*            </HoverCardContent>*/}
-            {/*        </HoverCardRoot> ] </p>*/}
-            {/*        <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span> /craft Command [<HoverCardRoot>*/}
-            {/*            <HoverCardTrigger>*/}
-            {/*                <span style={{color:'#7EE772'}}>1 Month</span>]*/}
-            {/*            </HoverCardTrigger>*/}
-            {/*            <HoverCardContent maxWidth="340px" >*/}
-            {/*                <HoverCardArrow />*/}
-            {/*                <Box padding={'10px'}>*/}
-            {/*                    <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,*/}
-            {/*                    referring to energy centers in the body*/}
-            {/*                </Box>*/}
-            {/*            </HoverCardContent>*/}
-            {/*        </HoverCardRoot> ] </p>*/}
-            {/*        <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span> INGAME*/}
-            {/*            Role [<HoverCardRoot>*/}
-            {/*                <HoverCardTrigger>*/}
-            {/*                    <span style={{color:'#7EE772'}}>1 Month</span>]*/}
-            {/*                </HoverCardTrigger>*/}
-            {/*                <HoverCardContent maxWidth="340px" >*/}
-            {/*                    <HoverCardArrow />*/}
-            {/*                    <Box padding={'10px'}>*/}
-            {/*                        <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,*/}
-            {/*                        referring to energy centers in the body*/}
-            {/*                    </Box>*/}
-            {/*                </HoverCardContent>*/}
-            {/*            </HoverCardRoot> ] </p>*/}
-            {/*        <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span> MYMC Discord Role [ <HoverCardRoot>*/}
-            {/*            <HoverCardTrigger>*/}
-            {/*                <span style={{color:'#7EE772'}}>1 Month</span>]*/}
-            {/*            </HoverCardTrigger>*/}
-            {/*            <HoverCardContent maxWidth="340px" >*/}
-            {/*                <HoverCardArrow />*/}
-            {/*                <Box padding={'10px'}>*/}
-            {/*                    <Strong>Chakra</Strong> is a Sanskrit word that means disk or wheel,*/}
-            {/*                    referring to energy centers in the body*/}
-            {/*                </Box>*/}
-            {/*            </HoverCardContent>*/}
-            {/*        </HoverCardRoot> ] </p>*/}
-            {/*        <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span> Multiple Homes ( 5 Max )</p>*/}
-            {/*        <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span> Custom Kit ( Tools and Armor )</p>*/}
-            {/*        <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span> Ingame Currency ( 30000 )</p>*/}
-            {/*        <p className={'text-sm flex items-center Plan-head'}><span className={'mr-1'}><img*/}
-            {/*            src={vector}/> </span>Bonus Claim Blocks ( +10000 )</p>*/}
-
-            {/*    </div>*/}
-
-            {/*    <button className="mt-4 bg-black text-white Plan-head px-4 py-2 shiny-cta">*/}
-            {/*        Purchase*/}
-            {/*    </button>*/}
-            {/*</div>*/}
-
-
         </motion.div>
     );
 };

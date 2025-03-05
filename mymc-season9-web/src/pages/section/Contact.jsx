@@ -89,7 +89,7 @@ export const Contact = () => {
                     transition={{ duration: 0.6, ease: 'easeInOut', delay: 0.4 }}
                     type="submit"
                     onClick={HandleSubmit}
-                    className="w-fit py-3 px-7 rounded-xl border border-[#0eff00] active:scale-105 duration-700 ease-in-out"
+                    className="w-fit py-3 px-7 rounded-xl border cursor-pointer border-[#0eff00] active:scale-105 duration-700 ease-in-out"
                 />
             </motion.div>
             <ToastContainer />

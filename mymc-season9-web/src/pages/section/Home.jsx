@@ -5,7 +5,11 @@ import mymcs9 from "../../assets/MYMCS9.png";
 import { FaCircle } from "react-icons/fa";
 
 export const Home = ({ playerCount, serverStatus }) => {
+    if (playerCount === undefined) {
+        playerCount = 0;
+    }
     return (
+
         <section className={'home bg-no-repeat relative'} id={'home'}>
             <video autoPlay loop muted className={'video-background '}>
                 <source src={Minecraft} type="video/mp4" />

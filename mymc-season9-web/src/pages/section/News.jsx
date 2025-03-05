@@ -28,8 +28,10 @@ export const News = () => {
         <section id={'News'} className={'relative overflow-hidden w-full flex justify-center py-20'}>
             <div className="gradient-overlay2 h-full"></div>
             <div className="flex flex-col items-center w-full z-20">
-                <h2 className="text-4xl font-bold text-center text-white mb-8">Latest News</h2>
-                <div className={'flex  md:justify-start xl:justify-center items-center overflow-x-auto hide-scrollbar space-x-4 w-full'}>
+                <h2 className="text-4xl font-bold text-center text-white mb-8"><span className={'text-[#ff9800] mine-logo'}>Latest</span>  News
+                </h2>
+                <div
+                    className={'flex  md:justify-start xl:justify-center items-center overflow-x-auto hide-scrollbar space-x-4 w-full'}>
                     {newsItems.map((item, index) => (
                         <motion.div
                             key={index}

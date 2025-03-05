@@ -32,7 +32,7 @@ export const MymcConnection = () => {
                         <p className={'text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] mb-4 w-full sm:w-[600px] text-left text-[#ADB7BE]'}>
                             Welcome to MYMC (Muttayi Minecraft) – Kerala’s top public Minecraft server where creativity meets adventure! Whether you're a builder, an explorer, or a fierce competitor, our server offers an exciting survival, minigames, and custom gameplay experience. Connect with fellow Malayali gamers, participate in thrilling events, and enjoy a lag-free, community-driven Minecraft world.
                         </p>
-                        <button className={'shiny-cta'}>JOIN NOW</button>
+                        {/*<button className={'shiny-cta'}>JOIN NOW</button>*/}
                     </motion.div>
                 </div>
             </div>

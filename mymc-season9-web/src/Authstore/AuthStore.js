@@ -8,7 +8,7 @@ const setUserCookie = (username) => {
 const isAuthenticated = () => {
     return Cookies.get('username') !== undefined;
 };
-// AuthStore.js
+
 export const NumberOfPlayers = async () => {
     try {
         const response = await fetch('https://api.mcstatus.io/v2/status/java/play.muttayi.world');

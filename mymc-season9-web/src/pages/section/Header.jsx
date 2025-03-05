@@ -163,7 +163,7 @@ export const Header = ({ username }) => {
                                     <li className={'my-6'}>
                                         <Link
                                             className={'block hover:text-[#62db40] text-center duration-700 transition text-[16px] px-3'}
-                                            to={'#home'}>HOME</Link>
+                                            to={'/'}>HOME</Link>
                                     </li>
                                     <li className={'my-6'}>
                                         <a className={'block hover:text-[#62db40] text-center duration-700 transition text-[16px] px-3'}
