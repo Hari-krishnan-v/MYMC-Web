@@ -20,6 +20,9 @@ const Footer = ({playerCount}) => {
                         <li><a href="#" className="hover:text-yellow-400">Community & Forum</a></li>
                         <li><a href="/store" className="hover:text-yellow-400">Store</a></li>
                         <li><a href="#" className="hover:text-yellow-400">Contact Us</a></li>
+                        <li><a href="/terms-and-conditions" className="hover:text-yellow-400">Terms and Conditions</a></li>
+                        <li><a href="/privacy-policy" className="hover:text-yellow-400">Privacy Policy</a></li>
+                        <li><a href="/refund-policy" className="hover:text-yellow-400">Refund Policy</a></li>
                     </ul>
                 </motion.div>
 

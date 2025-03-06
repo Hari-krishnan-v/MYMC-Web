@@ -4,13 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="small update">
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/ARchr.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/suposChr.png" afterDir="false" />
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="preload test 1">
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Privacy_Policy.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/RefundPolicy.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Terms_and_Condition.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Authstore/AuthStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Authstore/AuthStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Footer.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,22 +42,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "C:/Users/harik/WebstormProjects/mymc-web/mymc-season9-web/src/assets/characters",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "npm.dev.executor": "Run",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/harik/WebstormProjects/mymc-web/mymc-season9-web/src/assets/characters&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\characters" />
@@ -64,6 +65,7 @@
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\storeItems" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\pages" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\characters" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\fonts" />
@@ -128,7 +130,8 @@
       <workItem from="1740992192161" duration="2791000" />
       <workItem from="1741000633667" duration="17431000" />
       <workItem from="1741099075396" duration="12137000" />
-      <workItem from="1741204835091" duration="1725000" />
+      <workItem from="1741204835091" duration="2538000" />
+      <workItem from="1741236480380" duration="1845000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -234,7 +237,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741176847616</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="preload test 1">
+      <option name="closed" value="true" />
+      <created>1741207113543</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1741207113543</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +274,8 @@
     <MESSAGE value="fetch data player count and server status" />
     <MESSAGE value="add vercel import { Analytics }" />
     <MESSAGE value="small update" />
-    <option name="LAST_COMMIT_MESSAGE" value="small update" />
+    <MESSAGE value="preload test 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="preload test 1" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
