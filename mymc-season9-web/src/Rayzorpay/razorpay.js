@@ -1,9 +1,10 @@
 import Razorpay from 'razorpay';
 // import jsPDF from 'jspdf';
 
+
 export const handleRazorpayPayment = async (username, totalAmount, cartItems) => {
     const options = {
-        key: process.env.RAZORPAY_KEY_ID,
+        key: 'rzp_test_WqJB1cAL6yIVHX',
         amount: totalAmount * 100,
         currency: 'INR',
         name: 'MYMC STORE',

@@ -15,6 +15,7 @@ export const Cart = ({ username }) => {
         setCartItems(cart);
         calculateTotal(cart);
     }, []);
+
     useEffect(() => {
         const script = document.createElement('script');
         script.src = 'https://checkout.razorpay.com/v1/checkout.js';
@@ -44,6 +45,10 @@ export const Cart = ({ username }) => {
         }
     } ;
     const handleCheckout = () => {
+        if(totalAmount === 0) {
+            alert('Cart is empty');
+            return;
+        }
         handleRazorpayPayment(username, totalAmount, cartItems);
     };
     return (
