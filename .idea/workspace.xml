@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="Privacy_Policy RefundPolicy Terms_and_Condition added">
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/ discordBot.js" afterDir="false" />
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="toast bug fix discord bot creation started">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/ discordBot.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/discordBot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/razorpay.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/razorpay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -128,7 +130,7 @@
       <workItem from="1741099075396" duration="12137000" />
       <workItem from="1741204835091" duration="2538000" />
       <workItem from="1741236480380" duration="5084000" />
-      <workItem from="1741410715794" duration="778000" />
+      <workItem from="1741410715794" duration="3706000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -250,7 +252,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741238565782</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="toast bug fix discord bot creation started">
+      <option name="closed" value="true" />
+      <created>1741411867622</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1741411867622</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -281,7 +291,8 @@
     <MESSAGE value="small update" />
     <MESSAGE value="preload test 1" />
     <MESSAGE value="Privacy_Policy RefundPolicy Terms_and_Condition added" />
-    <option name="LAST_COMMIT_MESSAGE" value="Privacy_Policy RefundPolicy Terms_and_Condition added" />
+    <MESSAGE value="toast bug fix discord bot creation started" />
+    <option name="LAST_COMMIT_MESSAGE" value="toast bug fix discord bot creation started" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

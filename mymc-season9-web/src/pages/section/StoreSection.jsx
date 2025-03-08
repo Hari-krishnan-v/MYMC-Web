@@ -14,8 +14,8 @@ export const StoreSection = () => {
     const addToCart = (item) => {
         if(!user) {
             toast.error("please login", {
-                position: "bottom-right",
-                className: "toast-message z-50",
+                position: "bottom-left",
+                className: "toast-message ",
             });
 
         }else{
@@ -23,8 +23,8 @@ export const StoreSection = () => {
             cart.push(item);
             Cookies.set('cart', JSON.stringify(cart), {expires: 7});
             toast.success("Item added to the cart !", {
-                position: "bottom-right",
-                className: "toast-message z-50",
+                position: "bottom-left",
+                className: "toast-message ",
             });
             setSelected(selected); // Trigger re-render
         }
@@ -48,7 +48,7 @@ export const StoreSection = () => {
                 <IngameCurrency addToCart={addToCart}/> : selected === 'Kits' ?
                     <Kits addToCart={addToCart}/> : selected === 'Homes' ? <Homes addToCart={addToCart}/> :
                         <All addToCart={addToCart}/>}
-            <ToastContainer className={'z-50'} />
+            <ToastContainer />
 
         </section>
     );

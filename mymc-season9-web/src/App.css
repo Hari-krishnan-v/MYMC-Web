@@ -347,3 +347,7 @@ font-family: "Oxanium", sans-serif;
 .no-select {
     user-select: none;
 }
+
+.toast-message{
+    z-index: 1000;
+}
