@@ -9,6 +9,9 @@ import sam from '../../assets/characters/sam.png';
 import Akku from '../../assets/characters/akku.png';
 import ARchr from '../../assets/characters/ARchr.png';
 import suposChr from '../../assets/characters/suposChr.png';
+import novschr from '../../assets/characters/novachr.png';
+import noba from '../../assets/characters/noba.jpg';
+
 
 import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
 import { motion } from "framer-motion";
@@ -64,6 +67,15 @@ export const OurTeam = () => {
             role: "Admin",
             image: Akku,
             CharacterImage: zycoChr,
+            discord: "https://discord.gg/mymc",
+            instagram: "",
+            youtube: ""
+        },
+        {
+            name: "iiTN0V4",
+            role: "Admin",
+            image: noba,
+            CharacterImage: novschr,
             discord: "https://discord.gg/mymc",
             instagram: "",
             youtube: ""

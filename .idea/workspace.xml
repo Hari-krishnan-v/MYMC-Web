@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="premium plans connected with razorpay">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/suposChr.png" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/suposChr.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +127,7 @@
       <workItem from="1741099075396" duration="12137000" />
       <workItem from="1741204835091" duration="2538000" />
       <workItem from="1741236480380" duration="5084000" />
-      <workItem from="1741410715794" duration="13232000" />
+      <workItem from="1741410715794" duration="14189000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -297,7 +297,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741426539584</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="premium plans connected with razorpay">
+      <option name="closed" value="true" />
+      <created>1741436661661</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1741436661662</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
