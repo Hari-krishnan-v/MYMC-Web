@@ -4,6 +4,7 @@ import Badge from '../../assets/Badge.svg'
 import { motion } from "framer-motion";
 import {DialogBody, DialogCloseTrigger, DialogContent, DialogRoot} from "../../components/ui/Dialog.tsx";
 import Login from "./Login.jsx";
+import {handleRazorpayPayment} from "../../Rayzorpay/razorpay.js";
 
 
 export const PremiumPacks = ({username}) => {

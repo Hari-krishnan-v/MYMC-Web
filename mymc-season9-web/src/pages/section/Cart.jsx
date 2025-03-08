@@ -16,17 +16,7 @@ export const Cart = ({ username }) => {
         calculateTotal(cart);
     }, []);
 
-    useEffect(() => {
-        const script = document.createElement('script');
-        script.src = 'https://checkout.razorpay.com/v1/checkout.js';
-        script.async = true;
-        document.body.appendChild(script);
 
-        return () => {
-            document.body.removeChild(script);
-        };
-
-    }, []);
     const calculateTotal = (items) => {
         const total = items.reduce((sum, item) => sum + item.price, 0);
         setTotalAmount(total);

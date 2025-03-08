@@ -5,19 +5,19 @@ import mymcs9 from "../../assets/MYMCS9.png";
 import { FaCircle } from "react-icons/fa";
 
 export const Home = ({ playerCount, serverStatus }) => {
-    // useEffect(() => {
-    //     // Preload video
-    //     const video = document.createElement('video');
-    //     video.src = Minecraft;
-    //     video.load();
-    //
-    //     // Preload images
-    //     const images = [mymcs9];
-    //     images.forEach(src => {
-    //         const img = new Image();
-    //         img.src = src;
-    //     });
-    // }, []);
+    useEffect(() => {
+        // Preload video
+        const video = document.createElement('video');
+        video.src = Minecraft;
+        video.load();
+
+        // Preload images
+        const images = [mymcs9];
+        images.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+    }, []);
 
     if (playerCount === undefined) {
         playerCount = 0;
