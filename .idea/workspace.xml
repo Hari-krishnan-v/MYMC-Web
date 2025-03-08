@@ -4,14 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="preload test 1">
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Privacy_Policy.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/RefundPolicy.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Terms_and_Condition.jsx" afterDir="false" />
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="Privacy_Policy RefundPolicy Terms_and_Condition added">
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/ discordBot.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Authstore/AuthStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Authstore/AuthStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/razorpay.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/razorpay.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +127,8 @@
       <workItem from="1741000633667" duration="17431000" />
       <workItem from="1741099075396" duration="12137000" />
       <workItem from="1741204835091" duration="2538000" />
-      <workItem from="1741236480380" duration="1845000" />
+      <workItem from="1741236480380" duration="5084000" />
+      <workItem from="1741410715794" duration="778000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -245,7 +242,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741207113543</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Privacy_Policy RefundPolicy Terms_and_Condition added">
+      <option name="closed" value="true" />
+      <created>1741238565781</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1741238565782</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -275,7 +280,8 @@
     <MESSAGE value="add vercel import { Analytics }" />
     <MESSAGE value="small update" />
     <MESSAGE value="preload test 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="preload test 1" />
+    <MESSAGE value="Privacy_Policy RefundPolicy Terms_and_Condition added" />
+    <option name="LAST_COMMIT_MESSAGE" value="Privacy_Policy RefundPolicy Terms_and_Condition added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
