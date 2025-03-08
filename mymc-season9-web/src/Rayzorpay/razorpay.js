@@ -1,7 +1,7 @@
 import Razorpay from 'razorpay';
-// import { sendPaymentSuccessMessage } from './discordBot';
+// import jsPDF from 'jspdf';
 
-export const handleRazorpayPayment = (username, totalAmount, cartItems) => {
+export const handleRazorpayPayment = async (username, totalAmount, cartItems) => {
     const options = {
         key: process.env.RAZORPAY_KEY_ID,
         amount: totalAmount * 100,
@@ -11,14 +11,7 @@ export const handleRazorpayPayment = (username, totalAmount, cartItems) => {
         handler: function (response) {
             alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
 
-            // // Send message to Discord
-            // sendPaymentSuccessMessage(username, cartItems, totalAmount)
-            //     .then(() => {
-            //         console.log('Payment success message sent to Discord');
-            //     })
-            //     .catch((error) => {
-            //         console.error('Error sending message to Discord:', error);
-            //     });
+            // Generate and download PDF receipt
             // const doc = new jsPDF();
             // doc.text('Payment Receipt', 10, 10);
             // doc.text(`Username: ${username}`, 10, 20);
@@ -42,6 +35,7 @@ export const handleRazorpayPayment = (username, totalAmount, cartItems) => {
             color: '#F37254'
         }
     };
-    const rzp = new Razorpay(options);
+
+    const rzp = new window.Razorpay(options);
     rzp.open();
 };
