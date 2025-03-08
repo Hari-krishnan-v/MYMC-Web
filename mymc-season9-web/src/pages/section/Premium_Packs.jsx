@@ -22,15 +22,27 @@ export const PremiumPacks = ({username}) => {
 
     const handlePurchase = (amount) => {
         if (isAuthenticated) {
+            let cartItem;
+            if (amount === 59) {
+                cartItem = { name: 'Gold Plan', description: 'Basic Plan', price: 59 };
+            } else if (amount === 199) {
+                cartItem = { name: 'Diamond Plan', description: 'The Best One', price: 199 };
+            } else if (amount === 399) {
+                cartItem = { name: 'Emerald Plan', description: 'The Flex', price: 399 };
+            }
 
-            console.log( amount);
+            if (cartItem) {
+                handleRazorpayPayment(username, amount, [cartItem]);
+            } else {
+                console.error('Invalid amount');
+            }
         } else {
-
             setShowLoginDialog(true);
-        }
-    };
 
-    return (
+        }
+    }
+
+            return (
         <section id={'PremiumPacks'} className={'min-h-screen flex justify-center items-center relative '}>
             <div className="gradient-overlay2 h-full"></div>
             <div className={'z-20 max-w-[1000px] w-full flex-col justify-center items-center   p-6'}>
