@@ -4,9 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="premium plans connected with razorpay">
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="added nova as admin">
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/MYMC_S9_Resorcepack.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/ArNg.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/storeItems/Axe.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/storeItems/Minecraft_home.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/storeItems/pickaxeImg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/storeItems/shovelImg.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/StartPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Authstore/AuthStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Authstore/AuthStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/razorpay.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/razorpay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Contact.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Mymc_connection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Mymc_connection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/News.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/vite.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/vite.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,12 +77,12 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\characters" />
-      <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\storeItems" />
+      <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\pages" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\characters" />
+      <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\pages" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\fonts" />
     </key>
@@ -127,7 +148,17 @@
       <workItem from="1741099075396" duration="12137000" />
       <workItem from="1741204835091" duration="2538000" />
       <workItem from="1741236480380" duration="5084000" />
-      <workItem from="1741410715794" duration="14189000" />
+      <workItem from="1741410715794" duration="16595000" />
+      <workItem from="1741606306987" duration="3204000" />
+      <workItem from="1741718950338" duration="3036000" />
+      <workItem from="1741756318586" duration="10000" />
+      <workItem from="1741886489320" duration="1848000" />
+      <workItem from="1741938377348" duration="1015000" />
+      <workItem from="1742121280163" duration="741000" />
+      <workItem from="1742136643866" duration="8000" />
+      <workItem from="1742222080881" duration="4750000" />
+      <workItem from="1742267348964" duration="32000" />
+      <workItem from="1742283665820" duration="969000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -305,7 +336,15 @@
       <option name="project" value="LOCAL" />
       <updated>1741436661662</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="added nova as admin">
+      <option name="closed" value="true" />
+      <created>1741437116132</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1741437116132</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,7 +378,8 @@
     <MESSAGE value="toast bug fix discord bot creation started" />
     <MESSAGE value="razorpay integrated" />
     <MESSAGE value="premium plans connected with razorpay" />
-    <option name="LAST_COMMIT_MESSAGE" value="premium plans connected with razorpay" />
+    <MESSAGE value="added nova as admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="added nova as admin" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -351,7 +391,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx</url>
-          <line>219</line>
+          <line>254</line>
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">

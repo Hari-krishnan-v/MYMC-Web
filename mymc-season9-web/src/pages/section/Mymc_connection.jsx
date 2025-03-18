@@ -12,7 +12,7 @@ export const MymcConnection = () => {
                     <motion.div
                         initial={{opacity: 0, scale: .8}}
                         whileInView={{opacity: 1, scale: 1}}
-                        exit={{opacity: 0, scale: -10}}
+                        exit={{opacity: 0, scale: .8}}
                         transition={{duration: .6, ease: "easeInOut"}}
                         className="z-20 container w-[711px] h-[710px] mymc-con-img-con md:hidden lg:hidden xl:block sm:hidden">
                         <img src={MYMCS9} alt="Mymc Connection"/>
@@ -20,7 +20,7 @@ export const MymcConnection = () => {
                     <motion.div
                         initial={{opacity: 0, scale: 0.9}}
                         whileInView={{opacity: 1, scale: 1}}
-                        exit={{opacity: 0, scale: -10}}
+                        exit={{opacity: 0, scale: .8}}
                         transition={{duration: .5}}
                         className={'z-20 justify-items-start m-auto'}>
                         <div className={'border w-fit rounded-[30px] p-2'}>

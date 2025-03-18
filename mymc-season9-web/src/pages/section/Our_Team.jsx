@@ -8,6 +8,7 @@ import zycoChr from '../../assets/characters/zyco.png';
 import sam from '../../assets/characters/sam.png';
 import Akku from '../../assets/characters/akku.png';
 import ARchr from '../../assets/characters/ARchr.png';
+import ArNg from '../../assets/characters/ArNg.jpg';
 import suposChr from '../../assets/characters/suposChr.png';
 import novschr from '../../assets/characters/novachr.png';
 import noba from '../../assets/characters/noba.jpg';
@@ -56,7 +57,7 @@ export const OurTeam = () => {
         }, {
             name: "ARnG2",
             role: "Admin",
-            image: sam,
+            image: ArNg,
             CharacterImage: ARchr,
             discord: "https://discord.gg/mymc",
             instagram: "",
@@ -90,19 +91,19 @@ export const OurTeam = () => {
                     <motion.h2
                         initial={{ opacity: 0, scale: 0.8 }}
                         whileInView={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: -10 }}
+                        exit={{ opacity: 0, scale: .7 }}
                         transition={{ duration: .6, ease: "easeInOut" }}
                         className="font-bold text-white text-4xl sm:text-5xl md:text-6xl">
                         <span className={"mine-logo text-[#0eff00]"}>Our</span> Team
                     </motion.h2>
-                    <motion.p
-                        initial={{ opacity: 0, scale: 0.4 }}
-                        whileInView={{ opacity: 1, scale: 1 }}
-                        exit={{ opacity: 0, scale: -10 }}
-                        transition={{ duration: .6, ease: "easeInOut", delay: 0.1 }}
-                        className="text-white text-sm sm:text-base md:text-lg sm:mx-3">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                    </motion.p>
+                    {/*<motion.p*/}
+                    {/*    initial={{ opacity: 0, scale: 0.4 }}*/}
+                    {/*    whileInView={{ opacity: 1, scale: 1 }}*/}
+                    {/*    exit={{ opacity: 0, scale: -10 }}*/}
+                    {/*    transition={{ duration: .6, ease: "easeInOut", delay: 0.1 }}*/}
+                    {/*    className="text-white text-sm sm:text-base md:text-lg sm:mx-3">*/}
+                    {/*    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod*/}
+                    {/*</motion.p>*/}
                 </div>
                 <div className="flex flex-wrap justify-center gap-5 max-w-screen-2xl">
                     {teamMembers.map((item, index) => (
@@ -110,7 +111,7 @@ export const OurTeam = () => {
                             key={index}
                             initial={{ opacity: 0, scale: 0.5 }}
                             whileInView={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: -10 }}
+                            exit={{ opacity: 0, scale: .7 }}
                             transition={{ duration: .6, ease: "easeInOut" }}
                             className="card w-64 sm:w-48 md:w-56 lg:w-64">
                             <div className="card-inner">

@@ -51,13 +51,13 @@ export const PremiumPacks = ({username}) => {
                     <motion.h2
                         initial={{opacity: 0, scale: 0.7}}
                         whileInView={{opacity: 1, scale: 1}}
-                        exit={{opacity: 0, scale: -10}}
+                        exit={{opacity: 0, scale: .7}}
                         transition={{duration: .6, ease: "easeInOut"}}
                         className={'text-center font-bold text-white text-[56px]  '}> <span className={'text-[#ff9800] mine-logo'}>Premium</span> Packs </motion.h2>
                     <motion.p
                         initial={{opacity: 0, scale: 0.7}}
                         whileInView={{opacity: 1, scale: 1}}
-                        exit={{opacity: 0, scale: -10}}
+                        exit={{opacity: 0, scale: .7}}
                         transition={{duration: .6, ease: "easeInOut",delay:0.2}}
                         className={'text-center text-white'}>
                         Elevate your gameplay with our premium plans, designed to give you exclusive advantages and
@@ -69,7 +69,7 @@ export const PremiumPacks = ({username}) => {
                     <motion.div
                         initial={{opacity: 0, scale: 0.8}}
                         whileInView={{opacity: 1, scale: 1}}
-                        exit={{opacity: 0, scale: -10}}
+                        exit={{opacity: 0, scale: .7}}
                         transition={{duration: .6, ease: "easeInOut",delay:0.2}}
                         className="toggle bg-black  w-[240px] h-[42px] flex items-center justify-between border rounded-full p-1">
                         <button
@@ -120,7 +120,7 @@ const MonthlyPlan = ({ handlePurchase }) => {
         <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
+            exit={{ opacity: 0, scale: 0.7 }}
             transition={{ duration: 0.5 }}
             className={'max-w-[950px] flex  justify-between  gap-4 items-center  plan '}>
             <div className="min-w-[300px] h-[480px]  bg-[#2A2A2A] text-left border border-[#ceff00] md:space-y-5 rounded-3xl p-6 flex flex-col justify-between">
@@ -230,10 +230,10 @@ const MonthlyPlan = ({ handlePurchase }) => {
 const BattlePass = () => {
     return (
         <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
+            initial={{ opacity: 0, scale: 0.7 }}
             whileInView={{ opacity: 1, scale: 1 }}
-            exit={{ opacity: 0, scale: 0.9 }}
-            transition={{ duration: 0.8 }}
+            exit={{ opacity: 0, scale: 0.7 }}
+            transition={{ duration: 1 }}
             className={'max-w-[950px] min-h-[500px] flex  justify-center  gap-4 items-center '}>
             <h1 className={'mine-logo text-[71px]  font-bold'}><span className={"text-[#0eff00] mine-logo"}>COMING</span>   SOON</h1>
         </motion.div>

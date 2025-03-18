@@ -17,6 +17,7 @@ import { DialogBody, DialogCloseTrigger, DialogContent, DialogRoot, DialogTrigge
 import Login from "./Login.jsx";
 import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from "../../components/ui/Menu.tsx";
 import { Cart } from "./Cart.jsx";
+import MYMC_S9_Resorcepack from "../../assets/MYMC_S9_Resorcepack.png"
 
 export const Header = ({ username }) => {
     const [open, setOpen] = useState(false);
@@ -50,41 +51,39 @@ export const Header = ({ username }) => {
             initial={{ opacity: 0, top: -100 }}
             animate={{ opacity: 1, top: 8 }}
             exit={{ opacity: 0, top: -100 }}
-            transition={{ duration: .8 }}
+            transition={{ duration: 1 }}
             className="fixed top left-0 right-0 flex justify-center items-center shadow-xl h-[65px] max-w-[1100px] rounded-3xl mx-auto z-50 "
             style={{ backgroundColor: 'rgba(37, 38, 41, 0.8)', backdropFilter: 'blur(10px)' }}
         >
             <nav className={'flex justify-between w-full px-7 items-center navbar'}>
-                <div className="logo flex justify-center items-center">
-                    <h2 className={'text-white text-[1.8rem]  font-bold mine-logo'}>MYMC</h2>
+                <div className="logo flex justify-center items-center ">
+                    <img src={MYMC_S9_Resorcepack} width={100}/>
+                    {/*<h2 className={'text-white text-[1.8rem]  font-bold mine-logo'}>MYMC</h2>*/}
                 </div>
                 <ul className={'list-none flex deactivate transition-all'}>
                     <li className={'mx-2'}>
-                        <a className={'block text-[16px] px-3'} href={'/#home'}>HOME</a>
+                        <a className={'block text-[16px] px-3'} href={'/home'}>HOME</a>
                     </li>
                     <li className={'mx-2'}>
-                        <a className={'block text-[16px] px-3'} href={'/#MymcConnection'}>ABOUT US</a>
+                        <a className={'block text-[16px] px-3'} href={'/home#MymcConnection'}>ABOUT US</a>
                     </li>
                     <li className={'mx-2'}>
-                        <a className={'block text-[16px] px-3'} href={'/#PremiumPacks'}>PACKS</a>
+                        <a className={'block text-[16px] px-3'} href={'/home#PremiumPacks'}>PACKS</a>
                     </li>
                     <li className={'mx-2'}>
-                        <a className={'block text-[16px] px-3'} href={'/#OurPartners'}>PARTNERS</a>
+                        <a className={'block text-[16px] px-3'} href={'/home#OurPartners'}>PARTNERS</a>
                     </li>
                     <li className={'mx-2'}>
-                        <a className={'block text-[16px] px-3'} href={'/#OurTeam'}>OUR TEAM</a>
+                        <a className={'block text-[16px] px-3'} href={'/home#OurTeam'}>OUR TEAM</a>
                     </li>
                     <li className={'mx-2'}>
-                        <a className={'block text-[16px] px-3'} href={'/#Contact'}>CONTACT US</a>
+                        <a className={'block text-[16px] px-3'} href={'/home#Contact'}>CONTACT US</a>
                     </li>
                     <li className={'mx-2'}>
                         <Link className={'block text-[16px] px-3'} to={'/store'}>STORE</Link>
                     </li>
-                    <li className={'mx-2'}>
-                        <a className={'block text-[16px] px-3'} href={'/#News'}> NEWS</a>
-                    </li>
                 </ul>
-                <div className="flex gap-2 items-center ">
+                <div className="flex gap-3  ">
                     {isAuthenticated ? (
                         <>
                             <MenuRoot>
@@ -163,37 +162,34 @@ export const Header = ({ username }) => {
                                     <li className={'my-6'}>
                                         <Link
                                             className={'block hover:text-[#62db40] text-center duration-700 transition text-[16px] px-3'}
-                                            to={'/'}>HOME</Link>
+                                            to={'/home'}>HOME</Link>
                                     </li>
                                     <li className={'my-6'}>
                                         <a className={'block hover:text-[#62db40] text-center duration-700 transition text-[16px] px-3'}
-                                           href={'/#MymcConnection'}>ABOUT US</a>
+                                           href={'/home#MymcConnection'}>ABOUT US</a>
                                     </li>
                                     <li className={'my-6'}>
                                         <a className={'block hover:text-[#62db40] text-center duration-700 transition text-[16px] px-3'}
-                                           href={'/#PremiumPacks'}>PACKS</a>
+                                           href={'/home#PremiumPacks'}>PACKS</a>
                                     </li>
                                     <li className={'my-6'}>
                                         <a className={'block hover:text-[#62db40] text-center duration-700 transition text-[16px] px-3'}
-                                           href={'/#OurPartners'}>PARTNERS</a>
+                                           href={'/home#OurPartners'}>PARTNERS</a>
                                     </li>
                                     <li className={'my-6'}>
                                         <a className={'block hover:text-[#62db40] text-center duration-700 transition text-[16px] px-3'}
-                                           href={'/#OurTeam'}>OUR TEAM</a>
+                                           href={'/home#OurTeam'}>OUR TEAM</a>
                                     </li>
                                     <li className={'my-6'}>
                                         <a className={'block hover:text-[#62db40] text-center duration-700 transition text-[16px] px-3'}
-                                           href={'/#Contact'}>CONTACT US</a>
+                                           href={'/home#Contact'}>CONTACT US</a>
                                     </li>
                                     <li className={'my-6'}>
                                         <Link
                                             className={'block hover:text-[#62db40] text-center duration-700 transition text-[16px] px-3'}
                                             to={'/store'}>STORE</Link>
                                     </li>
-                                    <li className={'my-6'}>
-                                        <a className={'block hover:text-[#62db40] text-center duration-700 transition text-[16px] px-3'}
-                                           href={'/#News'}>NEWS</a>
-                                    </li>
+
                                 </ul>
                             </DrawerBody>
                             <DrawerCloseTrigger />

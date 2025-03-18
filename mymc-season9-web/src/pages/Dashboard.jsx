@@ -23,12 +23,12 @@ export const Dashboard = () => {
     const [playerCount, setPlayerCount] = useState(0);
     const [serverStatus, setServerStatus] = useState('Offline');
     const username = Cookies.get("username");
-    useEffect(() => {
-        setTimeout(() => {
-            setFadeOut(true);
-            setTimeout(() => setLoading(false), 600);
-        }, 3500); // Adjust time as needed
-    }, []);
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setFadeOut(true);
+    //         setTimeout(() => setLoading(false), 600);
+    //     }, 3500); // Adjust time as needed
+    // }, []);
 
     useEffect(() => {
         const fetchPlayerCount = async () => {
@@ -41,16 +41,16 @@ export const Dashboard = () => {
         return () => clearInterval(intervalId);
     }, []);
 
-    if (loading) {
-        return (
-            <div className={`bg-black grid place-content-center transition-opacity duration-500 ${fadeOut ? "opacity-0" : "opacity-100"} fixed top-0 left-0 w-full h-full `}>
-                <img src={download} alt={"minecraft loading"} className={''} />
-                {/*<div className="flex justify-center items-end h-full w-full absolute bottom-0">*/}
-                {/*    <img src={mymcs9} className={'h-1/4'} alt={"minecraft loading"}/>*/}
-                {/*</div>*/}
-            </div>
-        );
-    }
+    // if (loading) {
+    //     return (
+    //         <div className={`bg-black grid place-content-center transition-opacity duration-500 ${fadeOut ? "opacity-0" : "opacity-100"} fixed top-0 left-0 w-full h-full `}>
+    //             <img src={download} alt={"minecraft loading"} className={''} />
+    //             {/*<div className="flex justify-center items-end h-full w-full absolute bottom-0">*/}
+    //             {/*    <img src={mymcs9} className={'h-1/4'} alt={"minecraft loading"}/>*/}
+    //             {/*</div>*/}
+    //         </div>
+    //     );
+    // }
 
     return (
         <>

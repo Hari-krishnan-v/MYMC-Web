@@ -29,7 +29,7 @@ export const Contact = () => {
             <motion.h2
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: -10 }}
+                exit={{ opacity: 0, scale: 0.7 }}
                 transition={{ duration: .6, ease: "easeInOut" }}
                 className="text-center font-bold text-white text-4xl sm:text-5xl md:text-6xl mine-logo z-20">
                 <span className="text-[#0eff00] mine-logo">Contact</span> Us
@@ -38,7 +38,7 @@ export const Contact = () => {
             <motion.div
                 initial={{ opacity: 0, scale: 0.8 }}
                 whileInView={{ opacity: 1, scale: 1 }}
-                exit={{ opacity: 0, scale: -10 }}
+                exit={{ opacity: 0, scale: 0.7 }}
                 transition={{ duration: .6, ease: "easeInOut", delay: 0.2 }}
                 className="w-11/12 sm:w-3/4 md:w-2/4 h-3/4 mine-logo z-20 rounded-2xl flex flex-col gap-5 p-5">
                 <div className="flex flex-col sm:flex-row gap-5">
