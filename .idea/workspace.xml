@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="correct exit animation and added team memberss" />
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="correct exit animation and added team memberss">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -135,6 +137,10 @@
       <workItem from="1742222080881" duration="4750000" />
       <workItem from="1742267348964" duration="32000" />
       <workItem from="1742283665820" duration="1279000" />
+      <workItem from="1742288879029" duration="144000" />
+      <workItem from="1742289192232" duration="4000" />
+      <workItem from="1742745473825" duration="954000" />
+      <workItem from="1742892377856" duration="360000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -328,7 +334,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742284953987</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="correct exit animation and added team memberss">
+      <option name="closed" value="true" />
+      <created>1742288906585</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1742288906585</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
