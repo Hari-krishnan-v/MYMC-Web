@@ -8,18 +8,27 @@ const Login = ({ onLogin }) => {
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-    const handleLogin = () => {
+    const handleLogin = async () => {
         if (!username.trim()) {
             setError('Username is required.');
             return;
         }
-
         setLoading(true);
-        setUserCookie(username);
-        window.location.reload();
-        onLogin();
-        setError('');
-
+        try {
+            const res = await axios.post('http://localhost:5000/api/store/login', { username });
+            if (res.status === 200) {
+                localStorage.setItem('user', JSON.stringify(res.data.data));
+                setLoading(false);
+                navigate('/home');
+            }
+        } catch (err) {
+            setLoading(false);
+            if (err.response) {
+                setError(err.response.data.error);
+            } else {
+                setError('An error occurred. Please try again.');
+            }
+        }
     };
 
     return (
