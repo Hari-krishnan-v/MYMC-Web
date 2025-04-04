@@ -1,7 +1,8 @@
-import React, { useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { motion } from 'framer-motion';
+import React, {useEffect} from 'react';
+import {useNavigate} from 'react-router-dom';
+import {motion} from 'framer-motion';
 import MYMC_S9_Resorcepack from "../assets/MYMC_S9_Resorcepack.png";
+import {Helmet} from "react-helmet-async";
 
 const StartPage = () => {
     const navigate = useNavigate();
@@ -15,6 +16,13 @@ const StartPage = () => {
     }, [navigate]);
 
     return (
+        <>
+            <Helmet>
+                <title>Loading... Muttayi Minecraft</title>
+                <meta name="description"
+                      content="Loading Muttayi Minecraft server. Get ready to experience Kerala’s best Minecraft world!"/>
+                <meta name="robots" content="noindex"/>
+            </Helmet>
         <div className={`bg-black flex justify-center items-center fixed top-0 left-0 w-full h-full`}>
             <motion.div
                 className="relative h-1/3"
@@ -27,6 +35,7 @@ const StartPage = () => {
 
             </motion.div>
         </div>
+        </>
     );
 };
 

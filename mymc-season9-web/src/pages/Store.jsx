@@ -5,6 +5,7 @@ import download from "../assets/download.gif";
 import {StoreSection} from "./section/StoreSection.jsx";
 import Footer from "./section/Footer.jsx";
 import Cookies from "js-cookie";
+import {Helmet} from "react-helmet-async";
 
 export const Store = () => {
     const username = Cookies.get("username");
@@ -30,6 +31,14 @@ export const Store = () => {
     // }
     return (
         <>
+            <Helmet>
+                <title>Muttayi Minecraft Store - Buy Premium Packs</title>
+                <meta name="description" content="Support the Muttayi Minecraft server and upgrade your gameplay! Buy premium packs, skins, and more." />
+                <meta name="keywords" content="Minecraft store, Minecraft premium packs, Muttayi Minecraft, Minecraft skins, Minecraft donation" />
+                <meta name="author" content="Muttayi Minecraft Team" />
+                <meta property="og:title" content="Muttayi Minecraft Store" />
+                <meta property="og:description" content="Buy exclusive packs and support Kerala’s top Minecraft server." />
+            </Helmet>
         <Header username={username}/>
             <main>
                 <StoreSection/>

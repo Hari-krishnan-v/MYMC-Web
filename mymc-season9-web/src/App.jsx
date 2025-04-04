@@ -10,6 +10,11 @@ import { PrivacyPolicy } from "./pages/Privacy_Policy.jsx";
 import { useEffect } from "react";
 import { AnimatePresence } from 'framer-motion';
 import StartPage from "./pages/StartPage.jsx";
+import { HelmetProvider } from 'react-helmet-async';
+
+
+
+
 
 function App() {
     const location = useLocation();
@@ -28,8 +33,8 @@ function App() {
     return (
         <>
             <Analytics />
-            <AnimatePresence exitBeforeEnter>
-                <Routes location={location} key={location.pathname}>
+            <AnimatePresence mode="wait">
+            <Routes location={location} key={location.pathname}>
                     <Route path="/" element={<StartPage />} />
                     <Route path="/home" element={<Dashboard />} />
                     <Route path="/store" element={<Store />} />
@@ -43,9 +48,11 @@ function App() {
 }
 
 const AppWrapper = () => (
+    <HelmetProvider>
     <Router>
         <App />
     </Router>
+    </HelmetProvider>
 );
 
 export default AppWrapper;

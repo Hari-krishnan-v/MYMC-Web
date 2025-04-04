@@ -11,7 +11,7 @@ export const Contact = () => {
 
     const HandleSubmit = () => {
         if (!name || !email || !subject || !message) {
-            toast.error("You need to fill up all !", {
+            toast.error("You need to fill up all inputs !", {
                 position: "bottom-right",
                 className: "toast-message",
             });

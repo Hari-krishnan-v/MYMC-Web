@@ -4,8 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="correct exit animation and added team memberss">
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="compressed video">
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/ArNg.webp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/akku.webp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/Bgrandom.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/ArNg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/akku.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/StartPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/StartPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/Store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Store.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Contact.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,27 +50,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/harik/WebstormProjects/mymc-web/mymc-season9-web/src/assets/characters&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/harik/WebstormProjects/mymc-web/mymc-season9-web/src/assets/characters",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\characters" />
-      <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\storeItems" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets" />
+      <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\storeItems" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\characters" />
@@ -141,6 +155,8 @@
       <workItem from="1742289192232" duration="4000" />
       <workItem from="1742745473825" duration="954000" />
       <workItem from="1742892377856" duration="360000" />
+      <workItem from="1743692645123" duration="1060000" />
+      <workItem from="1743756376914" duration="1853000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -342,7 +358,15 @@
       <option name="project" value="LOCAL" />
       <updated>1742288906585</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="compressed video">
+      <option name="closed" value="true" />
+      <created>1743692848644</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1743692848644</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -378,7 +402,8 @@
     <MESSAGE value="premium plans connected with razorpay" />
     <MESSAGE value="added nova as admin" />
     <MESSAGE value="correct exit animation and added team memberss" />
-    <option name="LAST_COMMIT_MESSAGE" value="correct exit animation and added team memberss" />
+    <MESSAGE value="compressed video" />
+    <option name="LAST_COMMIT_MESSAGE" value="compressed video" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -392,10 +417,6 @@
           <url>file://$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx</url>
           <line>254</line>
           <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx</url>
-          <option name="timeStamp" value="21" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
