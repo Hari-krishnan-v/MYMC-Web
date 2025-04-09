@@ -4,17 +4,40 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="seo optimization Helmet added">
-      <change afterPath="$PROJECT_DIR$/server/Controller/Auth.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/Controller/StoreActions.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/Utils/generateTokenAndSetCookie.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/items.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/StoreItems.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/models/UserData.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/routes/Routes.js" afterDir="false" />
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="new update">
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/Rash.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/chhycoohunter.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/stark.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/News&amp;Announcement.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Play.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/News&amp;announcement_Section/News_AnnouncementSection.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/PlaySections/Play_miniGames.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/ServerFeatures.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/server/middleware/auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Authstore/AuthStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Authstore/AuthStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/chhycoohunter.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/rash.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/zyco.webp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/sr.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/sr.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/Store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Store.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Footer.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Controller/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/Controller/Auth.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/Routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,8 +102,8 @@
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\characters" />
-      <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\pages" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets" />
+      <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\pages" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\fonts" />
     </key>
   </component>
@@ -196,6 +219,12 @@
       <workItem from="1743692645123" duration="1060000" />
       <workItem from="1743756376914" duration="14876000" />
       <workItem from="1743777372770" duration="66000" />
+      <workItem from="1743777798405" duration="264000" />
+      <workItem from="1743778103830" duration="14375000" />
+      <workItem from="1744076898640" duration="27000" />
+      <workItem from="1744101592238" duration="10966000" />
+      <workItem from="1744117115255" duration="17005000" />
+      <workItem from="1744183209514" duration="490000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -413,7 +442,15 @@
       <option name="project" value="LOCAL" />
       <updated>1743758379197</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="backend setting">
+      <option name="closed" value="true" />
+      <created>1743778047327</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1743778047327</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -451,7 +488,9 @@
     <MESSAGE value="correct exit animation and added team memberss" />
     <MESSAGE value="compressed video" />
     <MESSAGE value="seo optimization Helmet added" />
-    <option name="LAST_COMMIT_MESSAGE" value="seo optimization Helmet added" />
+    <MESSAGE value="backend setting" />
+    <MESSAGE value="new update" />
+    <option name="LAST_COMMIT_MESSAGE" value="new update" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -460,11 +499,6 @@
           <url>file://$PROJECT_DIR$/mymc-season9-web/src/pages/section/Footer.jsx</url>
           <line>19</line>
           <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx</url>
-          <line>310</line>
-          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

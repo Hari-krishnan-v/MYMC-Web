@@ -18,19 +18,18 @@ import Login from "./Login.jsx";
 import { MenuContent, MenuItem, MenuRoot, MenuTrigger } from "../../components/ui/Menu.tsx";
 import { Cart } from "./Cart.jsx";
 import MYMC_S9_Resorcepack from "../../assets/MYMC_S9_Resorcepack.png"
+import useAuthStore from "../../store/authStore.js";
 
-export const Header = ({ username }) => {
+export const Header = () => {
     const [open, setOpen] = useState(false);
-    const [isAuthenticated, setAuthenticated] = useState(false);
     const [cartCount, setCartCount] = useState(0);
+    const { cart,user, isAuthenticated, logout } = useAuthStore();
+
+
 
     useEffect(() => {
-        setAuthenticated(!!username);
-    }, [username]);
-
-    useEffect(() => {
+         console.log(user)
         const updateCartCount = () => {
-            const cart = JSON.parse(Cookies.get('cart') || '[]');
             setCartCount(cart.length);
         }
         updateCartCount();
@@ -38,13 +37,6 @@ export const Header = ({ username }) => {
         return () => clearInterval(interval);
     }, []);
 
-    const handleLogout = () => {
-        Cookies.remove("username");
-        Cookies.remove("cart");
-        setAuthenticated(false);
-        setCartCount(0)
-        window.location.reload(); // Ensure UI updates correctly
-    };
 
     return (
         <motion.header
@@ -93,12 +85,12 @@ export const Header = ({ username }) => {
                                     </button>
                                 </MenuTrigger>
                                 <MenuContent className="p-[10px] rounded-[5px]">
-                                    <MenuItem>{username}</MenuItem>
+                                    <MenuItem>{user}</MenuItem>
                                     <MenuItem
                                         value="delete"
                                         color="fg.error"
                                         _hover={{ bg: "bg.error", color: "fg.error" }}
-                                        onClick={handleLogout}
+                                        onClick={logout}
                                     >
                                         Logout...
                                     </MenuItem>
@@ -121,7 +113,7 @@ export const Header = ({ username }) => {
                                         <DrawerTitle>Cart</DrawerTitle>
                                     </DrawerHeader>
                                     <DrawerBody>
-                                        <Cart username={username} />
+                                        <Cart />
                                     </DrawerBody>
                                     <DrawerCloseTrigger />
                                 </DrawerContent>

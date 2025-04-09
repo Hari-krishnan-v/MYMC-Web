@@ -3,7 +3,7 @@ import sr from '../../assets/sr.jpg';
 import Sr from '../../assets/characters/Sr.png';
 import MRGYT from '../../assets/characters/MRGYT.png';
 import Rashnanna from '../../assets/characters/rash.jpg';
-import ZYCO from '../../assets/characters/chhycoohunter.png';
+import ZYCO from '../../assets/characters/chhycoohunter.jpg';
 import zycoChr from '../../assets/characters/zyco.png';
 import sam from '../../assets/characters/sam.png';
 import Akku from '../../assets/characters/akku.webp';
@@ -12,6 +12,7 @@ import ArNg from '../../assets/characters/ArNg.webp';
 import suposChr from '../../assets/characters/suposChr.png';
 import novschr from '../../assets/characters/novachr.png';
 import noba from '../../assets/characters/noba.jpg';
+import stark from '../../assets/characters/stark.jpg';
 
 
 import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
@@ -21,7 +22,7 @@ export const OurTeam = () => {
     const teamMembers = [
         {
             name: "MRGYT",
-            role: "Founder",
+            role: "Owner",
             image: Rashnanna,
             CharacterImage: MRGYT,
             discord: "https://discord.gg/mymc",
@@ -30,7 +31,7 @@ export const OurTeam = () => {
         },
         {
             name: "SR Gamer",
-            role: "Founder",
+            role: "Owner",
             image: sr,
             CharacterImage: Sr,
             discord: "https://discord.gg/mymc",
@@ -39,7 +40,7 @@ export const OurTeam = () => {
         },
         {
             name: "ZYCO",
-            role: "Founder",
+            role: "Owner",
             image: ZYCO,
             CharacterImage: zycoChr,
             discord: "https://discord.gg/mymc",
@@ -48,7 +49,7 @@ export const OurTeam = () => {
         },
         {
             name: "supposedly_sam",
-            role: "Admin",
+            role: "Lead Developer",
             image: sam,
             CharacterImage: suposChr,
             discord: "https://discord.gg/mymc",
@@ -80,6 +81,14 @@ export const OurTeam = () => {
             discord: "https://discord.gg/mymc",
             instagram: "",
             youtube: ""
+        },{
+            name: "mrstark gaming",
+            role: "Admin / web developer ",
+            image: stark,
+            CharacterImage: novschr,
+            discord: "https://discord.gg/mymc",
+            instagram: "",
+            youtube: ""
         },
     ];
 
@@ -93,71 +102,66 @@ export const OurTeam = () => {
                         whileInView={{ opacity: 1, scale: 1 }}
                         exit={{ opacity: 0, scale: .7 }}
                         transition={{ duration: .6, ease: "easeInOut" }}
-                        className="font-bold text-white text-4xl sm:text-5xl md:text-6xl">
-                        <span className={"mine-logo text-[#0eff00]"}>Our</span> Team
+                        className="font-semibold text-white text-5xl sm:text-5xl md:text-5xl"> Our Team
                     </motion.h2>
-                    {/*<motion.p*/}
-                    {/*    initial={{ opacity: 0, scale: 0.4 }}*/}
-                    {/*    whileInView={{ opacity: 1, scale: 1 }}*/}
-                    {/*    exit={{ opacity: 0, scale: -10 }}*/}
-                    {/*    transition={{ duration: .6, ease: "easeInOut", delay: 0.1 }}*/}
-                    {/*    className="text-white text-sm sm:text-base md:text-lg sm:mx-3">*/}
-                    {/*    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod*/}
-                    {/*</motion.p>*/}
+
                 </div>
-                <div className="flex flex-wrap justify-center gap-5 max-w-screen-2xl">
+                <div className="flex flex-wrap justify-center gap-5 max-w-6xl">
                     {teamMembers.map((item, index) => (
                         <motion.div
                             key={index}
-                            initial={{ opacity: 0, scale: 0.5 }}
-                            whileInView={{ opacity: 1, scale: 1 }}
-                            exit={{ opacity: 0, scale: .7 }}
-                            transition={{ duration: .6, ease: "easeInOut" }}
-                            className="card w-64 sm:w-48 md:w-56 lg:w-64">
-                            <div className="card-inner">
-                                <div className={`card-front relative ${item.role === 'Founder' ? 'border-[#FFBB00]' : ''}`}>
-                                    <img src={item.CharacterImage} className="bg-cover object-cover w-full h-full] z-20 " style={{filter:'drop-shadow(5px 5px 15px rgba(0,0,0,0.5)'}} alt="partner1" />
-                                    <motion.div
-                                        initial={{ opacity: 0, y: 100 }}
-                                        whileInView={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: 100 }}
-                                        transition={{ duration: 1, ease: "easeInOut" }}
-                                        className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-30 flex justify-start items-end px-4 pb-2">
-                                        <div className="text-white text-start mb-1">
-                                            <h2 className="text-xl head-font font-bold">{item.name}<span className={'text-xl text-orange-400'}>[{item.role}]</span></h2>
-                                        </div>
-                                    </motion.div>
-                                </div>
-                                <div className="card-back relative">
-                                    <img src={item.image} className="bg-cover object-cover w-full h-full" alt="partner1" />
-                                    <div className="absolute top-0 left-0 w-full h-full flex gap-5 justify-center items-end p-8">
-                                        <motion.div
-                                            initial={{ scale: 1 }}
-                                            whileHover={{ scale: 1.3 }}
-                                            animate={{ scale: 1 }}
-                                            transition={{ duration: .2, ease: "easeInOut" }}
-                                            className="p-2 rounded-xl bg-white shadow-2xl">
-                                            <a href={item.discord} className="text-blue-500 shadow-2xl text-2xl"><FaDiscord /></a>
-                                        </motion.div>
-                                        <motion.div
-                                            initial={{ scale: 1 }}
-                                            whileHover={{ scale: 1.3 }}
-                                            animate={{ scale: 1 }}
-                                            transition={{ duration: .2, ease: "easeInOut" }}
-                                            className="p-2 rounded-xl bg-white">
-                                            <a href={item.instagram} className="text-blue-400 shadow-2xl text-2xl"><FaInstagram /></a>
-                                        </motion.div>
-                                        <motion.div
-                                            initial={{ scale: 1 }}
-                                            whileHover={{ scale: 1.3 }}
-                                            animate={{ scale: 1 }}
-                                            transition={{ duration: .2, ease: "easeInOut" }}
-                                            className="p-2 rounded-xl bg-white">
-                                            <a href={item.youtube} className="text-red-500 shadow-2xl text-2xl"><FaYoutube /></a>
-                                        </motion.div>
-                                    </div>
-                                </div>
+                            initial={{opacity: 0, scale: 0.5}}
+                            whileInView={{opacity: 1, scale: 1}}
+
+                            exit={{opacity: 0, scale: .7}}
+                            transition={{duration: .6, ease: "easeInOut"}}
+                            className=" w-[288px] max-h-[367px] sm:w-48 md:w-56 lg:w-64 overflow-hidden rounded-xl relative">
+                            <div className="absolute bg-gradient-to-b from-transparent via-transparent to-black w-full h-full"></div>
+                            <div className="absolute bottom-0 p-6 flex flex-col gap-1">
+                                <h2 className={"font-semibold text-xl"}>{item.name}</h2>
+                                <h2 className={"text-[16px] text-[#D4D4D4]"}>{item.role}</h2>
                             </div>
+                            <motion.div
+                                initial={{opacity: 0, scale: 1,translateX: 50}}
+                                whileHover={{opacity: 1, scale: 1, translateX: 0}}
+                                exit={{opacity: 0, scale: 1, translateX: 50}}
+                                transition={{duration: .3, ease: "easeInOut"}}
+                                className="absolute top-0 bottom-0 right-5 w-full h-full items-end justify-center flex flex-col gap-5">
+                                <motion.div
+                                    initial={{scale: 1}}
+                                    whileHover={{scale: 1.3}}
+                                    animate={{scale: 1}}
+                                    transition={{duration: .2, ease: "easeInOut"}}
+                                    className="p-2 rounded-full bg-white shadow-2xl">
+                                    <a href={item.discord}
+                                       className="text-black shadow-2xl text-2xl"><FaDiscord/></a>
+                                </motion.div>
+                                <motion.div
+                                    initial={{scale: 1}}
+                                    whileHover={{scale: 1.3}}
+                                    animate={{scale: 1}}
+                                    transition={{duration: .2, ease: "easeInOut"}}
+                                    className="p-2 rounded-full bg-white">
+                                    <a href={item.instagram}
+                                       className="text-black shadow-2xl text-2xl"><FaInstagram/></a>
+                                </motion.div>
+                                <motion.div
+                                    initial={{scale: 1}}
+                                    whileHover={{scale: 1.3}}
+                                    animate={{scale: 1}}
+                                    transition={{duration: .2, ease: "easeInOut"}}
+                                    className="p-2 rounded-full bg-white">
+                                    <a href={item.youtube} className="text-black shadow-2xl text-2xl"><FaYoutube/></a>
+                                </motion.div>
+
+                            </motion.div>
+                            <img
+                                src={item.image}
+                                alt={item.name}
+                                className="w-full h-full object-cover rounded-lg shadow-lg"
+                            />
+
+
                         </motion.div>
                     ))}
                 </div>

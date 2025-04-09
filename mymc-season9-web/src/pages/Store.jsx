@@ -8,7 +8,7 @@ import Cookies from "js-cookie";
 import {Helmet} from "react-helmet-async";
 
 export const Store = () => {
-    const username = Cookies.get("username");
+
 
     // const [loading, setLoading] = useState(true);
     // const [fadeOut, setFadeOut] = useState(false);
@@ -39,7 +39,7 @@ export const Store = () => {
                 <meta property="og:title" content="Muttayi Minecraft Store" />
                 <meta property="og:description" content="Buy exclusive packs and support Kerala’s top Minecraft server." />
             </Helmet>
-        <Header username={username}/>
+        <Header/>
             <main>
                 <StoreSection/>
             </main>

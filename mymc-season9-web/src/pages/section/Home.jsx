@@ -4,6 +4,7 @@ import Minecraft from "../../assets/Minecraft.mp4";
 import mymcs9 from "../../assets/MYMCS9.png";
 import { FaCircle } from "react-icons/fa";
 
+
 export const Home = ({ playerCount, serverStatus }) => {
     useEffect(() => {
 
@@ -22,10 +23,10 @@ export const Home = ({ playerCount, serverStatus }) => {
     if (playerCount === undefined) {
         playerCount = 0;
     }
+
     const Handlejoin = () => {
-        alert('To join the server, open TLauncher and add the server manually with the following details:\n\nServer Name: MuttayiServer\nIP: play.muttayi.world\nPort: 19132');
-        console.log('Displayed server join instructions');
-    };
+        window.href="/play";
+    }
 
     return (
         <section className={'home bg-no-repeat relative'} id={'home'}>
@@ -53,7 +54,9 @@ export const Home = ({ playerCount, serverStatus }) => {
                             <h2 className={'font-bold head-font text-4xl sm:text-5xl md:text-6xl lg:text-7xl '}>{playerCount}</h2>
                             <p className={'mx-2 mt-10 font-bold text-xs sm:text-sm md:text-base lg:text-lg'} style={{ color: '#0eff00' }}>/Playing</p>
                         </div>
-                        <button onClick={()=>Handlejoin()} className={'shiny-cta text-xs sm:text-sm md:text-base lg:text-lg'}>JOIN NOW</button>
+                        <button className={'shiny-cta text-xs sm:text-sm md:text-base lg:text-lg'}>
+                            <a href="/play">JOIN NOW</a>
+                        </button>
                     </motion.div>
                 </div>
             </div>

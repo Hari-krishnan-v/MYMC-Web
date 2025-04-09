@@ -16,6 +16,7 @@ import {News} from "./section/News.jsx";
 import {NumberOfPlayers} from "../Authstore/AuthStore.js";
 import Cookies from "js-cookie";
 import { Helmet } from 'react-helmet-async';
+import {ServerFeatures} from "./section/ServerFeatures.jsx";
 
 
 export const Dashboard = () => {
@@ -23,7 +24,7 @@ export const Dashboard = () => {
     const [fadeOut, setFadeOut] = useState(false);
     const [playerCount, setPlayerCount] = useState(0);
     const [serverStatus, setServerStatus] = useState('Offline');
-    const username = Cookies.get("username");
+
     // useEffect(() => {
     //     setTimeout(() => {
     //         setFadeOut(true);
@@ -86,11 +87,12 @@ export const Dashboard = () => {
                     })}
                 </script>
             </Helmet>
-            <Header username={username}/>
+            <Header/>
             <main>
                 <Home playerCount={playerCount} serverStatus={serverStatus}/>
                 <MymcConnection/>
-                <PremiumPacks username={username}/>
+                <ServerFeatures/>
+                <PremiumPacks />
                 {/*<OurPartners />*/}
                 <News/>
                 <OurTeam />

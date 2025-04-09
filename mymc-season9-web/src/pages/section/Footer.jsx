@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Footer = ({playerCount}) => {
     return (
-        <footer className="text-white py-10 px-4 text-center">
+        <footer className="text-white py-10 px-4  text-center">
             <div className="container mx-auto grid md:grid-cols-3 gap-6 text-sm">
                 {/* Quick Links */}
                 <motion.div
@@ -15,14 +15,15 @@ const Footer = ({playerCount}) => {
                     <h3 className="text-lg head-font text-[20px] font-bold mb-2 text-start">Quick Links</h3>
                     <ul className="space-y-1 flex flex-col gap-1 text-[15px] text-[#adb7be] text-start">
                         <li><a href="#" className="hover:text-yellow-400">Home</a></li>
-                        <li><a href="#" className="hover:text-yellow-400">How to Join</a></li>
+                        <li><a href="/news-and-announcement" className="hover:text-yellow-400">News & Announcements  </a></li>
                         <li><a href="#" className="hover:text-yellow-400">Server Features</a></li>
                         <li><a href="#" className="hover:text-yellow-400">Community & Forum</a></li>
                         <li><a href="/store" className="hover:text-yellow-400">Store</a></li>
                         <li><a href="#" className="hover:text-yellow-400">Contact Us</a></li>
-                        <li><a href="/terms-and-conditions" className="hover:text-yellow-400">Terms and Conditions</a></li>
-                        <li><a href="/privacy-policy" className="hover:text-yellow-400">Privacy Policy</a></li>
-                        <li><a href="/refund-policy" className="hover:text-yellow-400">Refund Policy</a></li>
+
+                        {/*<li><a href="/terms-and-conditions" className="hover:text-yellow-400">Terms and Conditions</a></li>*/}
+                        {/*<li><a href="/privacy-policy" className="hover:text-yellow-400">Privacy Policy</a></li>*/}
+                        {/*<li><a href="/refund-policy" className="hover:text-yellow-400">Refund Policy</a></li>*/}
                     </ul>
                 </motion.div>
 

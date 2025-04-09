@@ -1,12 +1,4 @@
-import Cookies from 'js-cookie';
 
-const setUserCookie = (username) => {
-    Cookies.set('username', username, { expires: 7 });
-};
-
-const isAuthenticated = () => {
-    return Cookies.get('username') !== undefined;
-};
 
 export const NumberOfPlayers = async () => {
     try {
@@ -23,4 +15,3 @@ export const NumberOfPlayers = async () => {
         return 0;
     }
 };
-export { setUserCookie, isAuthenticated };

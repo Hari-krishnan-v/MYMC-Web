@@ -59,7 +59,7 @@ export const PremiumPacks = ({username}) => {
                         whileInView={{opacity: 1, scale: 1}}
                         exit={{opacity: 0, scale: .7}}
                         transition={{duration: .6, ease: "easeInOut",delay:0.2}}
-                        className={'text-center text-white'}>
+                        className={'text-center text-[#AFAFAF]'}>
                         Elevate your gameplay with our premium plans, designed to give you exclusive advantages and
                         access to enhanced assets on the server. Enjoy essential features with no hidden fees, all
                         tailored to maximize your Minecraft experience.

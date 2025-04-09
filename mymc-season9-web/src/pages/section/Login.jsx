@@ -1,35 +1,27 @@
 import React, { useState } from 'react';
-import { setUserCookie } from '../../Authstore/AuthStore.js';
 import { LoaderCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
+import axios from "axios";
+import useAuthStore from "../../store/authStore.js";
 
 const Login = ({ onLogin }) => {
     const [username, setUsername] = useState('');
+    const login = useAuthStore((state) => state.login);
     const [error, setError] = useState('');
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
+
+
+    // mymc-season9-web/src/pages/section/Login.jsx
     const handleLogin = async () => {
         if (!username.trim()) {
-            setError('Username is required.');
-            return;
+            return console.error("Username is required.");
         }
-        setLoading(true);
-        try {
-            const res = await axios.post('http://localhost:5000/api/store/login', { username });
-            if (res.status === 200) {
-                localStorage.setItem('user', JSON.stringify(res.data.data));
-                setLoading(false);
-                navigate('/home');
-            }
-        } catch (err) {
-            setLoading(false);
-            if (err.response) {
-                setError(err.response.data.error);
-            } else {
-                setError('An error occurred. Please try again.');
-            }
-        }
+
+        await login(username);
+        navigate("/home");
     };
+
 
     return (
         <div className="flex flex-col p-4 ">
