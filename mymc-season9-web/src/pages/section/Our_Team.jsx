@@ -2,7 +2,7 @@ import React from 'react';
 import sr from '../../assets/sr.jpg';
 import Sr from '../../assets/characters/Sr.png';
 import MRGYT from '../../assets/characters/MRGYT.png';
-import Rashnanna from '../../assets/characters/rash.jpg';
+import Rashnanna from '../../assets/characters/Rash.jpg';
 import ZYCO from '../../assets/characters/chhycoohunter.jpg';
 import zycoChr from '../../assets/characters/zyco.png';
 import sam from '../../assets/characters/sam.png';
