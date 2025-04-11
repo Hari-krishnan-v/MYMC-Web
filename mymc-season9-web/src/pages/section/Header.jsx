@@ -44,8 +44,7 @@ export const Header = () => {
             animate={{ opacity: 1, top: 8 }}
             exit={{ opacity: 0, top: -100 }}
             transition={{ duration: 1 }}
-            className="fixed top left-0 right-0 flex justify-center items-center shadow-xl h-[65px] max-w-[1100px] rounded-3xl mx-auto z-50 "
-            style={{ backgroundColor: 'rgba(37, 38, 41, 0.8)', backdropFilter: 'blur(10px)' }}
+            className="fixed top left-0 right-0 flex justify-center items-center shadow-xl h-[65px] max-w-[1100px] rounded-3xl mx-auto mt-5 z-50 "
         >
             <nav className={'flex justify-between w-full px-7 items-center navbar'}>
                 <div className="logo flex justify-center items-center ">
@@ -123,7 +122,7 @@ export const Header = () => {
                         <DialogRoot placement={"center"}>
                             <DialogTrigger asChild>
                                 <button className="text-white mx-2">
-                                    <FaUser />
+                                    <FaUser className={"text-white/60 hover:text-white"} />
                                 </button>
                             </DialogTrigger>
                             <DialogContent className={'flex flex-col w-80  p-2'}>

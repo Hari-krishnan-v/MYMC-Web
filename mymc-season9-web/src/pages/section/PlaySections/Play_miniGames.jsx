@@ -58,25 +58,27 @@ export const PlayMiniGames = () => {
 
     return (
         <section className="min-h-screen w-full py-16 px-4 sm:px-8 flex flex-col items-center justify-center relative">
-            <div className="w-3/4 space-y-5">
-                <h2 className="text-[30px]  text-center mt-10 ">Our Minecraft Games</h2>
+            <div className="gradient-overlay2 h-full"></div>
+
+            <div className="w-3/4 space-y-5 z-20">
+                <h2 className="text-[30px]  text-center mt-14 ">Our Minecraft Games</h2>
                 <div className="flex w-full h-[80vh] gap-4">
 
                     {/* Left Game List */}
-                    <div className="flex flex-col space-y-3 w-1/4 border p-3 pt-5">
+                    <div className="flex flex-col space-y-3 w-1/4  p-3 pt-5">
                         {games.map((game, index) => (
                             <button
                                 key={index}
                                 onClick={() => setGame(game)}
-                                className={`w-full h-16 border flex justify-center items-center text-xl font-semibold rounded-md hover:scale-105 duration-200 transition-all
-                                    ${currentGame.name === game.name ? 'bg-[#ff9800] text-black' : 'bg-white text-[#2A2A2A]'}`}>
+                                className={`w-full h-16  flex justify-center items-center text-xl font-semibold rounded-3xl hover:scale-105 duration-200 transition-all
+                                    ${currentGame.name === game.name ? 'bg-[#A782E5]' : ' text-white'}`}>
                                 {game.name}
                             </button>
                         ))}
                     </div>
 
                     {/* Right Game Display */}
-                    <div className="relative w-3/4 overflow-hidden border rounded-lg">
+                    <div className="relative w-3/4 overflow-hidden bg-[#554274]/10 rounded-xl">
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentGame.name}

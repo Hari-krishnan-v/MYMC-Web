@@ -31,7 +31,6 @@ const useAuthStore = create((set, get) => ({
             const res = await axios.get("http://localhost:5000/api/store/is-authenticated", {
                 withCredentials: true,
             });
-
             if (res.data.authenticated) {
                 set({ user: res.data.data.username, isAuthenticated: true });
             } else {

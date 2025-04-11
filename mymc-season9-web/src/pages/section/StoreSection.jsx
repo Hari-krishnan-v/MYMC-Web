@@ -70,8 +70,8 @@ export const StoreSection = () => {
     };
 
     return (
-        <section className="min-h-dvh w-full flex flex-col gap-9 mt-32 items-center relative">
-            <div className="gradient-overlay2 h-full"></div>
+        <section className="min-h-dvh w-full flex flex-col gap-9 pt-32 items-center relative ">
+            {/*<div className="gradient-overlay2 h-full"></div>*/}
             <div className="z-20 w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 h-16 py-2 flex gap-5 flex-wrap justify-center">
                 {['All', 'ClaimBlocks', 'Money', 'Kits', 'Home'].map((category) => (
                     <button

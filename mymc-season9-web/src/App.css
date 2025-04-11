@@ -1,6 +1,6 @@
 
 .navbar li a{
-    color: #FCECEC;
+    color: rgba(255, 255, 255, 0.6);
     text-decoration: none;
     display: block;
     transition: .5s all;

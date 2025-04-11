@@ -12,7 +12,7 @@ import mymclogoanimation from "../assets/mymclogoanimation.gif"
 import {Faq} from "./section/Faq.jsx";
 import InfiniteScrollingLogosAnimation from "./section/InfiniteScrollingLogosAnimation.jsx";
 import Footer from "./section/Footer.jsx";
-import {News} from "./section/News.jsx";
+import {DevUpdates} from "./section/DevUpdates.jsx";
 import {NumberOfPlayers} from "../Authstore/AuthStore.js";
 import Cookies from "js-cookie";
 import { Helmet } from 'react-helmet-async';
@@ -94,7 +94,7 @@ export const Dashboard = () => {
                 <ServerFeatures/>
                 <PremiumPacks />
                 {/*<OurPartners />*/}
-                <News/>
+                <DevUpdates/>
                 <OurTeam />
                 {/*<Faq/>*/}
                 {/*<InfiniteScrollingLogosAnimation/>*/}

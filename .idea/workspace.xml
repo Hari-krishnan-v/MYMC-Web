@@ -5,39 +5,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="new update">
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/Rash.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/chhycoohunter.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/stark.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/News&amp;Announcement.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Play.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/News&amp;announcement_Section/News_AnnouncementSection.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/PlaySections/Play_miniGames.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/ServerFeatures.jsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/middleware/auth.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminAnnouncement.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminComponents/AdminFooter.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminComponents/AdminHeader.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminOrder.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminPremiumItem.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminUsersView.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/Admin_dashboard.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/Admin_login.jsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/Minecraft_illustration.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Authstore/AuthStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Authstore/AuthStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/chhycoohunter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/rash.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/characters/zyco.webp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/sr.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/sr.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/index.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/Store.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Store.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/StartPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/StartPage.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Footer.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Footer.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Header.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/News&amp;announcement_Section/News_AnnouncementSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/News&amp;announcement_Section/News_AnnouncementSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/News.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/DevUpdates.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/PlaySections/Play_miniGames.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/PlaySections/Play_miniGames.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/ServerFeatures.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/ServerFeatures.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Controller/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/Controller/Auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/Routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,25 +67,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/harik/WebstormProjects/mymc-web/mymc-season9-web/src/assets/characters&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;npm.dev (1).executor&quot;: &quot;Run&quot;,
-    &quot;npm.dev.executor&quot;: &quot;Run&quot;,
-    &quot;npm.start.executor&quot;: &quot;Run&quot;,
-    &quot;npm.test.executor&quot;: &quot;Run&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;C:\\Program Files\\JetBrains\\WebStorm 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.Admin_dashboard.jsx.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "last_opened_file_path": "C:/Users/harik/WebstormProjects/mymc-web/mymc-season9-web/src/assets/characters",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "npm.dev (1).executor": "Run",
+    "npm.dev.executor": "Run",
+    "npm.start.executor": "Run",
+    "npm.test.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.2.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\characters" />
@@ -101,13 +94,13 @@
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\storeItems" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\characters" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets" />
+      <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\characters" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\pages" />
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\fonts" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev (1)">
+  <component name="RunManager" selected="npm.dev">
     <configuration name="dev (1)" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/server/package.json" />
       <command value="run" />
@@ -150,8 +143,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.dev" />
+        <item itemvalue="npm.dev (1)" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.test" />
       </list>
@@ -225,6 +218,9 @@
       <workItem from="1744101592238" duration="10966000" />
       <workItem from="1744117115255" duration="17005000" />
       <workItem from="1744183209514" duration="490000" />
+      <workItem from="1744183915646" duration="586000" />
+      <workItem from="1744305941918" duration="441000" />
+      <workItem from="1744377023004" duration="15648000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -450,7 +446,23 @@
       <option name="project" value="LOCAL" />
       <updated>1743778047327</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="new update">
+      <option name="closed" value="true" />
+      <created>1744183958619</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1744183958619</updated>
+    </task>
+    <task id="LOCAL-00030" summary="new update">
+      <option name="closed" value="true" />
+      <created>1744184131809</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1744184131809</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -497,8 +509,24 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/mymc-season9-web/src/pages/section/Footer.jsx</url>
-          <line>19</line>
+          <line>20</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/mymc-season9-web/src/pages/section/Our_Team.jsx</url>
+          <option name="timeStamp" value="15" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminUsersView.jsx</url>
+          <line>99</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminAnnouncement.jsx</url>
+          <line>57</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="19" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

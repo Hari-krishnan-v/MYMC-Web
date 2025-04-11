@@ -10,7 +10,7 @@ const StartPage = () => {
     useEffect(() => {
         const timer = setTimeout(() => {
             navigate('/home');
-        }, 4000); // Adjust time as needed (1s for fadeIn + 3s for fadeOut)
+        }, 2000); // Adjust time as needed (1s for fadeIn + 3s for fadeOut)
 
         return () => clearTimeout(timer);
     }, [navigate]);
@@ -29,7 +29,7 @@ const StartPage = () => {
                 initial={{ opacity: 0, scale: 0.8 }}
                 animate={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0 ,scale:0.8}}
-                transition={{ duration: 2, ease: "easeInOut" }}
+                transition={{ duration: 1, ease: "easeInOut" }}
             >
                 <img src={MYMC_S9_Resorcepack} alt={"minecraft loading"} className={'h-full'} />
 

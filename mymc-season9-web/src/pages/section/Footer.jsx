@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 
 const Footer = ({playerCount}) => {
     return (
-        <footer className="text-white py-10 px-4  text-center">
+        <footer className="text-white py-10 px-4 bg-gradient-to-b from-black to-[#231D2D]  text-center">
+
             <div className="container mx-auto grid md:grid-cols-3 gap-6 text-sm">
                 {/* Quick Links */}
                 <motion.div

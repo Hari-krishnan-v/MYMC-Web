@@ -28,7 +28,7 @@ export const ServerFeatures = () => {
 
     return (
         <section
-            className="server-features min-h-screen flex flex-col items-center justify-center bg-[#1A1A1A] text-white py-10 relative">
+            className="server-features min-h-screen flex flex-col items-center justify-center  text-white py-10 relative">
             <div className="gradient-overlay2 h-full"></div>
 
             <motion.h2

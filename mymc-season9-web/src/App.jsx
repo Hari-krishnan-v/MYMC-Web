@@ -7,13 +7,18 @@ import {Analytics} from '@vercel/analytics/react';
 import {TermsAndCondition} from "./pages/Terms_and_Condition.jsx";
 import {RefundPolicy} from "./pages/RefundPolicy.jsx";
 import {PrivacyPolicy} from "./pages/Privacy_Policy.jsx";
-import {useEffect} from "react";
+import React, {useEffect} from "react";
 import {AnimatePresence} from 'framer-motion';
 import StartPage from "./pages/StartPage.jsx";
 import {HelmetProvider} from 'react-helmet-async';
 import useAuthStore from "./store/authStore.js";
 import NewsAnnouncement from "./pages/News&Announcement.jsx";
 import {Play} from "./pages/Play.jsx";
+import {AdminDashboard} from "./Admin_panel/Admin_dashboard.jsx";
+import {AdminUsersView} from "./Admin_panel/AdminUsersView.jsx";
+import {AdminOrder} from "./Admin_panel/AdminOrder.jsx";
+import {AdminAnnouncement} from "./Admin_panel/AdminAnnouncement.jsx";
+
 
 
 function App() {
@@ -49,6 +54,11 @@ function App() {
                     <Route path="/terms-and-conditions" element={<TermsAndCondition />} />
                     <Route path="/refund-policy" element={<RefundPolicy />} />
                     <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+                    <Route path={"/admin/dashboard"} element={<AdminDashboard/>}/>
+                    <Route path={"/admin/users"} element={<AdminUsersView/>}/>
+                    <Route path={"/admin/orders"} element={<AdminOrder/>}/>
+                    <Route path={"/admin/announcement"} element={<AdminAnnouncement/>}/>
+
                 </Routes>
             </AnimatePresence>
         </>
@@ -57,11 +67,9 @@ function App() {
 
 const AppWrapper = () => (
     <HelmetProvider>
-
     <Router>
         <App />
     </Router>
-
     </HelmetProvider>
 );
 

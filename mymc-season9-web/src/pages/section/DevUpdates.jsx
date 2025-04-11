@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import mymcs9 from '../../assets/MYMCS9.png';
 
-export const News = () => {
+export const DevUpdates = () => {
     const newsItems = [
         { title: " 9 ", description: "Description for news 1", image: mymcs9 },
         { title: " 8", description: "Description for news 2", image: mymcs9 },
@@ -28,7 +28,7 @@ export const News = () => {
         <section id={'News'} className={'relative overflow-hidden w-full flex justify-center py-20'}>
             <div className="gradient-overlay2 h-full"></div>
             <div className="flex flex-col items-center w-full z-20">
-                <h2 className="text-4xl font-bold text-center text-white mb-8"><span className={'text-[#ff9800] mine-logo'}>Season</span>  Highlights
+                <h2 className="text-4xl font-bold text-center text-white mb-8"><span className={'text-[#ff9800] mine-logo'}>Dev</span>  Updates
                 </h2>
                 <div
                     className={'flex  md:justify-start xl:justify-center items-center overflow-x-auto hide-scrollbar space-x-4 w-full'}>
