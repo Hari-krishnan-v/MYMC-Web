@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import { motion } from 'framer-motion';
-import  useAuthStore  from '../../store/authStore';
-import vector from '../../assets/Vector.svg';
+import useAuthStore from '../../store/authStore';
+import { toast, ToastContainer } from "react-toastify";
 import ClaimBlocksimg from '../../assets/storeItems/ClaimBlocks.png';
 import money from '../../assets/storeItems/money.png';
 import AddItemBtn from "../../components/Buttons/AddItem.jsx";
-import { toast, ToastContainer } from "react-toastify";
 import pickaxeImg from '../../assets/storeItems/pickaxeImg.png';
 import axeImg from '../../assets/storeItems/Axe.png';
 import shovelImg from '../../assets/storeItems/shovelImg.png';
@@ -23,7 +22,8 @@ export const fetchStoreItems = async (category) => {
 export const StoreSection = () => {
     const [selected, setSelected] = useState('All');
     const [items, setItems] = useState([]);
-    const { user, isAuthenticated ,addToCart} = useAuthStore();
+    const { user, isAuthenticated, addToCart } = useAuthStore();
+
     useEffect(() => {
         fetchStoreItems(selected).then(setItems);
     }, [selected]);
@@ -70,66 +70,86 @@ export const StoreSection = () => {
     };
 
     return (
-        <section className="min-h-dvh w-full flex flex-col gap-9 pt-32 items-center relative ">
-            {/*<div className="gradient-overlay2 h-full"></div>*/}
-            <div className="z-20 w-11/12 sm:w-3/4 md:w-2/3 lg:w-1/2 h-16 py-2 flex gap-5 flex-wrap justify-center">
-                {['All', 'ClaimBlocks', 'Money', 'Kits', 'Home'].map((category) => (
-                    <button
-                        key={category}
-                        className={`px-6 animate-in transition-all duration-500 rounded-xl border ${selected === category ? 'bg-gray-100 text-black scale-110' : 'hover:bg-gray-100 hover:text-black'}`}
-                        onClick={() => setSelected(category)}
-                    >
-                        {category}
-                    </button>
-                ))}
-            </div>
-            <div className="flex flex-wrap gap-6">
-                <motion.div
-                    initial={{ opacity: 0, scale: 0.9 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 0.7 }}
-                    transition={{ duration: 0.8, ease: 'easeInOut' }}
-                    className="min-h-[500px] w-11/12 sm:w-3/4 md:w-full lg:w-full p-5 flex flex-wrap gap-9 justify-center z-20">
-                    {items.map((item, index) => (
-                        <div
-                            key={index}
-                            className="min-w-[280px] max-w-[300px] h-[400px] bg-[#2A2A2A] text-left border border-[#ceff00] rounded-3xl p-6 flex flex-col justify-between items-center shadow-lg transform transition-transform hover:scale-105 overflow-hidden"
+        <section className="min-h-screen w-full flex flex-col gap-12 pt-32 items-center bg-gradient-to-b from-black to-[#231D2D]">
+            {/* Category Buttons */}
+            <div className="w-full flex justify-center">
+                <div className="flex gap-4 flex-wrap p-4 rounded-lg border border-[#444]">
+                    {['All', 'ClaimBlocks', 'Money', 'Kits', 'Home'].map((category) => (
+                        <button
+                            key={category}
+                            className={`px-6 py-3 rounded-lg text-sm font-semibold border-2 transition-all duration-300 ease-in-out ${
+                                selected === category
+                                    ? 'bg-[#1c1c1c] text-white border-[#009f29]'
+                                    : 'bg-transparent text-white hover:bg-[#525252] hover:border-[#00BC32]'
+                            }`}
+                            onClick={() => setSelected(category)}
                         >
-                            <div className="w-full flex justify-center mb-4 py-2">
-                                <img src={itemImage(item.name)} alt={item.name} className="w-24 h-24" />
-                            </div>
-                            <div className="text-center space-y-2">
-                                <h3 className="text-2xl text-[#00BC32] font-bold Plan-head">{item.name}</h3>
-                                <div>
-                                    {item.description.map((desc, index) => (
-                                        <p key={index} className="text-sm text-[#CFCFCF] text-start flex Plan-head">
-                                            <span className="mr-1">
-                                                <img
-                                                    src={
-                                                        desc.includes('Pickaxe') ? pickaxeImg :
-                                                            desc.includes('Axe') ? axeImg :
-                                                                desc.includes('Shovel') ? shovelImg :
-                                                                    vector
-                                                    }
-                                                    className="h-[20px]"
-                                                />
-                                            </span>
-                                            {desc}
-                                        </p>
-                                    ))}
-                                </div>
-                                <h2 className="my-3 text-3xl Plan-head font-bold">₹{item.price}</h2>
-                            </div>
-                            <AddItemBtn
-                                className="mt-4 bg-[#00BC32] text-white Plan-head px-4 py-2 rounded-full shadow-md hover:bg-[#00a82d] transition-colors"
-                                onClick={() => addItemToCart(item)}
-                            >
-                                Add to Cart
-                            </AddItemBtn>
-                        </div>
+                            {category}
+                        </button>
                     ))}
-                </motion.div>
+                </div>
             </div>
+
+            {/* Item Grid */}
+            <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.5 }}
+                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-11/12 max-w-7xl"
+            >
+                {items.map((item, index) => (
+                    <div
+                        key={index}
+                        className="rounded-lg bg-gradient-to-r from-[#1c1c1c] to-[#23232d] shadow-lg p-6 flex flex-col justify-between items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
+                    >
+                        {/* Item Image */}
+                        <motion.img
+                            src={itemImage(item.name)}
+                            alt={item.name}
+                            className="w-24 h-24 mb-4 rounded-md transition-transform duration-300 ease-in-out hover:scale-110"
+                        />
+
+                        {/* Item Name */}
+                        <h3 className="text-xl text-white font-semibold text-center mb-2">{item.name}</h3>
+
+                        {/* Item Description */}
+                        <div className="text-sm text-gray-300 w-full space-y-1 mb-3">
+                            {item.description.map((desc, i) => (
+                                <p key={i} className="flex items-center">
+                                    <img
+                                        src={
+                                            desc.includes("Pickaxe")
+                                                ? pickaxeImg
+                                                : desc.includes("Axe")
+                                                    ? axeImg
+                                                    : desc.includes("Shovel")
+                                                        ? shovelImg
+                                                        : ''
+                                        }
+                                        alt="icon"
+                                        className="h-4 w-4 mr-2"
+                                    />
+                                    {desc}
+                                </p>
+                            ))}
+                        </div>
+
+                        {/* Price Section */}
+                        <div className="w-full text-center bg-[#009f29] text-white py-2 rounded-lg mb-4">
+                            <h2 className="text-xl font-semibold">₹{item.price}</h2>
+                        </div>
+
+                        {/* Add to Cart Button */}
+                        <AddItemBtn
+                            className="bg-[#00BC32] hover:bg-[#009f29] text-white font-medium px-6 py-3 rounded-lg mt-auto shadow-md transform hover:translate-y-1"
+                            onClick={() => addItemToCart(item)}
+                        >
+                            Add to Cart
+                        </AddItemBtn>
+                    </div>
+                ))}
+            </motion.div>
+
             <ToastContainer />
         </section>
     );

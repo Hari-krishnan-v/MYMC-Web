@@ -25,10 +25,6 @@ export const Home = ({ playerCount, serverStatus }) => {
         playerCount = 0;
     }
 
-    const Handlejoin = () => {
-        window.href="/play";
-    }
-
     return (
         <section className={'home bg-no-repeat relative bg-gradient-to-b from-black to-[#231D2D]'} id={'home'}>
             {/*<video preload="auto" autoPlay loop muted className={'video-background '}>*/}

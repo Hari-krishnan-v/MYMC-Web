@@ -8,39 +8,62 @@ const useAuthStore = create((set, get) => ({
 
     login: async (username) => {
         try {
-            const res = await axios.post("http://localhost:5000/api/store/login",
+            const res = await axios.post(
+                "http://localhost:5000/api/store/login",
                 { username },
                 { withCredentials: true }
             );
-            console.log("Login response:", res);
+
             if (res.status === 200 && res.data.success) {
-                const username = res.data.data?.username || "Guest";
-                set({ user: username, isAuthenticated: true });
-                localStorage.setItem("token", res.data.token);
+                const { token, data } = res.data;
+
+                set({
+                    user: data,
+                    isAuthenticated: true,
+                    cart: data.cart || [],
+                });
+
+                localStorage.setItem("token", token);
             }
         } catch (err) {
-            console.error("Login failed:", err.response?.data);
+            console.error("Login failed:", err.response?.data || err.message);
         }
     },
 
     checkAuth: async () => {
+        set({ loading: true }); // Start loading
+
         try {
             const token = localStorage.getItem("token");
-            if (!token) return set({ isAuthenticated: false, user: null });
+            if (!token) {
+                set({ isAuthenticated: false, user: null, cart: [], loading: false });
+                return;
+            }
 
-            const res = await axios.get("http://localhost:5000/api/store/is-authenticated", {
-                withCredentials: true,
+            const res = await axios.get("http://localhost:5000/api/store/check-auth", {
+                credentials: "include",
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
             });
+
             if (res.data.authenticated) {
-                set({ user: res.data.data.username, isAuthenticated: true });
+                const userData = res.data.data;
+                set({
+                    user: userData,
+                    isAuthenticated: true,
+                    cart: userData.cart || [],
+                    loading: false,
+                });
             } else {
-                set({ isAuthenticated: false, user: null });
+                set({ isAuthenticated: false, user: null, cart: [], loading: false });
             }
         } catch (error) {
-            console.error("Auth check failed:", error.response?.data);
-            set({ isAuthenticated: false, user: null });
+            console.error("Auth check failed:", error.response?.data || error.message);
+            set({ isAuthenticated: false, user: null, cart: [], loading: false });
         }
     },
+
 
     logout: () => {
         localStorage.removeItem("token");
@@ -49,12 +72,15 @@ const useAuthStore = create((set, get) => ({
 
     addToCart: async (username, item) => {
         try {
-            const res = await axios.post("http://localhost:5000/api/store/add-to-cart", { username, item });
+            const res = await axios.post("http://localhost:5000/api/store/add-to-cart", {
+                username,
+                item,
+            });
             if (res.status === 200) {
                 set({ cart: res.data.data.UserCart });
             }
         } catch (error) {
-            console.error("Failed to add to cart:", error.response?.data);
+            console.error("Failed to add to cart:", error.response?.data || error.message);
         }
     },
 
@@ -65,7 +91,7 @@ const useAuthStore = create((set, get) => ({
                 set({ cart: res.data.cartItems });
             }
         } catch (error) {
-            console.error("Failed to fetch cart items:", error.response?.data);
+            console.error("Failed to fetch cart items:", error.response?.data || error.message);
         }
     },
 
@@ -73,16 +99,16 @@ const useAuthStore = create((set, get) => ({
         try {
             const res = await axios.post("http://localhost:5000/api/store/remove-from-cart", {
                 username,
-                itemId
+                itemId,
             });
-
             if (res.status === 200) {
                 set({ cart: res.data.data.UserCart });
             }
         } catch (error) {
-            console.error("Failed to remove from cart:", error.response?.data);
+            console.error("Failed to remove from cart:", error.response?.data || error.message);
         }
     },
+
 }));
 
 export default useAuthStore;

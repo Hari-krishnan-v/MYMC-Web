@@ -49,14 +49,15 @@ const Footer = ({playerCount}) => {
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, ease: 'easeInOut' ,delay:0.2 }}
+                    className="flex flex-col gap-2"
                 >
                     <h3 className="text-lg head-font text-[20px] font-bold mb-2 text-start">Follow Us</h3>
-                    <div className="flex space-x-4">
-                        <a href="https://discord.gg/mymc" className="text-blue-500 hover:text-white bg-slate-700 p-1 rounded-xl text-2xl"><FaDiscord /></a>
-                        <a href="#" className="text-blue-400 hover:text-white bg-slate-700 p-1 rounded-xl text-2xl"><FaInstagram /></a>
-                        <a href="#" className="text-red-500 hover:text-white bg-slate-700 p-1 rounded-xl text-2xl"><FaYoutube /></a>
+                    <div className="flex space-x-4 ">
+                        <a href="https://discord.gg/mymc" className="text-black hover:scale-110 bg-white p-1 transition-all duration-200 rounded-xl text-2xl"><FaDiscord /></a>
+                        <a href="#" className="text-black hover:scale-110 bg-white  p-1 transition-all duration-200 rounded-xl text-2xl"><FaInstagram /></a>
+                        <a href="#" className="text-black hover:scale-110 bg-white p-1 transition-all duration-200 rounded-xl text-2xl"><FaYoutube /></a>
                     </div>
-                    <p className="mt-2 text-start">Email: mymc0786@gmail.com</p>
+                    <p className="mt-2 text-start text-[#adb7be]">Email: mymc0786@gmail.com</p>
                 </motion.div>
             </div>
 

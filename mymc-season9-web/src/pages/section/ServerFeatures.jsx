@@ -45,8 +45,8 @@ export const ServerFeatures = () => {
                         key={index}
                         initial={{opacity: 0, scale: 0.8}}
                         whileInView={{opacity: 1, scale: 1}}
-                        transition={{duration: 0.5, ease: "easeInOut"}}
-                        className="bg-[#2A2A2A] p-6 rounded-lg shadow-lg w-[300px] text-center"
+                        transition={{duration: 0.8, ease: "easeInOut"}}
+                        className="bg-[#1F1F1F]/20 p-6 rounded-lg shadow-lg w-[300px] text-center"
                     >
                         <div className="mb-4">{feature.icon}</div>
                         <h3 className="text-2xl font-semibold mb-2">{feature.title}</h3>

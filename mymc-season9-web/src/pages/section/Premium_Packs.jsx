@@ -5,15 +5,17 @@ import { motion } from "framer-motion";
 import {DialogBody, DialogCloseTrigger, DialogContent, DialogRoot} from "../../components/ui/Dialog.tsx";
 import Login from "./Login.jsx";
 import {handleRazorpayPayment} from "../../Rayzorpay/razorpay.js";
+import useAuthStore from "../../store/authStore.js";
 
 
-export const PremiumPacks = ({username}) => {
+export const PremiumPacks = () => {
     const [isMonthly, setIsMonthly] = useState(true);
     const [isAuthenticated, setIsAuthenticated] = useState(false); // Replace with actual authentication logic
     const [showLoginDialog, setShowLoginDialog] = useState(false);
+    const {user}=useAuthStore();
 
     useEffect(() => {
-        if (username) {
+        if (user) {
             setIsAuthenticated(true);
         }
     }, []);
@@ -33,7 +35,7 @@ export const PremiumPacks = ({username}) => {
             }
 
             if (cartItem) {
-                handleRazorpayPayment(username, amount, [cartItem]);
+                handleRazorpayPayment(user, amount, [cartItem]);
             } else {
                 console.error('Invalid amount');
             }

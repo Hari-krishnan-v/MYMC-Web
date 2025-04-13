@@ -223,3 +223,11 @@ body {
   letter-spacing: .25rem;
   margin-top: -10px;
 }
+
+.minecraft-font {
+  font-family: 'Minecraft', sans-serif;
+}
+
+.glow {
+  box-shadow: 0 0 10px #00ff91, 0 0 20px #00ff91;
+}

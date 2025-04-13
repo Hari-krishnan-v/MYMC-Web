@@ -1,5 +1,5 @@
 import React from 'react'
-import MYMCS9 from '../../assets/MYMCS9.png'
+import MYMCS9 from '../../assets/MYMC_LOGO_2025-01.png'
 import {motion} from "framer-motion";
 
 export const MymcConnection = () => {
@@ -14,8 +14,8 @@ export const MymcConnection = () => {
                         whileInView={{opacity: 1, scale: 1}}
                         exit={{opacity: 0, scale: .8}}
                         transition={{duration: .6, ease: "easeInOut"}}
-                        className="z-20 container w-[711px] h-[710px] mymc-con-img-con md:hidden lg:hidden xl:block sm:hidden">
-                        <img src={MYMCS9} alt="Mymc Connection"/>
+                        className="z-20   w-[711px] h-[710px]  md:hidden lg:hidden xl:flex sm:hidden  items-center justify-center">
+                        <img src={MYMCS9} className={"h-[510px] "} alt="Mymc Connection"/>
                     </motion.div>
                     <motion.div
                         initial={{opacity: 0, scale: 0.9}}
