@@ -1,25 +1,10 @@
 import React, { useEffect } from 'react';
-import { motion } from "framer-motion";
-import Minecraft from "../../assets/Minecraft.mp4";
-import mymcs9 from "../../assets/MYMCS9.png";
+import { motion } from "framer-motion";;
 import { FaCircle } from "react-icons/fa";
 import Minecraft_illustration from "../../assets/Minecraft_illustration.png";
 
 
 export const Home = ({ playerCount, serverStatus }) => {
-    useEffect(() => {
-
-        const video = document.createElement('video');
-        video.src = Minecraft;
-        video.load();
-
-        // Preload images
-        const images = [mymcs9];
-        images.forEach(src => {
-            const img = new Image();
-            img.src = src;
-        });
-    }, []);
 
     if (playerCount === undefined) {
         playerCount = 0;
@@ -27,17 +12,13 @@ export const Home = ({ playerCount, serverStatus }) => {
 
     return (
         <section className={'home bg-no-repeat relative bg-gradient-to-b from-black to-[#231D2D]'} id={'home'}>
-            {/*<video preload="auto" autoPlay loop muted className={'video-background '}>*/}
-            {/*    <source src={Minecraft} type="video/mp4" />*/}
-            {/*</video>*/}
-            {/*<div className={'gradient-overlay'}></div>*/}
             <div className="gradient-overlay2 h-full"></div>
             <motion.img
                 initial={{ opacity: 0, scale: 0.9 }}
                 whileInView={{ opacity: 1, scale: 1 }}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: .8 }}
-                src={Minecraft_illustration} className={"absolute bottom-0 right-0"} alt=""/>
+                src={Minecraft_illustration} className={"absolute bottom-0 right-0 select-none"} alt=""/>
 
             <div className={'max-w-[1440px] relative z-20 w-full m-auto'}>
                 <div className={'flex'}>
@@ -58,7 +39,7 @@ export const Home = ({ playerCount, serverStatus }) => {
                             admins.
                         </p>
                         <p className={'text-xs sm:text-sm md:text-base lg:text-lg mb-2'}>Currently playing</p>
-                        <div className={'flex'}>
+                        <div className={'flex '}>
                             <h2 className={'font-bold head-font text-4xl sm:text-5xl md:text-6xl lg:text-7xl '}>{playerCount}</h2>
                             <p className={'mx-2 mt-10 font-bold text-xs sm:text-sm md:text-base lg:text-lg'}
                                style={{color: '#0eff00'}}>/Playing</p>

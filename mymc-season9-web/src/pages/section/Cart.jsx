@@ -3,6 +3,7 @@ import ClaimBlocks from '../../assets/storeItems/ClaimBlocks.png';
 import money from '../../assets/storeItems/money.png';
 import DeleteButton from "../../components/Buttons/DeleteBtn.jsx";
 import useAuthStore from "../../store/authStore.js";
+import {handleRazorpayPayment} from "../../Rayzorpay/razorpay.js";
 
 export const Cart = () => {
     const [totalAmount, setTotalAmount] = useState(0);
@@ -24,7 +25,7 @@ export const Cart = () => {
     };
 
     const handleRemove = (itemId) => {
-        removeFromCart(user, itemId);
+        removeFromCart(user.username, itemId);
     };
 
     const itemImage = (name) => {
@@ -32,6 +33,13 @@ export const Cart = () => {
         if (name.includes('In-Game Money')) return money;
         return null;
     };
+    const handleCheckout = () => {
+        if (cart.length === 0) {
+            alert("Your cart is empty");
+            return;
+        }
+        handleRazorpayPayment(user.username, totalAmount, [cart]);
+    }
 
     return (
         <div className={'flex flex-col justify-between h-full'}>
@@ -56,7 +64,7 @@ export const Cart = () => {
             </div>
             <div className="flex flex-col gap-3">
                 <h3 className="text-lg">Total Amount: ₹{totalAmount}</h3>
-                {/* <button className="p-4 border w-full" onClick={handleCheckout}>Checkout</button> */}
+                 <button className="p-4 border w-full" onClick={handleCheckout}>Checkout</button>
             </div>
         </div>
     );

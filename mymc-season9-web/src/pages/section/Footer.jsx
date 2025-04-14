@@ -6,7 +6,7 @@ const Footer = ({playerCount}) => {
         <footer className="text-white py-10 px-4 bg-gradient-to-b from-black to-[#231D2D]  text-center">
 
             <div className="container mx-auto grid md:grid-cols-3 gap-6 text-sm">
-                {/* Quick Links */}
+
                 <motion.div
                     initial={{ opacity: 0, y: 50 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -64,8 +64,7 @@ const Footer = ({playerCount}) => {
             {/* Bottom Section */}
             <div className="border-t border-gray-700 mt-6 pt-4 text-xs text-gray-400">
                 <p>&copy; 2025 Muttayi Minecraft. All Rights Reserved.</p>
-                {/*<p>Not affiliated with Mojang Studios or Microsoft.</p>*/}
-                {/*<p>Designed with ❤️ by the Muttayi Minecraft Team.</p>*/}
+
             </div>
         </footer>
     );

@@ -1,5 +1,5 @@
 import Razorpay from 'razorpay';
-
+import MYMC_S9_Resorcepack from '../assets/MYMC_S9_Resorcepack.png';
 
 
 export const handleRazorpayPayment = async (username, totalAmount, cartItems) => {
@@ -12,21 +12,18 @@ export const handleRazorpayPayment = async (username, totalAmount, cartItems) =>
         handler: function (response) {
             alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
 
-
         },
         prefill: {
             name: username,
-            email: 'user@example.com', // Replace with user's email
-            contact: '9999999999' // Replace with user's contact number
         },
         notes: {
             items: JSON.stringify(cartItems)
         },
         theme: {
-            color: '#F37254'
+            color: '#370900'
         }
     };
-
     const rzp = new window.Razorpay(options);
     rzp.open();
+
 };

@@ -12,19 +12,15 @@ export const PremiumPacks = () => {
     const [isMonthly, setIsMonthly] = useState(true);
     const [isAuthenticated, setIsAuthenticated] = useState(false); // Replace with actual authentication logic
     const [showLoginDialog, setShowLoginDialog] = useState(false);
-    const {user}=useAuthStore();
+    const {user ,}=useAuthStore();
 
-    useEffect(() => {
-        if (user) {
-            setIsAuthenticated(true);
-        }
-    }, []);
+
     const handleToggle = (selection) => {
         setIsMonthly(selection === 'monthly');
     };
 
     const handlePurchase = (amount) => {
-        if (isAuthenticated) {
+        if (user) {
             let cartItem;
             if (amount === 59) {
                 cartItem = { name: 'Gold Plan', description: 'Basic Plan', price: 59 };

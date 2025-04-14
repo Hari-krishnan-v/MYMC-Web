@@ -20,17 +20,10 @@ import {ServerFeatures} from "./section/ServerFeatures.jsx";
 
 
 export const Dashboard = () => {
-    const [loading, setLoading] = useState(true);
-    const [fadeOut, setFadeOut] = useState(false);
+
     const [playerCount, setPlayerCount] = useState(0);
     const [serverStatus, setServerStatus] = useState('Offline');
 
-    // useEffect(() => {
-    //     setTimeout(() => {
-    //         setFadeOut(true);
-    //         setTimeout(() => setLoading(false), 600);
-    //     }, 3500); // Adjust time as needed
-    // }, []);
 
     useEffect(() => {
         const fetchPlayerCount = async () => {
@@ -43,16 +36,6 @@ export const Dashboard = () => {
         return () => clearInterval(intervalId);
     }, []);
 
-    // if (loading) {
-    //     return (
-    //         <div className={`bg-black grid place-content-center transition-opacity duration-500 ${fadeOut ? "opacity-0" : "opacity-100"} fixed top-0 left-0 w-full h-full `}>
-    //             <img src={download} alt={"minecraft loading"} className={''} />
-    //             {/*<div className="flex justify-center items-end h-full w-full absolute bottom-0">*/}
-    //             {/*    <img src={mymcs9} className={'h-1/4'} alt={"minecraft loading"}/>*/}
-    //             {/*</div>*/}
-    //         </div>
-    //     );
-    // }
 
     return (
         <>
@@ -69,7 +52,6 @@ export const Dashboard = () => {
                 <meta property="og:image" content="https://mymc-web.vercel.app/assets/MYMC_S9_Resorcepack-D7zjRM5F.png"/>
                 <meta property="og:url" content="https://mymc-web.vercel.app/"/>
 
-                {/* ✅ Schema.org Structured Data for VideoGame */}
                 <script type="application/ld+json">
                     {JSON.stringify({
                         "@context": "https://schema.org",

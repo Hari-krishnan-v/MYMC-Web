@@ -1,5 +1,4 @@
 const UserData = require('../models/UserData');
-const {generateTokenAndSetCookie} = require("../Utils/generateTokenAndSetCookie");
 const jwt = require("jsonwebtoken");
 require('dotenv').config();
 const axios = require('axios');
@@ -16,22 +15,22 @@ const Login = async (req, res) => {
     }
 
     try {
-        // Fetch Minecraft player data from PlayerDB API
+
         const mcRes = await axios.get(`https://playerdb.co/api/player/minecraft/${username}`);
 
-        // Check if player data exists
+
         const mcData = mcRes?.data?.data?.player;
         if (!mcData) {
             return res.status(404).json({ error: 'Minecraft player not found' });
         }
 
-        // Get the full body skin using CraftHead API (full avatar)
+
         const fullSkinUrl = `https://crafthead.net/armor/body/${mcData.id}`;  // CraftHead full body image URL
 
-        // Check if user already exists in your database
+
         let user = await UserData.findOne({ username });
 
-        // If user doesn't exist, create a new one with the avatar URL
+
         if (!user) {
             user = await UserData.create({
                 username,

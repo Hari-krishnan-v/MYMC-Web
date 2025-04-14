@@ -78,6 +78,7 @@ const useAuthStore = create((set, get) => ({
             });
             if (res.status === 200) {
                 set({ cart: res.data.data.UserCart });
+                return res.status(200)
             }
         } catch (error) {
             console.error("Failed to add to cart:", error.response?.data || error.message);

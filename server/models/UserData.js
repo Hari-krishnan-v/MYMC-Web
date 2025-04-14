@@ -5,6 +5,7 @@ const UserSchema = new mongoose.Schema({
     minecraftUUID: { type: String },
     avatar: { type: String },
     UserCart: { type: [Object], default: [] },
+    OrderHistory: { type: [Object], default: [] },
 });
 
 module.exports = mongoose.model('UserData', UserSchema);

@@ -29,6 +29,7 @@ export const StoreSection = () => {
     }, [selected]);
 
     const addItemToCart = async (item) => {
+        console.log(user)
         if (!isAuthenticated) {
             toast.error("Please login", {
                 position: "bottom-left",
@@ -38,18 +39,14 @@ export const StoreSection = () => {
         }
 
         try {
-            const response = await addToCart(user, item); // Using authStore method
-            if (response.ok) {
+            await addToCart(user.username, item); // Using authStore method
+
                 toast.success("Item added to cart!", {
                     position: "bottom-left",
                     className: "toast-message",
+
                 });
-            } else {
-                toast.error(data.error || "Failed to add to cart", {
-                    position: "bottom-left",
-                    className: "toast-message",
-                });
-            }
+
         } catch (err) {
             console.error(err);
             toast.error("Server error", {
