@@ -9,9 +9,9 @@ export const handleRazorpayPayment = async (username, totalAmount, cartItems) =>
         currency: 'INR',
         name: 'MYMC STORE',
         description: 'Purchase Description',
+        image: MYMC_S9_Resorcepack,
         handler: function (response) {
             alert(`Payment successful! Payment ID: ${response.razorpay_payment_id}`);
-
         },
         prefill: {
             name: username,

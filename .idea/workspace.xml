@@ -4,17 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="ui updated and admin ui created">
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="updated Premium_Packs.jsx changed main logo store card updated">
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/Sura.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/razorpay.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Rayzorpay/razorpay.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/MYMC_LOGO_2025-01.png" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/MYMC_LOGO_2025-01.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/assets/MYMC_S9_Resorcepack.png" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/MYMC_S9_Resorcepack.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/Dashboard.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Cart.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Cart.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Contact.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Contact.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -219,7 +216,9 @@
       <workItem from="1744440487296" duration="8657000" />
       <workItem from="1744518936703" duration="11993000" />
       <workItem from="1744621729721" duration="6000" />
-      <workItem from="1744622456962" duration="304000" />
+      <workItem from="1744622456962" duration="3085000" />
+      <workItem from="1744696753205" duration="895000" />
+      <workItem from="1744698213188" duration="2888000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -477,7 +476,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744550442081</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="updated Premium_Packs.jsx changed main logo store card updated">
+      <option name="closed" value="true" />
+      <created>1744623286545</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1744623286545</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -518,7 +525,8 @@
     <MESSAGE value="backend setting" />
     <MESSAGE value="new update" />
     <MESSAGE value="ui updated and admin ui created" />
-    <option name="LAST_COMMIT_MESSAGE" value="ui updated and admin ui created" />
+    <MESSAGE value="updated Premium_Packs.jsx changed main logo store card updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated Premium_Packs.jsx changed main logo store card updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -546,6 +554,11 @@
           <url>file://$PROJECT_DIR$/mymc-season9-web/src/App.jsx</url>
           <line>46</line>
           <option name="timeStamp" value="21" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/mymc-season9-web/src/pages/Terms_and_Condition.jsx</url>
+          <line>28</line>
+          <option name="timeStamp" value="22" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
