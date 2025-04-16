@@ -82,9 +82,7 @@ font-family: "Oxanium", sans-serif;
     .mymc-con-img-con{
         display: none;
     }
-    .mymc-con{
-      margin: 60px 5px;
-    }
+
     .mymc-con>div>*{
       margin: 20px 10px;
     }

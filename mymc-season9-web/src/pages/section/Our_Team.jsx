@@ -1,18 +1,12 @@
 import React from 'react';
 import sr from '../../assets/sr.jpg';
-import Sr from '../../assets/characters/Sr.png';
-import MRGYT from '../../assets/characters/MRGYT.png';
-import Rashnanna from '../../assets/characters/Rash.jpg';
-import ZYCO from '../../assets/characters/chhycoohunter.jpg';
-import zycoChr from '../../assets/characters/zyco.png';
-import sam from '../../assets/characters/sam.png';
-import Akku from '../../assets/characters/akku.webp';
-import ARchr from '../../assets/characters/ARchr.png';
-import ArNg from '../../assets/characters/ArNg.webp';
-import suposChr from '../../assets/characters/suposChr.png';
-import novschr from '../../assets/characters/novachr.png';
-import noba from '../../assets/characters/noba.jpg';
-import stark from '../../assets/characters/stark.jpg';
+import Rashnanna from '../../assets/OutTeamMembers/Rash.jpg';
+import ZYCO from '../../assets/OutTeamMembers/chhycoohunter.jpg';
+import sam from '../../assets/OutTeamMembers/sam.png';
+import Akku from '../../assets/OutTeamMembers/akku.webp';
+import ArNg from '../../assets/OutTeamMembers/ArNg.webp';
+import noba from '../../assets/OutTeamMembers/noba.jpg';
+import stark from '../../assets/OutTeamMembers/stark.jpg';
 
 
 import { FaDiscord, FaInstagram, FaYoutube } from "react-icons/fa";
@@ -24,8 +18,7 @@ export const OurTeam = () => {
             name: "MRGYT",
             role: "Owner",
             image: Rashnanna,
-            CharacterImage: MRGYT,
-            discord: "https://discord.gg/mymc",
+            discord: "https://discord.gg/JTVBjYUD",
             instagram: "",
             youtube: ""
         },
@@ -33,8 +26,7 @@ export const OurTeam = () => {
             name: "SR Gamer",
             role: "Owner",
             image: sr,
-            CharacterImage: Sr,
-            discord: "https://discord.gg/mymc",
+            discord: "https://discord.gg/dUKzwm2e",
             instagram: "",
             youtube: ""
         },
@@ -42,7 +34,6 @@ export const OurTeam = () => {
             name: "ZYCO",
             role: "Owner",
             image: ZYCO,
-            CharacterImage: zycoChr,
             discord: "https://discord.gg/mymc",
             instagram: "",
             youtube: ""
@@ -51,7 +42,6 @@ export const OurTeam = () => {
             name: "supposedly_sam",
             role: "Lead Developer",
             image: sam,
-            CharacterImage: suposChr,
             discord: "https://discord.gg/mymc",
             instagram: "",
             youtube: ""
@@ -59,7 +49,6 @@ export const OurTeam = () => {
             name: "ARnG2",
             role: "Admin",
             image: ArNg,
-            CharacterImage: ARchr,
             discord: "https://discord.gg/mymc",
             instagram: "",
             youtube: ""
@@ -68,7 +57,6 @@ export const OurTeam = () => {
             name: "Akku",
             role: "Admin",
             image: Akku,
-            CharacterImage: zycoChr,
             discord: "https://discord.gg/mymc",
             instagram: "",
             youtube: ""
@@ -77,7 +65,6 @@ export const OurTeam = () => {
             name: "iiTN0V4",
             role: "Admin",
             image: noba,
-            CharacterImage: novschr,
             discord: "https://discord.gg/mymc",
             instagram: "",
             youtube: ""
@@ -85,8 +72,7 @@ export const OurTeam = () => {
             name: "mrstark gaming",
             role: "Admin / web developer ",
             image: stark,
-            CharacterImage: novschr,
-            discord: "https://discord.gg/mymc",
+            discord: "https://discord.gg/UXzJTxFB",
             instagram: "",
             youtube: ""
         },

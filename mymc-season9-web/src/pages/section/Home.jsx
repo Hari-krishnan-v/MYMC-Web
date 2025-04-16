@@ -8,41 +8,10 @@ import Suresh from "../../assets/Sura.jpg";
 
 
 export const Home = ({ playerCount, serverStatus }) => {
-    const [typed, setTyped] = useState("");
-    const [showSecret, setShowSecret] = useState(false);
-    const secret = "mutta";
 
     if (playerCount === undefined) {
         playerCount = 0;
     }
-    const startListening = () => {
-
-        setTyped("");
-        setShowSecret(false);
-        document.addEventListener('keydown', keyListener);
-    };
-
-    const keyListener = (event) => {
-        const key = event.key.toLowerCase();
-
-        if (/^[a-z]$/.test(key)) {
-            setTyped(prev => {
-                const updated = (prev + key).slice(-secret.length);
-                console.log(updated)
-                if (updated === secret) {
-                    setShowSecret(true);
-                    document.removeEventListener('keydown', keyListener);
-                }
-                return updated;
-            });
-        }
-    };
-
-    useEffect(() => {
-        return () => {
-            document.removeEventListener('keydown', keyListener); // Cleanup
-        };
-    }, []);
 
 
     return (
@@ -53,19 +22,8 @@ export const Home = ({ playerCount, serverStatus }) => {
                 whileInView={{opacity: 0.9, scale: 1}}
                 exit={{ opacity: 0, scale: 0.9 }}
                 transition={{ duration: .8 }}
-                onClick={startListening}
                 src={Minecraft_illustration} className={"absolute bottom-0 right-0 z-20  select-none"} alt=""/>
 
-            {showSecret && (
-                <motion.img
-                    initial={{opacity: 0}}
-                    animate={{opacity: 1}}
-                    transition={{duration: 1}}
-                    src={Suresh}
-                    alt="Secret"
-                    className="absolute top-10 left-10 w-60 rounded-xl z-50"
-                />
-            )}
             <div className={'max-w-[1440px] relative z-20 w-full m-auto'}>
                 <div className={'flex'}>
                     <motion.div

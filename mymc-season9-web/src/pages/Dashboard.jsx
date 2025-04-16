@@ -75,9 +75,9 @@ export const Dashboard = () => {
                 <MymcConnection/>
                 <ServerFeatures/>
                 <PremiumPacks />
-                {/*<OurPartners />*/}
                 <DevUpdates/>
                 <OurTeam />
+                <OurPartners />
                 {/*<Faq/>*/}
                 {/*<InfiniteScrollingLogosAnimation/>*/}
                 <Contact />
