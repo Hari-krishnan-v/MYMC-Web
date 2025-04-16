@@ -45,7 +45,7 @@ export const DevUpdates = () => {
                 <h2 className="text-4xl font-bold text-center text-white mb-10">
                     <span className="text-[#ff9800] ">Dev</span> Updates
                 </h2>
-                <div className="flex hide-scrollbar space-x-6 px-4 w-full md:justify-start xl:justify-center">
+                <div className="flex hide-scrollbar space-x-6 px-4 w-full md:justify-start xl:justify-center ">
                     {updates.map((update, index) => (
                         <motion.div
                             key={index}

@@ -31,7 +31,7 @@ export const Home = ({ playerCount, serverStatus }) => {
                         whileInView={{opacity: 1, scale: 1}}
                         exit={{opacity: 0, scale: 0.9}}
                         transition={{duration: .8}}
-                        className={'justify-items-start lg:ml-20 xl:ml-0 md:ml-16 home-div space-y-3'}>
+                        className={'justify-items-start lg:ml-20  md:ml-16 home-div space-y-3'}>
                         <div className={'border flex items-center gap-2 w-fit rounded-[20px] px-4 p-2'}>
                             <FaCircle fill={serverStatus ? "#0eff00" : "#ff0000"}/>
                             <h2 className={'font-bold text-sm sm:text-base md:text-lg lg:text-xl'}>{serverStatus ? "Online" : "Offline"}</h2>
