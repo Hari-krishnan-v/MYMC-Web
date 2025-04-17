@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="partners upddated" />
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="home responsive updated">
+      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/PartnersLOGO/cmxRigs.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/OurPartners.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/OurPartners.jsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -212,7 +216,7 @@
       <workItem from="1744622456962" duration="3085000" />
       <workItem from="1744696753205" duration="895000" />
       <workItem from="1744698213188" duration="8148000" />
-      <workItem from="1744817164814" duration="2735000" />
+      <workItem from="1744817164814" duration="5252000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -494,7 +498,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744819825443</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="home responsive updated">
+      <option name="closed" value="true" />
+      <created>1744820227463</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1744820227463</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -537,7 +549,8 @@
     <MESSAGE value="ui updated and admin ui created" />
     <MESSAGE value="updated Premium_Packs.jsx changed main logo store card updated" />
     <MESSAGE value="partners upddated" />
-    <option name="LAST_COMMIT_MESSAGE" value="partners upddated" />
+    <MESSAGE value="home responsive updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="home responsive updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

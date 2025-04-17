@@ -1,5 +1,5 @@
 import React from 'react';
-import exitlag from '../../assets/PartnersLOGO/exitlag.png';
+import cmxRigs from '../../assets/PartnersLOGO/cmxRigs.png';
 import uh_logo from '../../assets/PartnersLOGO/uh_logo.png';
 
 export const OurPartners = () => {
@@ -13,7 +13,7 @@ export const OurPartners = () => {
                 <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-8 ">
                     <div
                         className=" border border-gray-400 bg-black/30 rounded-xl p-3 flex items-center justify-center hover:scale-105 transition-transform duration-300">
-                        <img src={exitlag} className="h-20 w-20 object-contain bg-blend-screen" alt="ExitLag"/>
+                        <img src={cmxRigs} className="h-20 w-20 object-contain bg-blend-screen" alt="ExitLag"/>
                     </div>
                     <div
                         className=" border border-gray-400 bg-black/30 rounded-xl p-4 flex items-center justify-center hover:scale-105 transition-transform duration-300">
@@ -21,7 +21,7 @@ export const OurPartners = () => {
                     </div>
                     <div
                         className=" border border-gray-400 bg-black/30 rounded-xl p-4 flex items-center justify-center hover:scale-105 transition-transform duration-300">
-                        <img src={exitlag} className="h-20 w-20 object-contain" alt="ExitLag"/>
+                        <img src={cmxRigs} className="h-20 w-20 object-contain" alt="ExitLag"/>
                     </div>
                     <div
                         className=" border
