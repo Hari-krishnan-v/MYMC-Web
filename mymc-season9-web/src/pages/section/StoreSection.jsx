@@ -1,20 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { motion } from 'framer-motion';
+import React, {useEffect, useState} from 'react';
+import {motion} from 'framer-motion';
 import useAuthStore from '../../store/authStore';
-import { toast, ToastContainer } from "react-toastify";
+import {toast, ToastContainer} from "react-toastify";
 import ClaimBlocksimg from '../../assets/storeItems/ClaimBlocks.png';
 import money from '../../assets/storeItems/money.png';
-import AddItemBtn from "../../components/Buttons/AddItem.jsx";
-import pickaxeImg from '../../assets/storeItems/pickaxeImg.png';
-import axeImg from '../../assets/storeItems/Axe.png';
-import shovelImg from '../../assets/storeItems/shovelImg.png';
 import Minecraft_home from '../../assets/storeItems/Minecraft_home.png';
 
 export const fetchStoreItems = async (category) => {
-    const response = await fetch(
-        category === 'All'
-            ? 'http://localhost:5000/api/store/'
-            : `http://localhost:5000/api/store/${category}`
+    const response = await fetch(`http://localhost:5000/api/store/${category}`
     );
     return await response.json();
 };
@@ -29,7 +22,6 @@ export const StoreSection = () => {
     }, [selected]);
 
     const addItemToCart = async (item) => {
-        console.log(user)
         if (!isAuthenticated) {
             toast.error("Please login", {
                 position: "bottom-left",
@@ -39,14 +31,10 @@ export const StoreSection = () => {
         }
 
         try {
-            await addToCart(user.username, item); // Using authStore method
-
-                toast.success("Item added to cart!", {
-                    position: "bottom-left",
-                    className: "toast-message",
-
-                });
-
+            await addToCart(user.username, item);
+            toast.success("Item added to cart!", {
+                position: "bottom-left", className: "toast-message",
+            });
         } catch (err) {
             console.error(err);
             toast.error("Server error", {
@@ -57,97 +45,90 @@ export const StoreSection = () => {
     };
 
     const itemImage = (name) => {
-        if (name.includes('ClaimBlock')) {
-            return ClaimBlocksimg;
-        } else if (name.includes('In-Game Money')) {
-            return money;
-        } else if (name.includes('Home')) {
-            return Minecraft_home;
-        }
+        if (name.includes('ClaimBlock')) return ClaimBlocksimg;
+        if (name.includes('In-Game Money')) return money;
+        if (name.includes('Home')) return Minecraft_home;
     };
 
     return (
         <section className="min-h-screen w-full flex flex-col gap-12 pt-32 items-center bg-gradient-to-b from-black to-[#231D2D]">
             {/* Category Buttons */}
             <div className="w-full flex justify-center">
-                <div className="flex gap-4 flex-wrap p-4 rounded-lg border border-[#444]">
-                    {['All', 'ClaimBlocks', 'Money', 'Kits', 'Home'].map((category) => (
+                <motion.div
+                    initial={{opacity: 0, scale: 0.95}}
+                    animate={{opacity: 1, scale: 1}}
+                    exit={{opacity: 0, scale: 0.95}}
+                    transition={{duration: 0.5, ease: "easeInOut"}}
+                    className="flex gap-3 flex-wrap p-4 rounded-xl bg-[#121212] border border-[#2a2a2a] shadow-[0_4px_20px_rgba(0,0,0,0.4)]"
+                >
+                    {['Claim Blocks', 'Money', 'Kits', 'Home'].map((category) => (
                         <button
                             key={category}
-                            className={`px-6 py-3 rounded-lg text-sm font-semibold border-2 transition-all duration-300 ease-in-out ${
-                                selected === category
-                                    ? 'bg-[#1c1c1c] text-white border-[#009f29]'
-                                    : 'bg-transparent text-white hover:bg-[#525252] hover:border-[#00BC32]'
-                            }`}
                             onClick={() => setSelected(category)}
+                            className={`w-[100px] h-[80px] rounded-xl px-3 py-2 flex flex-col items-center justify-center text-xs font-medium tracking-wide transition-all duration-300
+                                ${selected === category ? 'bg-gradient-to-b from-black to-[#4B0082]  shadow-[0_0_30px_rgba(75,0,130,0.4)]' : 'bg-[#0d0d0d] text-gray-300 hover:bg-[#2c2c2c] hover:text-white hover:shadow-[0_0_8px_#00ff9966]'}`}
                         >
-                            {category}
+                            <div className="text-base mb-1">🎮</div>
+                            <span>{category}</span>
                         </button>
                     ))}
-                </div>
+                </motion.div>
             </div>
 
             {/* Item Grid */}
-            <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5 }}
-                className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 w-11/12 max-w-7xl"
-            >
-                {items.map((item, index) => (
-                    <div
+            <div className="flex flex-wrap justify-center gap-8 w-full max-w-6xl px-4 z-20">
+                {items.map((item, index) => {
+                    const isUltimate = item.name.toLowerCase().includes("ultimate");
+                    const isBusiness = item.name.toLowerCase().includes("pro");
+
+                    return (
+                        <motion.div
+                            initial={{opacity: 0, scale: 0.8}}
+                            whileInView={{opacity: 1, scale: 1}}
+                            exit={{opacity: 0, scale: 0.8}}
+                            transition={{duration: 0.8,}}
                         key={index}
-                        className="rounded-lg bg-gradient-to-r from-[#1c1c1c] to-[#23232d] shadow-lg p-6 flex flex-col justify-between items-center transition-all duration-300 ease-in-out hover:scale-105 hover:shadow-xl"
-                    >
-                        {/* Item Image */}
-                        <motion.img
-                            src={itemImage(item.name)}
-                            alt={item.name}
-                            className="w-24 h-24 mb-4 rounded-md transition-transform duration-300 ease-in-out hover:scale-110"
-                        />
+                            className={`group relative flex flex-col justify-between w-full sm:w-[300px] h-[380px] p-6 rounded-2xl border transition-all duration-500
+                                        ${isUltimate ? 'bg-gradient-to-br from-[#1f1f1f] via-[#2f2f2f] to-[#1f1f1f] border-[#333] shadow-[0_0_30px_#1fd07d44]'
+                                : 'bg-[#0d0d0d] border-[#2a2a2a] '
+                            } 
+                            hover:scale-105 hover:shadow-[0_0_30px_rgba(75,0,130,0.4)]`}
 
-                        {/* Item Name */}
-                        <h3 className="text-xl text-white font-semibold text-center mb-2">{item.name}</h3>
-
-                        {/* Item Description */}
-                        <div className="text-sm text-gray-300 w-full space-y-1 mb-3">
-                            {item.description.map((desc, i) => (
-                                <p key={i} className="flex items-center">
-                                    <img
-                                        src={
-                                            desc.includes("Pickaxe")
-                                                ? pickaxeImg
-                                                : desc.includes("Axe")
-                                                    ? axeImg
-                                                    : desc.includes("Shovel")
-                                                        ? shovelImg
-                                                        : ''
-                                        }
-                                        alt="icon"
-                                        className="h-4 w-4 mr-2"
-                                    />
-                                    {desc}
-                                </p>
-                            ))}
-                        </div>
-
-                        {/* Price Section */}
-                        <div className="w-full text-center bg-[#009f29] text-white py-2 rounded-lg mb-4">
-                            <h2 className="text-xl font-semibold">₹{item.price}</h2>
-                        </div>
-
-                        {/* Add to Cart Button */}
-                        <AddItemBtn
-                            className="bg-[#00BC32] hover:bg-[#009f29] text-white font-medium px-6 py-3 rounded-lg mt-auto shadow-md transform hover:translate-y-1"
-                            onClick={() => addItemToCart(item)}
                         >
-                            Add to Cart
-                        </AddItemBtn>
-                    </div>
-                ))}
-            </motion.div>
+                            {/* Title */}
+                            <h2 className="text-white text-lg font-semibold mb-2">{item.name}</h2>
 
-            <ToastContainer />
+                            {/* Price */}
+                            <h3 className="text-4xl font-bold text-white mb-2">
+                                ₹{item.price}
+                            </h3>
+
+                            {/* Subtitle */}
+                            <p className="text-white text-sm font-semibold mb-4">
+                                includes
+                            </p>
+
+                            {/* Description */}
+                            <div className="text-sm text-gray-300 flex-1 space-y-2 mb-4">
+                                {item.description.map((desc, i) => (<p key={i} className="flex items-start">
+                                    <span className="mr-2">✔️</span>{desc}
+                                </p>))}
+                        </div>
+
+
+                            <div className="mt-auto w-full ">
+                                <button
+                                    onClick={() => addItemToCart(item)}
+                                    className={"w-3/4 py-4 rounded-xl font-semibold transition-all text-sm bg-white text-black hover:bg-gray-200"}
+                                >
+                                    Add to Cart
+                                </button>
+                            </div>
+                        </motion.div>);
+                })}
+            </div>
+
+            <ToastContainer/>
         </section>
     );
 };

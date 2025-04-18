@@ -4,16 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="admin state security completed routes secured">
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/components/LoadingSpinner.jsx" afterDir="false" />
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="loaders updated">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminComponents/AdminHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminComponents/AdminHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/Admin_login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/Admin_login.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/PlaySections/Play_miniGames.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/PlaySections/Play_miniGames.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Controller/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/Controller/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +220,7 @@
       <workItem from="1744918754476" duration="1712000" />
       <workItem from="1744961230385" duration="10000" />
       <workItem from="1744962082696" duration="779000" />
-      <workItem from="1744979762627" duration="5424000" />
+      <workItem from="1744979762627" duration="8864000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -533,7 +526,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744981859065</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="loaders updated">
+      <option name="closed" value="true" />
+      <created>1744985400721</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1744985400721</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -579,7 +580,8 @@
     <MESSAGE value="home responsive updated" />
     <MESSAGE value="partners added" />
     <MESSAGE value="admin state security completed routes secured" />
-    <option name="LAST_COMMIT_MESSAGE" value="admin state security completed routes secured" />
+    <MESSAGE value="loaders updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="loaders updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -612,6 +614,12 @@
           <url>file://$PROJECT_DIR$/server/Controller/Auth.js</url>
           <line>7</line>
           <option name="timeStamp" value="23" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx</url>
+          <line>96</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="25" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
