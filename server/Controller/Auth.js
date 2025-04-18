@@ -87,8 +87,6 @@ const checkAuth = async (req, res) => {
 
     let token = req.cookies?.token || req.headers.authorization?.split(" ")[1];
 
-
-
     if (!token) {
 
         return res.status(401).json({ authenticated: false, error: "No token provided" });
@@ -109,7 +107,6 @@ const checkAuth = async (req, res) => {
 
             return res.status(404).json({ authenticated: false, error: "User not found" });
         }
-
 
         return res.status(200).json({
             authenticated: true,
@@ -138,6 +135,7 @@ const checkAuth = async (req, res) => {
         }
     }
 };
+
 
 const addToCart = async (req, res) => {
     const {username, item} = req.body;
@@ -186,6 +184,7 @@ const getCartItems = async (req, res) => {
         res.status(500).json({ error: 'Failed to fetch cart items' });
     }
 };
+
 const removeFromCart = async (req, res) => {
     const { username, itemId } = req.body;
 
@@ -213,4 +212,52 @@ const removeFromCart = async (req, res) => {
         res.status(500).json({ error: 'Failed to remove from cart' });
     }
 };
-module.exports = {Login , addToCart , getCartItems, removeFromCart , checkAuth};
+
+const adminLogin = async (req, res) => {
+    const { username, password } = req.body;
+console.log("Admin Login Attempt:", username, password);
+    if (!username || !password) {
+        return res.status(400).json({ error: 'Username and password required' });
+    }
+
+    try {
+
+        if (username === 'samsrrashzyco' && password === '@saSrrashzyco') {
+            const token = jwt.sign({ role: 'admin' }, process.env.JWT_SECRET || 'kandpidikula', { expiresIn: '1h' });
+            return res.status(200).json({
+                success: true,
+                token ,
+                username:"admin",
+            });
+        } else {
+            return res.status(401).json({ error: 'Invalid credentials' });
+        }
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to login' });
+    }
+};
+
+const adminCheckAuth = async (req, res) => {
+    let token = req.cookies?.token || req.headers.authorization?.split(" ")[1];
+
+    if (!token) {
+        return res.status(401).json({ authenticated: false, error: "No token provided" });
+    }
+
+    try {
+        const decoded = jwt.verify(token, process.env.JWT_SECRET || 'kandpidikula');
+        console.log("Decoded JWT:", decoded);
+
+        if (decoded.role !== 'admin') {
+            return res.status(403).json({ authenticated: false, error: "Not authorized" });
+        }
+
+        return res.status(200).json({ authenticated: true, success: true , username: decoded.role });
+
+    } catch (error) {
+        return res.status(500).json({ authenticated: false, error: "An unexpected error occurred" });
+    }
+}
+
+module.exports = {Login , addToCart , getCartItems, removeFromCart , checkAuth , adminCheckAuth, adminLogin};

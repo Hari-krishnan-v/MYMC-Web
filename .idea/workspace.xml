@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="home responsive updated">
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/assets/PartnersLOGO/cmxRigs.png" afterDir="false" />
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="partners added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/OurPartners.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/OurPartners.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminComponents/AdminHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminComponents/AdminHeader.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/Admin_login.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/Admin_login.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Controller/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/Controller/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/Routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,7 +84,7 @@
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\fonts" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev --host">
+  <component name="RunManager" selected="npm.dev (1)">
     <configuration name="dev --host" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/mymc-season9-web/package.json" />
       <command value="run" />
@@ -130,8 +134,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev --host" />
         <item itemvalue="npm.dev (1)" />
+        <item itemvalue="npm.dev --host" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.test" />
       </list>
@@ -217,6 +221,11 @@
       <workItem from="1744696753205" duration="895000" />
       <workItem from="1744698213188" duration="8148000" />
       <workItem from="1744817164814" duration="5252000" />
+      <workItem from="1744908232121" duration="8093000" />
+      <workItem from="1744918754476" duration="1712000" />
+      <workItem from="1744961230385" duration="10000" />
+      <workItem from="1744962082696" duration="779000" />
+      <workItem from="1744979762627" duration="1962000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -506,7 +515,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744820227463</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="partners added">
+      <option name="closed" value="true" />
+      <created>1744908254400</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1744908254400</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -550,7 +567,8 @@
     <MESSAGE value="updated Premium_Packs.jsx changed main logo store card updated" />
     <MESSAGE value="partners upddated" />
     <MESSAGE value="home responsive updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="home responsive updated" />
+    <MESSAGE value="partners added" />
+    <option name="LAST_COMMIT_MESSAGE" value="partners added" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -575,14 +593,14 @@
           <option name="timeStamp" value="19" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/mymc-season9-web/src/App.jsx</url>
-          <line>46</line>
-          <option name="timeStamp" value="21" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/mymc-season9-web/src/pages/Terms_and_Condition.jsx</url>
           <line>28</line>
           <option name="timeStamp" value="22" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/server/Controller/Auth.js</url>
+          <line>7</line>
+          <option name="timeStamp" value="23" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

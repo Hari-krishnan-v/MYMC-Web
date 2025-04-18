@@ -3,7 +3,11 @@ import axios from "axios";
 
 const useAuthStore = create((set, get) => ({
     user: null,
+    admin: null,
     isAuthenticated: false,
+    isAdminAuthenticated: null,
+    loading: false,
+    error: null,
     cart: [],
 
     login: async (username) => {
@@ -107,6 +111,71 @@ const useAuthStore = create((set, get) => ({
             }
         } catch (error) {
             console.error("Failed to remove from cart:", error.response?.data || error.message);
+        }
+    },
+    adminCheckAuth: async () => {
+        set({ loading: true, error: null });
+
+        try {
+            const token = localStorage.getItem("admintoken");
+            if (!token) {
+                set({ isAdminAuthenticated: false, admin: null, loading: false });
+                return;
+            }
+
+            const res = await axios.get("http://localhost:5000/api/store/admin-check-auth", {
+                credentials: "include",
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                },
+            });
+            console.log(res.data);
+            if (res.data.authenticated === true) {
+                set({
+                    isAdminAuthenticated: true,
+                    admin: res.data.username,
+                    loading: false,
+
+                });
+            } else {
+                set({ isAdminAuthenticated: false, admin: null, loading: false });
+            }
+        } catch (error) {
+            console.error("Admin auth check failed:", error.response?.data || error.message);
+            set({ isAdminAuthenticated: false, admin: null, loading: false });
+        }
+    },
+    logoutAdmin: () => {
+        localStorage.removeItem("admintoken");
+        set({ admin: null, isAdminAuthenticated: false });
+    },
+
+    adminLogin: async (username,password) => {
+        try {
+            set({ loading: true,error:null }); // Start loading
+            const res = await axios.post(
+                "http://localhost:5000/api/store/admin-login",
+                { username,password },
+                { withCredentials: true }
+            );
+            console.log(res.data);
+            if (res.status === 200 && res.data.success) {
+
+                const { token } = res.data;
+
+                set({
+
+                    isAdminAuthenticated: true,
+                    admin: res.data.username,
+                    error: null,
+                    loading: false,
+                });
+
+                localStorage.setItem("admintoken", token);
+            }
+        } catch (err) {
+            console.error("Login failed:", err.response?.data || err.message);
+            set({ loading: false,error: err.response?.data.error });
         }
     },
 

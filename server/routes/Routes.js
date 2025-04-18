@@ -1,13 +1,16 @@
 const express = require('express');
 const router = express.Router();
 const {AddItem, getItemsByCategory} = require("../Controller/StoreActions");
-const {Login, addToCart, removeFromCart, getCartItems, checkAuth} = require("../Controller/Auth");
+const {Login, addToCart, removeFromCart, getCartItems, checkAuth, adminCheckAuth, adminLogin} = require("../Controller/Auth");
 
 // Middleware
 router.use(express.json());
 
 /* ------------------------ Store Item Routes ------------------------ */
+
+router.get('/admin-check-auth',adminCheckAuth);
 router.get("/check-auth",checkAuth);
+
 
 router.post('/add', AddItem);
 router.get('/:category', getItemsByCategory);
@@ -16,6 +19,7 @@ router.get('/:category', getItemsByCategory);
 /* ------------------------ Authentication Routes ------------------------ */
 
 router.post('/login', Login);
+router.post('/admin-login', adminLogin);
 /* ------------------------ Cart Routes ------------------------ */
 
 router.post('/add-to-cart', addToCart);
