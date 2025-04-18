@@ -6,7 +6,6 @@ const storeItemSchema = new mongoose.Schema({
     price: { type: Number, required: true },
     category: {
         type: String,
-        enum: ['Claim Blocks', 'Money', 'Kits', 'Homes'],
         required: true,
     },
     createdAt: { type: Date, default: Date.now },

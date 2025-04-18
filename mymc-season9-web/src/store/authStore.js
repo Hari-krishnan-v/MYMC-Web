@@ -181,6 +181,36 @@ const useAuthStore = create((set, get) => ({
             set({ loading: false,error: err.response?.data.error });
         }
     },
+    addStoreItem: async (name,description,price,category) => {
+        try {
+            const res = await axios.post("http://localhost:5000/api/store/add", name,description,price,category);
+            if (res.status === 201) {
+                console.log("Item added successfully:", res.data);
+            }
+        } catch (error) {
+            console.error("Failed to add item:", error.response?.data || error.message);
+        }
+    },
+    updateStoreItem: async (id,name,description,price,category) => {
+        try {
+            const res = await axios.put(`http://localhost:5000/api/store/update/${id}`, { name,description,price,category });
+            if (res.status === 200) {
+                console.log("Item updated successfully:", res.data);
+            }
+        } catch (error) {
+            console.error("Failed to update item:", error.response?.data || error.message);
+        }
+    },
+    deleteStoreItem: async (id) => {
+        try {
+            const res = await axios.delete(`http://localhost:5000/api/store/delete/${id}`);
+            if (res.status === 200) {
+                console.log("Item deleted successfully:", res.data);
+            }
+        } catch (error) {
+            console.error("Failed to delete item:", error.response?.data || error.message);
+        }
+    },
 
 }));
 

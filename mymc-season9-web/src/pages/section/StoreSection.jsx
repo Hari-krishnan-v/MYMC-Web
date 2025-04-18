@@ -13,7 +13,7 @@ export const fetchStoreItems = async (category) => {
 };
 
 export const StoreSection = () => {
-    const [selected, setSelected] = useState('All');
+    const [selected, setSelected] = useState('Claim Blocks');
     const [items, setItems] = useState([]);
     const { user, isAuthenticated, addToCart } = useAuthStore();
 

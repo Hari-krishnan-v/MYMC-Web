@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const {AddItem, getItemsByCategory} = require("../Controller/StoreActions");
+const {AddItem, getItemsByCategory,updateItem ,deleteItem} = require("../Controller/StoreActions");
 const {Login, addToCart, removeFromCart, getCartItems, checkAuth, adminCheckAuth, adminLogin} = require("../Controller/Auth");
 
 // Middleware
@@ -14,6 +14,8 @@ router.get("/check-auth",checkAuth);
 
 router.post('/add', AddItem);
 router.get('/:category', getItemsByCategory);
+router.put('/update/:id', updateItem);
+router.delete('/delete/:id', deleteItem);
 
 
 /* ------------------------ Authentication Routes ------------------------ */

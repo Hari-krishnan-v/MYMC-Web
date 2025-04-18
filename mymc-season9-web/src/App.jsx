@@ -21,6 +21,7 @@ import {AdminDevUpdate} from "./Admin_panel/AdminDevUpdate.jsx";
 import {OrderVew} from "./pages/OrderVew.jsx";
 import {AdminLogin} from "./Admin_panel/Admin_login.jsx";
 import LoadingSpinner from "./components/LoadingSpinner.jsx";
+import {AdminStore} from "./Admin_panel/AdminStore.jsx";
 
 function App() {
     const location = useLocation();
@@ -108,6 +109,13 @@ function App() {
                             <AdminDevUpdate/>
                         </ProtectedAdminRoute>
                     }/>
+                    <Route path="/admin/premium" element={
+                        <ProtectedAdminRoute>
+                            <AdminStore/>
+                        </ProtectedAdminRoute>
+                    }/>
+
+                    {/* Redirect all other routes to home */}
                 </Routes>
 
 
