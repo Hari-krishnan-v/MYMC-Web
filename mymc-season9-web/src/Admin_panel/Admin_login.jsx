@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { AdminHeader } from "./AdminComponents/AdminHeader.jsx";
-import { AdminFooter } from "./AdminComponents/AdminFooter.jsx";
+import React, {useState} from 'react';
+import {AdminHeader} from "./AdminComponents/AdminHeader.jsx";
+import {AdminFooter} from "./AdminComponents/AdminFooter.jsx";
 import useAuthStore from "../store/authStore";
+import {motion} from 'framer-motion'
 
 export const AdminLogin = () => {
     const [username, setUsername] = useState('');
@@ -28,7 +28,12 @@ export const AdminLogin = () => {
             <AdminHeader />
             <main>
                 <section className="min-h-screen bg-gradient-to-b from-black to-[#231D2D] w-full flex items-center justify-center">
-                    <div className="bg-[#1F1F1F] p-8 rounded-lg shadow-lg w-[400px]">
+                    <motion.div
+                        initial={{opacity: 0, scale: 0.8}}
+                        animate={{opacity: 1, scale: 1}}
+                        exit={{opacity: 0, scale: 0.8}}
+                        transition={{duration: 0.8,ease:"easeInOut"}}
+                        className="bg-[#1F1F1F] p-8 rounded-lg shadow-lg w-[400px]">
                         <h1 className="text-green-700 text-center text-3xl font-bold mb-6">Admin Login</h1>
                         {error && (
                             <p className="text-red-500 text-sm mb-4">{error}</p>
@@ -63,7 +68,7 @@ export const AdminLogin = () => {
                                 {loading ? 'Loading...' : 'Login'}
                             </button>
                         </form>
-                    </div>
+                    </motion.div>
                 </section>
             </main>
             <AdminFooter />

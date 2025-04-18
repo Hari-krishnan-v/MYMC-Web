@@ -9,7 +9,7 @@ export const AdminHeader = () => {
 
     const handleLogout = () => {
         logoutAdmin();
-        navigate("/admin");
+        navigate("/admin/login");
     };
 
     return (

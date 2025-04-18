@@ -222,7 +222,7 @@ console.log("Admin Login Attempt:", username, password);
 
     try {
 
-        if (username === 'samsrrashzyco' && password === '@saSrrashzyco') {
+        if (username === process.env.ADMIN_USERNAME && password === process.env.ADMIN_PASSWORD ) {
             const token = jwt.sign({ role: 'admin' }, process.env.JWT_SECRET || 'kandpidikula', { expiresIn: '1h' });
             return res.status(200).json({
                 success: true,

@@ -65,13 +65,16 @@ export const PlayMiniGames = () => {
                 <div className="flex w-full h-[80vh] gap-4">
 
                     {/* Left Game List */}
-                    <div className="flex flex-col space-y-3 w-1/4  p-3 pt-5">
+                    <div className="w-full lg:w-1/4 space-y-4">
                         {games.map((game, index) => (
                             <button
                                 key={index}
                                 onClick={() => setGame(game)}
-                                className={`w-full h-16  flex justify-center items-center text-xl font-semibold rounded-3xl hover:scale-105 duration-200 transition-all
-                                    ${currentGame.name === game.name ? 'bg-[#A782E5]' : ' text-white'}`}>
+                                className={`w-full text-lg sm:text-xl font-medium rounded-2xl py-4 px-6 transition-all duration-300 shadow-lg hover:scale-[1.03] 
+                                    ${currentGame.name === game.name
+                                    ? 'bg-gradient-to-r from-purple-500 to-pink-500 text-white'
+                                    : 'bg-white/10 text-white hover:bg-white/20'}`}
+                            >
                                 {game.name}
                             </button>
                         ))}
@@ -82,10 +85,10 @@ export const PlayMiniGames = () => {
                         <AnimatePresence mode="wait">
                             <motion.div
                                 key={currentGame.name}
-                                initial={{opacity:0,  translateY: -300 }}
-                                animate={{opacity:1,  translateY: 0 }}
-                                exit={{ opacity:0, translateY:500 }}
-                                transition={{ duration: 0.8, ease: "easeInOut" }}
+                                initial={{opacity: 0, translateY: -300}}
+                                animate={{opacity: 1, translateY: 0}}
+                                exit={{opacity: 0, translateY: 500}}
+                                transition={{duration: 0.8, ease: "easeInOut"}}
                                 className="relative w-full h-full p-8 space-y-5"
                             >
                                 {/* Background Image */}
@@ -105,7 +108,7 @@ export const PlayMiniGames = () => {
                                 <ul className="space-y-3.5">
                                     {currentGame.features.map((feature, idx) => (
                                         <li key={idx} className="flex items-center gap-3 text-white text-lg">
-                                            <img src={vector} className="w-5 h-5" alt="check" />
+                                            <img src={vector} className="w-5 h-5" alt="check"/>
                                             {feature}
                                         </li>
                                     ))}

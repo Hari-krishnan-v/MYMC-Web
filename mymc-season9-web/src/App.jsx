@@ -20,12 +20,13 @@ import {AdminOrder} from "./Admin_panel/AdminOrder.jsx";
 import {AdminDevUpdate} from "./Admin_panel/AdminDevUpdate.jsx";
 import {OrderVew} from "./pages/OrderVew.jsx";
 import {AdminLogin} from "./Admin_panel/Admin_login.jsx";
+import LoadingSpinner from "./components/LoadingSpinner.jsx";
 
 function App() {
     const location = useLocation();
-    const {checkAuth, adminCheckAuth, isAdminAuthenticated} = useAuthStore();
+    const {checkAuth, adminCheckAuth, isAdminAuthenticated,isAuthenticated,loading} = useAuthStore();
 
-    // Check user authentication
+
     useEffect(() => {
         checkAuth();
         adminCheckAuth();
@@ -51,9 +52,10 @@ function App() {
         return children;
     };
 
-    if (isAdminAuthenticated === null) {
-        return <div>Loading...</div>;
+    if (isAdminAuthenticated === null || isAuthenticated === null || loading) {
+        return <LoadingSpinner/>;
     }
+
 
     return (
         <>

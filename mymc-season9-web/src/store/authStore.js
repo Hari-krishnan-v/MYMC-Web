@@ -4,13 +4,14 @@ import axios from "axios";
 const useAuthStore = create((set, get) => ({
     user: null,
     admin: null,
-    isAuthenticated: false,
+    isAuthenticated: null,
     isAdminAuthenticated: null,
     loading: false,
     error: null,
     cart: [],
 
     login: async (username) => {
+        set({ loading: true, error: null }); // Start loading
         try {
             const res = await axios.post(
                 "http://localhost:5000/api/store/login",
@@ -25,6 +26,8 @@ const useAuthStore = create((set, get) => ({
                     user: data,
                     isAuthenticated: true,
                     cart: data.cart || [],
+                    error: null,
+                    loading: false,
                 });
 
                 localStorage.setItem("token", token);
