@@ -32,7 +32,7 @@ export const AdminHeader = () => {
                         <a href="/admin/orders">Orders</a>
                     </li>
                     <li className={"text-white opacity-60 transition-all ease-in-out duration-700 cursor-pointer hover:opacity-100"}>
-                        <a href="/admin/premium">Premium items</a>
+                        <a href="/admin/store">Store items</a>
                     </li>
                     <li className={"text-white opacity-60 transition-all ease-in-out duration-700 cursor-pointer hover:opacity-100"}>
                         <a href="/admin/announcement">Announcement</a>

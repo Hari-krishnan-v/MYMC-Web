@@ -65,7 +65,12 @@ const Login = async (req, res) => {
                     uuid: mcData.id,
                     avatar: fullSkinUrl,
                     username: mcData.username
-                }
+                },
+                luckyDraw: user.luckyDraw,
+                luckyDrawMonth: user.luckyDrawMonth,
+                luckyDrawTicket: user.luckyDrawTicket,
+                OrderHistory: user.OrderHistory,
+                isLuckyDrawWinner: user.isLuckyDrawWinner,
             }
         });
 
@@ -118,8 +123,14 @@ const checkAuth = async (req, res) => {
                 minecraft: {
                     uuid: user.minecraftUUID,
                     avatar: user.avatar,
-                    username: user.username,
+                    username: decoded.username
                 },
+                luckyDraw: user.luckyDraw,
+                luckyDrawMonth: user.luckyDrawMonth,
+                luckyDrawTicket: user.luckyDrawTicket,
+                OrderHistory: user.OrderHistory,
+                isLuckyDrawWinner: user.isLuckyDrawWinner,
+
             },
         });
 
@@ -260,4 +271,19 @@ const adminCheckAuth = async (req, res) => {
     }
 }
 
-module.exports = {Login , addToCart , getCartItems, removeFromCart , checkAuth , adminCheckAuth, adminLogin};
+const adminUsersFetch = async (req, res) => {
+    try {
+        console.log("Fetching all users");
+        const users = await UserData.find();
+        res.status(200).json({
+            success: true,
+            data: users,
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ error: 'Failed to fetch users' });
+    }
+};
+
+
+module.exports = {Login , addToCart , getCartItems, removeFromCart , checkAuth , adminCheckAuth, adminLogin , adminUsersFetch};

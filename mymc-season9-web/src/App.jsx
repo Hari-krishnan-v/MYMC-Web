@@ -25,13 +25,14 @@ import {AdminStore} from "./Admin_panel/AdminStore.jsx";
 
 function App() {
     const location = useLocation();
-    const {checkAuth, adminCheckAuth, isAdminAuthenticated,isAuthenticated,loading} = useAuthStore();
+    const {checkAuth, adminCheckAuth, isAdminAuthenticated,isAuthenticated,loading ,user} = useAuthStore();
 
 
     useEffect(() => {
         checkAuth();
         adminCheckAuth();
-        console.log("Admin authenticated:", isAdminAuthenticated);
+
+
 
     }, [checkAuth, adminCheckAuth]);
 
@@ -109,7 +110,7 @@ function App() {
                             <AdminDevUpdate/>
                         </ProtectedAdminRoute>
                     }/>
-                    <Route path="/admin/premium" element={
+                    <Route path="/admin/store" element={
                         <ProtectedAdminRoute>
                             <AdminStore/>
                         </ProtectedAdminRoute>

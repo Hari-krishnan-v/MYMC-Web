@@ -228,7 +228,7 @@ const MonthlyPlan = ({ handlePurchase }) => {
             </div>
 
             <div
-                className="min-w-[300px] h-[480px]  text-left border border-[#ceff00] md:space-y-5 rounded-3xl p-6 flex flex-col justify-between">
+                className="min-w-[300px] h-[480px]   text-left border border-[#ceff00] md:space-y-5 rounded-3xl p-6 flex flex-col justify-between">
                 <div>
                     <h3 className="text-xl text-[#00BC32] font-bold Plan-head">Emerald</h3>
                     <p className="text-sm text-[#CFCFCF] Plan-head">The Flex</p>

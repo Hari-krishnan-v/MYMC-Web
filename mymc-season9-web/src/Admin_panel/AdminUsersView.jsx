@@ -1,7 +1,9 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import {AdminHeader} from "./AdminComponents/AdminHeader.jsx";
 import {AdminFooter} from "./AdminComponents/AdminFooter.jsx";
 import {motion} from "framer-motion";
+import LoadingSpinner from "../components/LoadingSpinner.jsx";
+import {toast, ToastContainer} from "react-toastify";
 
 const CurrentlyPlaying = () => {
     return(
@@ -47,26 +49,69 @@ const CurrentlyPlaying = () => {
 }
 
 const Users = () => {
-    return(
+    const [admin_users, setAdminUsers] = React.useState(null);
+    const fetchAdminUsers = () => {
+        fetch("http://localhost:5000/api/store/admin-usersFetch")
+            .then((response) => response.json())
+            .then((data) => {
+                setAdminUsers(data.data);
+            })
+            .catch((error) => {
+                console.error("Error fetching admin users:", error);
+            });
+    }
+    useEffect(() => {
+        fetchAdminUsers();
+    }, []);
+
+    if (!admin_users) {
+        return <LoadingSpinner/>;
+    }
+
+    const handleKick = (userId) => {
+        const secretPassword = "SrRashSam"; // Replace with your actual password
+        const enteredPassword = window.prompt("Enter the secret password to kick the player:");
+
+        if (enteredPassword === secretPassword) {
+            console.log(`Kicking user with ID: ${userId}`);
+            toast.success("User kicked successfully!", {
+                position: "bottom-left",
+                className: "toast-message",
+            });
+            // Add your kick logic here (e.g., API call to kick the user)
+        } else {
+            toast.error("Incorrect password. User not kicked.", {
+                position: "bottom-left",
+                className: "toast-message",
+            });
+        }
+    };
+
+    return (
         <div className="flex flex-col gap-5">
             <h1 className="text-white text-2xl font-bold">Users</h1>
             <div className="flex flex-col gap-3">
-                <div className="flex items-center justify-between bg-[#554274]/10 p-4 rounded-2xl">
-                    <div className="flex items-center gap-4">
-                        <img src="https://via.placeholder.com/50" alt=""/>
-                        <div className="flex flex-col">
-                            <h1 className="text-white text-lg font-bold">Player 1</h1>
-                            <p className="text-white opacity-60">Playing Minecraft</p>
+                {admin_users.map((user) => (
+                    <div key={user._id} className="flex items-center justify-between bg-[#554274]/10 p-4 rounded-2xl">
+                        <div className="flex items-center gap-4">
+                            <img src={user.avatar} alt="User Avatar" className="w-fit h-12 rounded-full"/>
+                            <div className="flex flex-col">
+                                <h1 className="text-white text-lg font-bold">{user.username}</h1>
+                                <p className="text-white opacity-60">Playing Minecraft</p>
+                            </div>
                         </div>
+                        <button
+                            onClick={() => handleKick(user._id)}
+                            className="bg-red-600 text-white px-4 py-2 rounded-full"
+                        >
+                            Kick
+                        </button>
                     </div>
-                    <button className="bg-red-600 text-white px-4 py-2 rounded-full">Kick</button>
-                </div>
-                {/* Add more players here */}
+                ))}
             </div>
-
         </div>
-    )
-}
+    );
+};
 const BannedUsers = () => {
     return(
         <div className="flex flex-col gap-5">
@@ -133,8 +178,11 @@ export const AdminUsersView = () => {
                             selectedTab === "Users"? <Users/>: <BannedUsers/> }
                     </motion.div>
                 </div>
+                <ToastContainer/>
+
             </section>
         </main>
         <AdminFooter/>
-    </>);
+        </>
+    );
 };

@@ -4,16 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="store card updated">
-      <change afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminStore.jsx" afterDir="false" />
+    <list default="true" id="e77cfe81-a14d-438f-bb1f-006058903dd2" name="Changes" comment="AdminPremiumItem.jsx updated (implemented add storeitems , updatestore)">
+      <change afterPath="$PROJECT_DIR$/server/Controller/LuckyDraw.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminComponents/AdminHeader.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminComponents/AdminHeader.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminPremiumItem.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminStore.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminStore.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminUsersView.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminUsersView.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/App.jsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Home.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/pages/section/Premium_Packs.jsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js" beforeDir="false" afterPath="$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/Controller/StoreActions.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/Controller/StoreActions.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/models/StoreItems.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/StoreItems.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/Controller/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/Controller/Auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/models/UserData.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/models/UserData.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/routes/Routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/server/routes/Routes.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -87,7 +91,7 @@
       <recent name="C:\Users\harik\WebstormProjects\mymc-web\mymc-season9-web\src\assets\fonts" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.dev (1)">
+  <component name="RunManager" selected="npm.dev --host">
     <configuration name="dev --host" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
       <package-json value="$PROJECT_DIR$/mymc-season9-web/package.json" />
       <command value="run" />
@@ -137,8 +141,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev --host" />
         <item itemvalue="npm.dev (1)" />
+        <item itemvalue="npm.dev --host" />
         <item itemvalue="npm.start" />
         <item itemvalue="npm.test" />
       </list>
@@ -228,7 +232,8 @@
       <workItem from="1744918754476" duration="1712000" />
       <workItem from="1744961230385" duration="10000" />
       <workItem from="1744962082696" duration="779000" />
-      <workItem from="1744979762627" duration="16083000" />
+      <workItem from="1744979762627" duration="18008000" />
+      <workItem from="1745041128854" duration="14674000" />
     </task>
     <task id="LOCAL-00001" summary="mymc web using react">
       <option name="closed" value="true" />
@@ -550,7 +555,15 @@
       <option name="project" value="LOCAL" />
       <updated>1744989475005</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="AdminPremiumItem.jsx updated (implemented add storeitems , updatestore)">
+      <option name="closed" value="true" />
+      <created>1744996878616</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1744996878616</updated>
+    </task>
+    <option name="localTasksCounter" value="42" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -598,7 +611,8 @@
     <MESSAGE value="admin state security completed routes secured" />
     <MESSAGE value="loaders updated" />
     <MESSAGE value="store card updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="store card updated" />
+    <MESSAGE value="AdminPremiumItem.jsx updated (implemented add storeitems , updatestore)" />
+    <option name="LAST_COMMIT_MESSAGE" value="AdminPremiumItem.jsx updated (implemented add storeitems , updatestore)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -614,7 +628,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/mymc-season9-web/src/Admin_panel/AdminUsersView.jsx</url>
-          <line>99</line>
+          <line>144</line>
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
@@ -635,13 +649,11 @@
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/mymc-season9-web/src/pages/section/StoreSection.jsx</url>
           <line>96</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="25" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/mymc-season9-web/src/store/authStore.js</url>
           <line>206</line>
-          <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="26" />
         </line-breakpoint>
       </breakpoints>

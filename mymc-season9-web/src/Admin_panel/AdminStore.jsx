@@ -23,6 +23,7 @@ const AddStore = () => {
         e.preventDefault();
         const descriptionArray = description.split('\n').map(item => item.trim()).filter(item => item !== '');
         addItem(name, descriptionArray, price, category)
+        toast.success("Item added successfully!");
         setName('');
         setDescription('');
         setPrice('');
@@ -73,7 +74,7 @@ const AddStore = () => {
 const UpdateStore = () => {
     const [items, setItems] = useState([]);
     const [selected, setSelected] = useState('Claim Blocks');
-    const { updateStoreItem } = useAuthStore();
+    const { updateStoreItem ,deleteStoreItem} = useAuthStore();
 
     useEffect(() => {
         fetchStoreItems(selected).then(data => {
@@ -106,6 +107,14 @@ const UpdateStore = () => {
         toast.success(`${item.editName} updated successfully!`);
     };
 
+    const handleDelete = async (id) => {
+        if (window.confirm("Are you sure you want to delete this item?")) {
+            await deleteStoreItem(id);
+            setItems(items.filter(item => item._id !== id));
+            toast.success("Item deleted successfully!");
+        }
+    }
+
     return (
         <div className="flex flex-col gap-5">
             <h1 className="text-white text-2xl font-bold">Update Premium</h1>
@@ -122,10 +131,9 @@ const UpdateStore = () => {
                             <button
                                 key={category}
                                 onClick={() => setSelected(category)}
-                                className={`w-[100px] h-[80px] rounded-xl px-3 py-2 flex flex-col items-center justify-center text-xs font-medium tracking-wide transition-all duration-300
+                                className={`w-[100px] h-[50px] rounded-xl px-3 py-2 flex flex-col items-center justify-center text-xs font-medium tracking-wide transition-all duration-300
                                 ${selected === category ? 'bg-gradient-to-b from-black to-[#4B0082] shadow-[0_0_30px_rgba(75,0,130,0.4)]' : 'bg-[#0d0d0d] text-gray-300 hover:bg-[#2c2c2c] hover:text-white hover:shadow-[0_0_8px_#00ff9966]'}`}
                             >
-                                <div className="text-base mb-1">🎮</div>
                                 <span>{category}</span>
                             </button>
                         ))}
@@ -162,12 +170,18 @@ const UpdateStore = () => {
                                 className="p-3 rounded-xl bg-white/10 text-white focus:outline-none resize-none h-[100px]"
                             />
 
-                            <div className="mt-auto w-full">
+                            <div className="mt-auto flex gap-2 w-full">
                                 <button
                                     onClick={() => handleUpdate(index,item.category)}
-                                    className="w-3/4 py-4 rounded-xl font-semibold transition-all text-sm bg-white text-black hover:bg-gray-200"
+                                    className="w-1/2 py-4 rounded-xl font-semibold transition-all text-sm bg-white text-black hover:bg-gray-200"
                                 >
                                     Update
+                                </button>
+                                <button
+                                    onClick={() => handleDelete(item._id)}
+                                    className="w-1/2 py-4 rounded-xl font-semibold transition-all text-sm bg-red-900 text-white hover:bg-gray-200"
+                                >
+                                    Delete
                                 </button>
                             </div>
                         </motion.div>
@@ -220,7 +234,6 @@ export const AdminStore = () => {
                         </motion.div>
                     </div>
                     <ToastContainer/>
-
                 </section>
             </main>
             <AdminFooter/>

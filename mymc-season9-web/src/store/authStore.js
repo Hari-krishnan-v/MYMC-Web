@@ -211,6 +211,19 @@ const useAuthStore = create((set, get) => ({
             console.error("Failed to delete item:", error.response?.data || error.message);
         }
     },
+    luckyDraw: async (id) => {
+        set({ loading: true, error: null }); // Start loading
+        try {
+            const res = await axios.post(`http://localhost:5000/api/store/lucky-draw/${id}`);
+            if (res.status === 200) {
+                console.log("Lucky draw successful:", res.data);
+                set({ loading: false });
+            }
+        } catch (error) {
+            console.error("Failed to participate in lucky draw:", error.response?.data || error.message);
+        }
+    },
+
 
 }));
 
